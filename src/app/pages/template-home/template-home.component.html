@@ -1,45 +1,44 @@
 <header>
-  <section>
+  <section class="container-menu">
     <div class="menu">
-      <nav aria-label="primaria">
-        <ul>
-          <li><a routerLink="sobre">Sobre Nós</a></li>
-          <li><a routerLink="servicos">Serviços</a></li>
-          <li><a routerLink="agendamento">Agendamento</a></li>
-          <li><a routerLink="contato">Contato</a></li>
-        </ul>
-      </nav>
+      <div class="nome-marca">
+        <a href="./">
+          <img src="assets/img/home/marca.png" width="160" height="30" alt="Donna" />
+        </a>
+      </div>
+      <div class="menu-principal">
+        <nav>
+          <ul>
+            <li><a routerLink="home">Home</a></li>
+            <li><a routerLink="sobre">Sobre Nós</a></li>
+            <li><a routerLink="servicos">Serviços</a></li>
+            <li><a routerLink="agendamento">Agendamento</a></li>
+            <li><a routerLink="contato">Contato</a></li>
+          </ul>
+        </nav>
+      </div>
+      <button class="botao-login">
+          <p><a routerLink="login">Login</a></p>
+      </button>
     </div>
-    <div class="nome_marca">
-      <a href="./">
-        <img src="assets/img/home/marca.png" width="160" height="30" alt="Donna" />
-      </a>
+    <div class="menu-texto">
+      <h1 class="texto-principal">O seu cabelo em <span class="cor-p1">boas mãos</span><br> e a sua autoestima <br>restaurada</h1>
+      <img src="assets/img/home/imagem3.png" width="400px" />
     </div>
-    <div class="login">
-      <ul>
-        <li><a href="./login.html">Login</a></li>
-      </ul>
-    </div>
-  </section>
-  <section>
-    <div class="texto">
-      <h1>O seu cabelo em boas mãos e a sua autoestima restaurada</h1>
-    </div>
-    <div class="imagem"></div>
-    <img src="assets/img/home/pexels-photo-4355995.jpeg" alt="" width="350px" />
   </section>
 </header>
 
+<!-- Aqui deverá rotear todos as páginas -->
 <router-outlet></router-outlet>
 
 <footer>
-  <div>
+  <div class="footer-container">
     <div>
-      <img />
+      <img src="assets/img/home/marca-pb.png" width="160" height="30" alt="Donna" />
     </div>
 
-    <div>
-      <h3>CONTATO</h3>
+    <div class="contato">
+      <h3>Contato</h3>
       <p>(11)4000-0000</p>
       <p>(11)90000-0000</p>
 
@@ -49,28 +48,30 @@
       <p>Manobrista no local</p>
     </div>
 
-    <div>
-      <h3>SERVIÇOS</h3>
+    <div class="servicos">
+      <h3>Serviços</h3>
       <ul>
-        <li><a>PROCEDIMENTOS CAPILARES</a></li>
-        <li><a>DIA DA NOIVA</a></li>
-        <li><a>MANICURE E PEDICURE</a></li>
-        <li><a>MAQUIAGEM</a></li>
-        <li><a>SOBRANCELHA</a></li>
+        <li><a>Procedimentos Capilares</a></li>
+        <li><a>Dia da Noiva</a></li>
+        <li><a>Manicure e Pedicure</a></li>
+        <li><a>Maquiagem</a></li>
+        <li><a>Sobrancelha</a></li>
+        <li><a>Programa de Fidelidade</a></li>
       </ul>
     </div>
 
-    <div>
-      <h3>MENU</h3>
+    <div class="menu-opcoes">
+      <h3>Menu</h3>
       <ul>
-        <li><a>HOME</a></li>
-        <li><a>SOBRE NÓS</a></li>
-        <li><a>AGENDAMENTO</a></li>
-        <li><a>CONTATO</a></li>
+        <li><a routerLink="home">Home</a></li>
+        <li><a routerLink="sobre">Sobre Nós</a></li>
+        <li><a routerLink="servicos">Serviços</a></li>
+        <li><a routerLink="agendamento">Agendamento</a></li>
+        <li><a routerLink="contato">Contato</a></li>
+        <li><a routerLink="login">Login</a></li>
       </ul>
     </div>
-
-    <p>Donna © 2023 - Desenvolvido por Kelly Vasconcellos</p>
   </div>
+  <p class="p-footer">Donna © 2023 - Desenvolvido por Kelly Vasconcellos</p>
 </footer>
 

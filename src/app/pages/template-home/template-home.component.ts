@@ -6,5 +6,4 @@ import { Component } from '@angular/core';
   styleUrls: ['./template-home.component.scss']
 })
 export class TemplateHomeComponent {
-
 }

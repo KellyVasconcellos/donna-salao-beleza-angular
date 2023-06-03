@@ -13,6 +13,10 @@ const routes: Routes = [
   { path: 'home', component: TemplateHomeComponent,
     children: [
       {
+        path: '' ,
+        component: HomeComponent,
+      },
+      {   
         path: 'contato' ,
         component: ContatoComponent,
       },
