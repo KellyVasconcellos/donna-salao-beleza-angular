@@ -66,9 +66,10 @@ p {
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: center;
-  gap: 70px;
+  justify-content: space-between;
   padding-top: 150px;
+  padding-left: 200px;
+  padding-right: 200px;
 
 }
 
