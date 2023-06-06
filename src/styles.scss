@@ -30,3 +30,8 @@ img {
 button {
   border: none;
 }
+
+
+@mixin padding-grid($top, $right, $bottom, $left) {
+  padding: $top $right $bottom $left;
+}

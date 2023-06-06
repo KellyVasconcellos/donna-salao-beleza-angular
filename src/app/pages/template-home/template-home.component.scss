@@ -1,3 +1,5 @@
+@import '../../../styles.scss';
+
 * {
   font-family:'Roboto', sans-serif;
 }
@@ -18,11 +20,12 @@ header {
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
   height: 80px;
   position: fixed;
   background-color: #ecc0c3;
+  @include padding-grid(0,100px,0,100px);
 }
 
 .container-menu .menu .menu-principal nav ul li {
@@ -50,7 +53,7 @@ header {
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
-  padding: 150px 200px 0px;
+  @include padding-grid(150px,200px,0,200px);
 }
 
 .container-menu .menu-texto h1 {
@@ -68,12 +71,13 @@ header {
 footer {
   background-color: #000000;
   color: #b8b8b8;
+  @include padding-grid(0,100px,0,100px);
 }
 
 footer .footer-container {
   display: flex;
   align-items: center;
-  justify-content: space-around;
+  justify-content: space-between;
   padding: 60px 0px 0px;
   line-height: 45px;
 }
