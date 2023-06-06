@@ -1,38 +1,33 @@
-.geral {
+section {
+  padding: 100px 200px 100px 200px;
+  color: #212529;
   font-family: 'Roboto', serif;
-  line-height: 27px;
+  line-height: 30px;
+}
+
+.caixa {
   color: #f0f0f0;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding-top: 100px;
-  padding-left: 200px;
-  padding-right: 200px;
-  padding-bottom: 100px;
   background-color: #000000;
 }
 
-.geral-1 {
-  width: 30%;
-
-}
-
-.geral h2{
+h2 {
   padding-bottom: 30px;
 }
 
-.geral-1 p{
+.caixa .caixa-principal {
+  width: 30%;
   text-align: justify;
 }
 
-.geral-1 .geral-2 {
+.caixa .caixa-principal p {
   padding-bottom: 30px;
 }
 
-.geral-1 .botao-1 {
-  color: #212529;
+.caixa .caixa-principal .botao {
   background-color: #ecc0c3;
-  border: none;
   border-radius: 20px;
   height: 40px;
   width: 250px;
@@ -40,7 +35,7 @@
   font-weight: bold;
 }
 
-.geral-3 {
+.caixa .caixa-img {
   display: flex;
   justify-content: center;
   gap:30px;
@@ -49,49 +44,26 @@
   width: 70%;
 }
 
-.geral-3 img {
-  border-radius: 20px;
-}
+ /*    */
 
 .diferenciais {
-  padding-top: 100px;
-  padding-bottom: 100px;
-  padding-left: 200px;
-  padding-right: 200px;
   background-color: #f0f0f0;
-
-}
-.diferenciais .titulo {
-
 }
 
 .diferenciais .itens {
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
   padding-top: 100px;
   gap: 50px;
 }
 
-
-.diferenciais .itens .cartao {
-  background-image: linear-gradient(to top, #acb7cf, #f6bfc4);
-  height: 270px;
-  width: 300px;
-  border-radius: 50%;
-  opacity: .3;
-}
-
-.destaque {
-  padding-top: 100px;
-  padding-bottom: 100px;
-  padding-left: 200px;
-  padding-right: 200px;
-}
-
 .destaque .imagens {
   display: flex;
   justify-content: space-between;
+  padding: 50px 0px 50px 0px;
 }
 
+/*fazer com canvas html*/

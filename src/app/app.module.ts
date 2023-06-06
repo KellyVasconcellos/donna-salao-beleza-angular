@@ -11,6 +11,7 @@ import { LoginComponent } from './pages/login/login.component';
 import { ContatoComponent } from './pages/contato/contato.component';
 import { AgendamentoComponent } from './pages/agendamento/agendamento.component';
 import { TemplateHomeComponent } from './pages/template-home/template-home.component';
+import { FormaCartaoComponent } from './pages/home/components/forma-cartao/forma-cartao.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { TemplateHomeComponent } from './pages/template-home/template-home.compo
     LoginComponent,
     ContatoComponent,
     AgendamentoComponent,
-    TemplateHomeComponent
+    TemplateHomeComponent,
+    FormaCartaoComponent
   ],
   imports: [
     BrowserModule,
