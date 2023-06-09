@@ -1,7 +1,7 @@
-@import '../../../styles.scss';
+@import "../../../styles.scss";
 
 * {
-  font-family:'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
 }
 
 header {
@@ -25,7 +25,7 @@ header {
   height: 80px;
   position: fixed;
   background-color: #ecc0c3;
-  @include padding-grid(0,100px,0,100px);
+  @include padding-grid(0, 100px, 0, 100px);
 }
 
 .container-menu .menu .menu-principal nav ul li {
@@ -33,7 +33,7 @@ header {
   align-items: baseline;
 }
 
-.container-menu .menu .menu-principal nav ul li:nth-of-type(1n+2) {
+.container-menu .menu .menu-principal nav ul li:nth-of-type(1n + 2) {
   margin-left: 75px;
 }
 
@@ -53,11 +53,11 @@ header {
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
-  @include padding-grid(150px,200px,0,200px);
+  @include padding-grid(150px, 200px, 0, 200px);
 }
 
 .container-menu .menu-texto h1 {
-  font-family: 'Roboto Slab', serif;
+  font-family: "Roboto Slab", serif;
   text-align: center;
   font-size: 3.75rem;
 }
@@ -71,7 +71,7 @@ header {
 footer {
   background-color: #000000;
   color: #b8b8b8;
-  @include padding-grid(0,100px,0,100px);
+  @include padding-grid(0, 100px, 0, 100px);
 }
 
 footer .footer-container {
@@ -83,7 +83,7 @@ footer .footer-container {
 }
 
 footer .footer-container h3 {
-  font-family: 'Roboto Slab', serif;
+  font-family: "Roboto Slab", serif;
   padding: 0px 0px 30px;
 }
 
@@ -92,11 +92,73 @@ footer .p-footer {
   padding: 60px 0px 40px;
 }
 
+@media (max-width: 1152px) {
+  .container-menu .menu {
+    justify-content: space-between;
+    @include padding-grid(0px, 50px, 0, 50px);
+  }
+  .container-menu .menu .menu-principal nav ul li:nth-of-type(1n + 2) {
+    margin-left: 50px;
+  }
+  .container-menu .menu-texto {
+    @include padding-grid(120px, 80px, 0, 80px);
+  }
+  footer {
+    @include padding-grid(0, 50px, 0, 50px);
+  }
+}
+
+@media (max-width: 1024px) {
+  .container-menu .menu {
+    justify-content: space-between;
+    @include padding-grid(0px, 40px, 0, 40px);
+  }
+  .container-menu .menu .menu-principal nav ul li:nth-of-type(1n + 2) {
+    margin-left: 40px;
+  }
+}
+
+@media (max-width: 950px) {
+  .container-menu .menu {
+    justify-content: space-around;
+  }
+  .container-menu .menu .menu-principal {
+    display: none;
+  }
+  .container-menu .menu .botao-login {
+    display: none;
+  }
+}
+
+@media (max-width: 425px) {
+  .container-menu .menu-texto {
+    flex-wrap: wrap;
+    @include padding-grid(80px, 55px, 0px, 55px);
+  }
+  .container-menu .menu-texto h1 {
+    padding: 50px 0 0 0;
+  }
+
+  .container-menu .menu-texto img {
+    padding-top: 50px;
+  }
+  footer .footer-container {
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: start;
+  }
+  footer .footer-container h3 {
+    padding-top: 50px;
+    padding-bottom: 15px;
+  }
+  footer .footer-container img {
+    padding-bottom: 20px;
+  }
+}
 
 /* font-family: 'Roboto', sans-serif;
 font-family: 'Roboto Slab', serif;
 margin: 10px 3px 30px 5px;  /* topo:     margem de 10px */
-                            /* direita/rigth:  margem de 3px  */
-                            /* inferior: margem de 30px */
-                            /* esquerda/left: margem de 5px  */
-
+/* direita/rigth:  margem de 3px  */
+/* inferior: margem de 30px */
+/* esquerda/left: margem de 5px  */
