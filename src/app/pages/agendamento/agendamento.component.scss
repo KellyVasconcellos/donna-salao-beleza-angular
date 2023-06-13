@@ -1,0 +1,101 @@
+@import "../../../styles.scss";
+
+section {
+  @include padding-grid(100px, 200px, 100px, 200px);
+  color: #212529;
+  font-family: "Roboto", serif;
+  line-height: 30px;
+}
+
+.sobre-salao {
+  width: 450px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: flex-start;
+  text-align: justify;
+}
+
+.sobre-salao h2 {
+  padding: 45px 0px 25px 0px;
+}
+
+.sobre-salao .nome-salao {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+.sobre-salao .localizacao {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 30px;
+}
+
+.sobre-salao .funcionamento {
+  display: flex;
+  gap: 30px;
+  padding-bottom: 30px;
+}
+
+.sobre-salao .botao {
+  background-color: #ecc0c3;
+  border-radius: 20px;
+  height: 35px;
+  width: 120px;
+  text-align: center;
+  font-weight: bold;
+}
+
+.equipe-foto {
+  background-color: #f0f0f0;
+}
+
+/*.equipe-foto .equipe p {
+  padding: 25px 0px 45px 0px;
+}*/
+
+.equipe-foto .equipe h2 {
+  padding: 0px 0px 25px 0px;
+}
+
+.equipe-foto .equipe .especialidades {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  text-align: center;
+}
+
+.equipe-foto .equipe .texto-equipe {
+  padding: 0px 0px 25px 0px;
+}
+
+.equipe-foto .equipe .especialidades div {
+  height: 230px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.equipe-foto .equipe .especialidades img {
+  opacity: .3 ;
+}
+
+.equipe-foto .equipe .especialidades img:hover {
+  opacity: 1;
+  cursor: pointer;
+}
+
+
+/*Imagens vao ficar em cinza após escolha do profissional: por no ts
+const button = document.querySelector("button");
+button.addEventListener("click", (event) => {
+  button.textContent = `Click count: ${event.detail}`;
+});*/
+
+
+
