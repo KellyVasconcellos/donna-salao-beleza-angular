@@ -7,6 +7,10 @@ section {
   line-height: 30px;
 }
 
+h5 {
+  margin: 0px;
+}
+
 .sobre-salao {
   width: 450px;
   display: flex;
@@ -38,15 +42,6 @@ section {
   display: flex;
   gap: 30px;
   padding-bottom: 30px;
-}
-
-.sobre-salao .botao {
-  background-color: #ecc0c3;
-  border-radius: 20px;
-  height: 35px;
-  width: 120px;
-  text-align: center;
-  font-weight: bold;
 }
 
 .equipe-foto {
@@ -82,7 +77,7 @@ section {
 }
 
 .equipe-foto .equipe .especialidades img {
-  opacity: .3 ;
+  opacity: 0.3;
 }
 
 .equipe-foto .equipe .especialidades img:hover {
@@ -90,12 +85,47 @@ section {
   cursor: pointer;
 }
 
+.servicos-salao {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.servicos-salao .servico {
+  height: 215px;
+  width: 700px;
+  border: #e0e4e8 1px solid;
+  border-radius: 20px;
+  padding: 30px 30px 30px 30px;
+  margin: 30px 0px 30px 0px;
+}
+
+.servicos-salao .servico .descricao {
+  padding: 8px 0px 20px 0px;
+}
+
+.servicos-salao .servico .preco-botao {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.servicos-salao .servico .preco-botao .preco {
+  display: flex;
+  align-items: center;
+}
+
+.servicos-salao .servico .botao {
+  background-color: #ecc0c3;
+  border-radius: 20px;
+  height: 35px;
+  width: 120px;
+  text-align: center;
+  font-weight: bold;
+}
 
 /*Imagens vao ficar em cinza após escolha do profissional: por no ts
 const button = document.querySelector("button");
 button.addEventListener("click", (event) => {
   button.textContent = `Click count: ${event.detail}`;
 });*/
-
-
-
