@@ -6,3 +6,71 @@ section {
   font-family: "Roboto", serif;
   line-height: 30px;
 }
+
+.sobre {
+  color: #f0f0f0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #000000;
+}
+
+h2 {
+  padding-bottom: 30px;
+}
+
+.sobre .sobre-principal {
+  width: 30%;
+  text-align: justify;
+}
+
+.sobre .sobre-principal p {
+  padding-bottom: 30px;
+}
+
+.sobre .sobre-principal .botao {
+  background-color: #ecc0c3;
+  border-radius: 20px;
+  height: 40px;
+  width: 250px;
+  text-align: center;
+  font-weight: bold;
+}
+
+.sobre .sobre-img {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 70%;
+}
+
+.equipe {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  text-align: justify;
+}
+
+.equipe .foto-equipe {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-top: 50px;
+
+}
+
+.equipe .foto-equipe div {
+  height: 300px;
+  width: 220px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.equipe .foto-equipe div img {
+  margin-bottom: 20px;
+}
