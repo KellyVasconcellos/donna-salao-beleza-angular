@@ -1,0 +1,8 @@
+@import "../../../styles.scss";
+
+section {
+  @include padding-grid(100px, 200px, 100px, 200px);
+  color: #212529;
+  font-family: "Roboto", serif;
+  line-height: 30px;
+}
