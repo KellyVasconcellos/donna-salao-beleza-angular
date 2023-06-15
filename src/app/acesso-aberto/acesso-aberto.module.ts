@@ -4,12 +4,12 @@ import { AgendamentoComponent } from './pages/agendamento/agendamento.component'
 import { ContatoComponent } from './pages/contato/contato.component';
 import { FormaCartaoComponent } from './pages/home/components/forma-cartao/forma-cartao.component';
 import { HomeComponent } from './pages/home/home.component';
-import { LoginComponent } from './pages/login/login.component';
 import { ServicosComponent } from './pages/servicos/servicos.component';
 import { SobreComponent } from './pages/sobre/sobre.component';
 import { MenuHamburguerComponent } from './pages/template-home/components/menu-hamburguer/menu-hamburguer.component';
 import { TemplateHomeComponent } from './pages/template-home/template-home.component';
 import { AcessoAbertoRoutingModule } from './acesso-aberto-routing.module';
+import { AcessoLoginModule } from '../acesso-login/acesso-login.module';
 
 
 
@@ -18,7 +18,6 @@ import { AcessoAbertoRoutingModule } from './acesso-aberto-routing.module';
     HomeComponent,
     SobreComponent,
     ServicosComponent,
-    LoginComponent,
     ContatoComponent,
     AgendamentoComponent,
     TemplateHomeComponent,
@@ -27,7 +26,8 @@ import { AcessoAbertoRoutingModule } from './acesso-aberto-routing.module';
   ],
   imports: [
     CommonModule,
-    AcessoAbertoRoutingModule
+    AcessoAbertoRoutingModule,
+    AcessoLoginModule,
   ]
 })
 export class AcessoAbertoModule { }

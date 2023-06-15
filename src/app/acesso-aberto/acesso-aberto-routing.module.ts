@@ -4,9 +4,11 @@ import { TemplateHomeComponent } from './pages/template-home/template-home.compo
 import { ContatoComponent } from './pages/contato/contato.component';
 import { AgendamentoComponent } from './pages/agendamento/agendamento.component';
 import { HomeComponent } from './pages/home/home.component';
-import { LoginComponent } from './pages/login/login.component';
 import { ServicosComponent } from './pages/servicos/servicos.component';
 import { SobreComponent } from './pages/sobre/sobre.component';
+import { AreaLogadaComponent } from '../acesso-login/view/area-logada/area-logada.component';
+import { CadastrarComponent } from '../acesso-login/view/cadastrar/cadastrar.component';
+import { LoginComponent } from '../acesso-login/view/login/login.component';
 
 const routes: Routes = [
   { path: '', component: TemplateHomeComponent,
@@ -28,10 +30,6 @@ const routes: Routes = [
         component: HomeComponent,
       },
       {
-        path: 'login' ,
-        component: LoginComponent,
-      },
-      {
         path: 'servicos' ,
         component: ServicosComponent,
       },
@@ -39,6 +37,18 @@ const routes: Routes = [
         path: 'sobre' ,
         component: SobreComponent,
       },
+      {
+        path: 'login',
+        component: LoginComponent
+      },
+      {
+        path: 'cadastrar',
+        component: CadastrarComponent
+      },
+      {
+        path: "area-logada",
+        component: AreaLogadaComponent
+      }
     ]
   }
 ];

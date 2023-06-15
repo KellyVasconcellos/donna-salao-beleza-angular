@@ -1,10 +1,11 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { AcessoAbertoRoutingModule } from './acesso-aberto/acesso-aberto-routing.module';
 
 const routes: Routes = [
   {
-    path: 'public',
-    loadChildren: () => import('./acesso-aberto/acesso-aberto.module').then(m => m.AcessoAbertoModule)
+    path: 'acesso-aberto',
+    loadChildren: () => AcessoAbertoRoutingModule
   },
   {
     path: '',

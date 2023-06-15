@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { AcessoAbertoModule } from './acesso-aberto/acesso-aberto.module';
 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -14,7 +15,7 @@ import { AcessoAbertoModule } from './acesso-aberto/acesso-aberto.module';
     BrowserModule,
     AppRoutingModule,
     NgbModule,
-    AcessoAbertoModule
+    AcessoAbertoModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
