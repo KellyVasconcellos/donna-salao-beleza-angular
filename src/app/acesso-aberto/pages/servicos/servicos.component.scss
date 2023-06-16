@@ -6,3 +6,15 @@ section {
   font-family: "Roboto", serif;
   line-height: 30px;
 }
+
+section h2 {
+  padding: 45px 0px 15px 0px;
+}
+
+section p {
+  padding: 8px 0px 20px 0px;
+}
+
+section li::marker {
+color: #ecc0c3;
+}

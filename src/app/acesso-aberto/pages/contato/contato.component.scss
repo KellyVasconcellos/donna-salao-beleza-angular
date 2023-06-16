@@ -1,0 +1,136 @@
+@import "../../../../styles.scss";
+
+main {
+  @include padding-grid(100px, 200px, 100px, 200px);
+  color: #212529;
+  font-family: "Roboto", serif;
+  line-height: 30px;
+}
+
+#contato {
+  background: linear-gradient(#000000 600px,#f0f0f0 0px);
+}
+
+article {
+  background-color: #f0f0f0;
+}
+
+.contato {
+  display: grid;
+  grid-template-columns: 2, 1fr;
+  margin: 0;
+  padding: 0;
+}
+
+.contato-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin: 0;
+  padding: 0;
+}
+
+.contato-container  .contato-dados,
+.contato-formulario {
+  padding: 60px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.contato-dados {
+  border-radius: 5px 0 0 5px;
+  background:#ecc0c3 url("/src/assets/img/contato/bottom-left.svg") no-repeat
+    bottom 20px left 20px;
+}
+
+.contato-formulario {
+  border-radius: 0 5px 5px 0;
+  background: #ffffff url("/src/assets/img/contato/bottom-right.svg") no-repeat
+    bottom 20px right 20px;
+}
+
+
+.contato-dados h2 {
+  margin-bottom: 60px;
+}
+
+.contato-endereco {
+  margin-bottom: 32px;
+  padding-left: 28px;
+  background: url("/src/assets/img/contato/local.svg") no-repeat 0px 2px;
+}
+
+.contato-endereco p {
+  margin-bottom: 8px;
+}
+
+
+
+.contato-meios a {
+  display: block;
+  max-width: max-content;
+  margin-bottom: 8px;
+  padding-left: 28px;
+}
+
+.contato-meios a:hover {
+  color: #ffffff;
+}
+
+.contato-meios a:first-child {
+  background: url("/src/assets/img/contato/email.svg") no-repeat 0px 2px;
+}
+
+.contato-meios a:nth-child(2) {
+  margin-bottom: 32px;
+}
+
+.contato-meios a:nth-child(3) {
+  background: url("/src/assets/img/contato/telefone.svg") no-repeat 0px 2px;
+  margin-bottom: 60px;
+}
+
+
+.form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.form label {
+  display: block;
+  margin-bottom: 4px;
+}
+
+.form .item-1 {
+  grid-column: span 2;
+}
+
+
+.form input[type="text"],
+.form input[type="email"],
+.form textarea {
+  font: 400 1rem/1.5;
+  background:#f7f7f7;
+  border: 1px solid #ededed;
+  padding: 12px;
+  border-radius: 4px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.form input[type="text"]:focus,
+.form input[type="email"]:focus,
+.form textarea:focus {
+  outline: none;
+  border-color:#f9757e;
+  background: #ffffff;
+  box-shadow: 0 0 0 2px #ecc0c3;
+}
+
+@media (max-width: 600px) {
+  .form {
+    grid-template-columns: 1fr;
+  }
+  .form .col-2 {
+    grid-column: 1;
+  }
+}
