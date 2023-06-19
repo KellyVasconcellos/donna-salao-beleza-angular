@@ -19,6 +19,7 @@ import { LoginComponent } from './acesso-login/view/login/login.component';
 import { HttpClientModule } from '@angular/common/http';
 import { ReactiveFormsModule } from '@angular/forms';
 import { FooterComponent } from './acesso-aberto/pages/template-home/components/footer/footer.component';
+import { ProfissionaisComponent } from './acesso-aberto/pages/agendamento/components/profissionais/profissionais.component';
 
 
 @NgModule({
@@ -37,7 +38,8 @@ import { FooterComponent } from './acesso-aberto/pages/template-home/components/
     AreaLogadaComponent,
     ModalEditarComponent,
     ModalEditarComponent,
-    FooterComponent
+    FooterComponent,
+    ProfissionaisComponent
   ],
   imports: [
     BrowserModule,
