@@ -18,6 +18,7 @@ import { CadastrarComponent } from './acesso-login/view/cadastrar/cadastrar.comp
 import { LoginComponent } from './acesso-login/view/login/login.component';
 import { HttpClientModule } from '@angular/common/http';
 import { ReactiveFormsModule } from '@angular/forms';
+import { FooterComponent } from './acesso-aberto/pages/template-home/components/footer/footer.component';
 
 
 @NgModule({
@@ -35,7 +36,8 @@ import { ReactiveFormsModule } from '@angular/forms';
     CadastrarComponent,
     AreaLogadaComponent,
     ModalEditarComponent,
-    ModalEditarComponent
+    ModalEditarComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
