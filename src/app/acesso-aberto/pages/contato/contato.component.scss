@@ -1,6 +1,6 @@
 @import "../../../../styles.scss";
 
-main {
+main, article {
   @include padding-grid(100px, 200px, 100px, 200px);
   color: #212529;
   font-family: "Roboto", serif;
@@ -32,37 +32,47 @@ article {
 }
 
 .contato-container {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
+  display: flex;
   margin: 0;
   padding: 0;
+  width: 100%;
+  justify-content: center;
+
 }
 
 .contato-container  .contato-dados,
 .contato-formulario {
   padding: 60px;
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+  place-items: center;
 }
 
 .contato-container  .contato-dados {
   border-radius: 20px 0 0 20px;
   background:#ecc0c3
     bottom 20px left 20px;
+  height: 642px;
+  width: 500px;
 }
 
 .contato-container  .contato-dados h2 {
   margin-bottom: 60px;
 }
 
-.contato-container .contato-dados .contato-endereco .localizacao {
+.contato-container .contato-dados .localizacao {
   display: flex;
   flex-direction: row;
   justify-content:flex-start;
   gap: 10px;
+  margin-bottom: 0px;
+}
+
+.contato-container .contato-dados .contato-espaço {
+  margin: 0px 0px 45px 35px;
 }
 
 .contato-container .contato-dados .contato-endereco p {
-  margin-bottom: 8px;
+  margin-bottom: 40px;
 }
 
 .contato-container .contato-dados .contato-meios a:hover {
@@ -74,11 +84,21 @@ article {
   flex-direction: row;
   justify-content:flex-start;
   gap: 10px;
+  align-items: center;
 }
+
+.contato-container .contato-dados .contato-meios .e-mail {
+  margin-bottom: 45px;
+}
+
+
+
 
 .contato-container  .contato-formulario {
   border-radius: 0 20px 20px 0;
   background: #ffffff bottom 20px right 20px;
+  height: 642px;
+  width: 750px;
 }
 
 .contato-container .contato-formulario .form {
@@ -122,7 +142,6 @@ article {
   background: linear-gradient(#f6bfc4, #acb7cf);
   border-radius: 20px;
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
-  color: var(--cor-p5);
   font: 600 1.125rem/1.35;
   max-width: max-content;
   border: none;
@@ -135,6 +154,50 @@ article {
   opacity:0.7;
 }
 
+article h1 {
+  padding-bottom: 60px;
+  font-size: 60px;
+}
+
+.endereco {
+  display: flex;
+  flex-direction: column;
+  padding-left: 126.5px;
+}
+
+.endereco iframe {
+border-radius: 20px 20px 0px 0px;
+}
+
+.endereco .endereco-texto {
+  background-color: #ffffff;
+  width: 500px;
+  border-radius: 0px 0px 20px 20px;
+}
+
+.endereco .endereco-texto h3 {
+  padding: 45px 0px 30px 0px;
+}
+
+.endereco .endereco-texto {
+  padding: 0px 35px 35px 35px;
+}
+
+.endereco .endereco-texto .texto {
+  padding-bottom: 30px;
+}
+
+.endereco .endereco-texto .icone-texto .texto-p {
+  padding-left: 40px;
+}
+
+.endereco .endereco-texto .icone-texto .icone {
+  display: flex;
+  flex-direction: row;
+  justify-content:flex-start;
+  gap: 10px;
+  margin-bottom: 0px;
+}
 
 @media (max-width: 600px) {
   .form {

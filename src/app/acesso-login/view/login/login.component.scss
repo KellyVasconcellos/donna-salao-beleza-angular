@@ -1,3 +1,7 @@
+main {
+  width: 100%;
+  background-color: #f0f0f0;
+}
 
 .caixa {
   display: flex;
@@ -26,7 +30,7 @@
 
 .caixa .caixa-login .area-de-login {
   width: 40%;
-  background: #58af9b;
+  background: #ecc0c3;
   border-radius: 15px 0px 0px 15px;
   display: flex;
   justify-content: center;
@@ -55,7 +59,7 @@
   font-weight: bold;
   width: 150px;
   margin-top: 1rem;
-  background-color: #58af9b;
+  background-color: #ecc0c3;
   border: 1px solid #fff;
   border-radius: 15px;
   text-transform: uppercase;
@@ -64,13 +68,13 @@
 
 .caixa .caixa-login .botao-entrar:hover {
   background-color: #fff;
-  color: #58af9b;
+  color: #ecc0c3;
   cursor: pointer;
 }
 
 .caixa .caixa-login .criar-login {
   width: 60%;
-  background: #fff;
+  background: #ffffff;
   border-radius: 0px 15px 15px 0px;
   display: flex;
   justify-content: center;
@@ -83,7 +87,7 @@
 }
 
 .caixa .caixa-login .criar-login .segundo-titulo {
-  color: #58af9b;
+  color: #ecc0c3;
 }
 
 .caixa .caixa-login .criar-login .p-titulo2 {
@@ -109,7 +113,7 @@
 }
 
 .caixa .caixa-login .criar-login .icones-gerais .icones-redes:hover {
-  background: #58af9b;
+  background: #ecc0c3;
   color: #fff;
   cursor: pointer;
 }
@@ -158,8 +162,8 @@
   align-self: center;
   border: none;
   margin-top: 1rem;
-  background-color: #58af9b;
-  border: 1px solid #58af9b;
+  background-color: #ecc0c3;
+  border: 1px solid #ecc0c3;
   border-radius: 15px;
   text-transform: uppercase;
   color: #fff;
@@ -168,8 +172,8 @@
 .caixa .caixa-login .criar-login .form .botao-form:hover {
   cursor: pointer;
   background-color: #fff;
-  border: 1px solid #58af9b;
-  color: #58af9b;
+  border: 1px solid #ecc0c3;
+  color: #ecc0c3;
 }
 
 .caixa .caixa-login-two .form h4 {

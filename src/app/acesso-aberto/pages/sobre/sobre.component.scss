@@ -47,30 +47,9 @@ h2 {
 }
 
 .equipe {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: space-between;
   text-align: justify;
 }
 
-.equipe .foto-equipe {
-  width: 100%;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  margin-top: 50px;
-
-}
-
-.equipe .foto-equipe div {
-  height: 300px;
-  width: 220px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.equipe .foto-equipe div img {
-  margin-bottom: 20px;
+.equipe p {
+  padding-bottom: 30px;
 }

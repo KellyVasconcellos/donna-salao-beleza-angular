@@ -41,38 +41,32 @@ h5 {
 .sobre-salao .funcionamento {
   display: flex;
   gap: 30px;
-  padding-bottom: 30px;
 }
 
-.equipe-foto {
-  background-color: #f0f0f0;
+.equipe-foto .equipe h2{
+  padding: 0px 0px 30px 0px;
 }
 
-/*.equipe-foto .equipe p {
-  padding: 25px 0px 45px 0px;
-}*/
-
-.equipe-foto .equipe h2 {
-  padding: 0px 0px 25px 0px;
-}
-
-.equipe-foto .equipe .texto-equipe {
-  padding: 0px 0px 25px 0px;
+.equipe-foto .equipe p{
+  padding: 0px 0px 30px 0px;
 }
 
 .servicos-salao {
-  width: 100%;
   display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
   justify-content: space-between;
 }
 
 .servicos-salao .servico {
+  flex-basis:50%;
   height: 215px;
   width: 700px;
   border: #e0e4e8 1px solid;
   border-radius: 20px;
   padding: 30px 30px 30px 30px;
-  margin: 30px 0px 30px 0px;
+  gap: 45px;
+  margin-top: 45px;
 }
 
 .servicos-salao .servico .descricao {

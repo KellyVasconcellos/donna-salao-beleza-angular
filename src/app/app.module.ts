@@ -1,26 +1,25 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
-import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
-import { AgendamentoComponent } from './acesso-aberto/pages/agendamento/agendamento.component';
-import { ContatoComponent } from './acesso-aberto/pages/contato/contato.component';
-import { FormaCartaoComponent } from './acesso-aberto/pages/home/components/forma-cartao/forma-cartao.component';
 import { HomeComponent } from './acesso-aberto/pages/home/home.component';
-import { ServicosComponent } from './acesso-aberto/pages/servicos/servicos.component';
 import { SobreComponent } from './acesso-aberto/pages/sobre/sobre.component';
-import { MenuHamburguerComponent } from './acesso-aberto/pages/template-home/components/menu-hamburguer/menu-hamburguer.component';
+import { ServicosComponent } from './acesso-aberto/pages/servicos/servicos.component';
+import { ContatoComponent } from './acesso-aberto/pages/contato/contato.component';
+import { AgendamentoComponent } from './acesso-aberto/pages/agendamento/agendamento.component';
 import { TemplateHomeComponent } from './acesso-aberto/pages/template-home/template-home.component';
-import { ModalEditarComponent } from './acesso-login/components/modal-editar/modal-editar.component';
-import { AreaLogadaComponent } from './acesso-login/view/area-logada/area-logada.component';
-import { CadastrarComponent } from './acesso-login/view/cadastrar/cadastrar.component';
+import { FormaCartaoComponent } from './acesso-aberto/components/forma-cartao/forma-cartao.component';
+import { MenuHamburguerComponent } from './acesso-aberto/components/menu-hamburguer/menu-hamburguer.component';
 import { LoginComponent } from './acesso-login/view/login/login.component';
+import { CadastrarComponent } from './acesso-login/view/cadastrar/cadastrar.component';
+import { AreaLogadaComponent } from './acesso-login/view/area-logada/area-logada.component';
+import { ModalEditarComponent } from './acesso-login/components/modal-editar/modal-editar.component';
+import { FooterComponent } from './acesso-aberto/components/footer/footer.component';
+import { ProfissionaisComponent } from './acesso-aberto/components/profissionais/profissionais.component';
+import { BackgroundPretoComponent } from './acesso-aberto/components/background-preto/background-preto.component';
 import { HttpClientModule } from '@angular/common/http';
 import { ReactiveFormsModule } from '@angular/forms';
-import { FooterComponent } from './acesso-aberto/pages/template-home/components/footer/footer.component';
-import { ProfissionaisComponent } from './acesso-aberto/pages/agendamento/components/profissionais/profissionais.component';
-
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { AppRoutingModule } from './app-routing.module';
 
 @NgModule({
   declarations: [
@@ -37,18 +36,18 @@ import { ProfissionaisComponent } from './acesso-aberto/pages/agendamento/compon
     CadastrarComponent,
     AreaLogadaComponent,
     ModalEditarComponent,
-    ModalEditarComponent,
     FooterComponent,
-    ProfissionaisComponent
+    ProfissionaisComponent,
+    BackgroundPretoComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     NgbModule,
     ReactiveFormsModule,
-    HttpClientModule
+    HttpClientModule,
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

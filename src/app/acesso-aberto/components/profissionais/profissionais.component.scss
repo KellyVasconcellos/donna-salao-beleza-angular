@@ -1,0 +1,37 @@
+.especialidades {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin: 0;
+}
+
+.especialidades img:hover {
+  opacity: 1;
+  cursor: pointer;
+}
+
+.especialidades .foto {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: center;
+  margin: 0;
+}
+
+.especialidades p {
+  width: 200px;
+  text-align: center;
+  margin: 0;
+  font-style: italic;
+
+}
+
+.especialidades .foto .nome {
+  font-family: "Roboto Slab", serif;
+  color:#ecc0c3;
+  font-weight: bold;
+  font-size: 1.125rem;
+  padding: 10px 0px 10px 0px;
+}
