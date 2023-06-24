@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-background-preto',
@@ -6,5 +6,10 @@ import { Component } from '@angular/core';
   styleUrls: ['./background-preto.component.scss']
 })
 export class BackgroundPretoComponent {
+
+  @Input() primeiraImagem: string = ""
+  @Input() segundaImagem: string = ""
+  @Input() terceiraImagem: string = ""
+  @Input() textoBotao: string =""
 
 }
