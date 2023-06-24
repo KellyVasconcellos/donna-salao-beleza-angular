@@ -39,7 +39,7 @@ export class LoginComponent implements OnInit {
         console.log(resposta)
         if (resposta.length) {
           if (resposta[0].senha === form.senha) {
-            this.router.navigateByUrl("/area-logada")
+            this.router.navigateByUrl("/home-fechada")
           } else {
             this.mensagemErro = "Usuário ou Senha inválida"
           }

@@ -20,6 +20,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { ReactiveFormsModule } from '@angular/forms';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { AppRoutingModule } from './app-routing.module';
+import { HomeFechadaComponent } from './acesso-fechado/pages/home-fechada/home-fechada.component';
 
 @NgModule({
   declarations: [
@@ -38,7 +39,8 @@ import { AppRoutingModule } from './app-routing.module';
     ModalEditarComponent,
     FooterComponent,
     ProfissionaisComponent,
-    BackgroundPretoComponent
+    BackgroundPretoComponent,
+    HomeFechadaComponent
   ],
   imports: [
     BrowserModule,

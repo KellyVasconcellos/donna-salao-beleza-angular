@@ -9,53 +9,56 @@ import { TemplateHomeComponent } from './acesso-aberto/pages/template-home/templ
 import { AreaLogadaComponent } from './acesso-login/view/area-logada/area-logada.component';
 import { CadastrarComponent } from './acesso-login/view/cadastrar/cadastrar.component';
 import { LoginComponent } from './acesso-login/view/login/login.component';
+import { HomeFechadaComponent } from './acesso-fechado/pages/home-fechada/home-fechada.component';
 
 const routes: Routes = [
-  { path: '', component: TemplateHomeComponent,
+  {
+    path: '',
+    component: TemplateHomeComponent,
     children: [
       {
-        path: '' ,
+        path: '',
         component: HomeComponent,
       },
       {
-        path: 'contato' ,
+        path: 'contato',
         component: ContatoComponent,
       },
       {
-        path: 'agendamento' ,
+        path: 'agendamento',
         component: AgendamentoComponent,
       },
       {
-        path: 'home' ,
+        path: 'home',
         component: HomeComponent,
       },
       {
-        path: 'servicos' ,
+        path: 'servicos',
         component: ServicosComponent,
       },
       {
-        path: 'sobre' ,
+        path: 'sobre',
         component: SobreComponent,
       },
       {
         path: 'login',
-        component: LoginComponent
+        component: LoginComponent,
       },
       {
         path: 'cadastrar',
-        component: CadastrarComponent
+        component: CadastrarComponent,
       },
       {
-        path: "area-logada",
-        component: AreaLogadaComponent
-      }
-    ]
-  }
+        path: 'area-logada',
+        component: AreaLogadaComponent,
+      },
+    ],
+  },
+  { path: 'home-fechada', component: HomeFechadaComponent },
 ];
-
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {}
