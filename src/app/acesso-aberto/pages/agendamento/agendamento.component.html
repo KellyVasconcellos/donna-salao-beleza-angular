@@ -28,11 +28,10 @@
       <div class="funcionamento">
         <div class="func-dia" *ngFor="let item of horarios">
           <div class="func-hoje">
-            <p>&nbsp;</p>
-            <p>&nbsp;</p>
-            <img src="assets/img/agendamento/calendario.png" width="30" />
-            <p>Hoje</p>
+            <img *ngIf="diaAtual(item.dia)" src="assets/img/agendamento/calendario.png" width="30" />
+            <p *ngIf="diaAtual(item.dia)">Hoje</p>
           </div>
+          <!-- para deixar em negrito usar condição do ngClass pesquisar no google, e subir ou descer com as datas é um componente bootstrap-->
           <div class="func-dia-semana">
             <p>{{ item.dia }}</p>
             <p>{{ item.horario }}</p>
