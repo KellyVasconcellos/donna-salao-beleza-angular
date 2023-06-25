@@ -26,29 +26,17 @@
 
       <h2>Horários de funcionamento</h2>
       <div class="funcionamento">
-        <div>
-          <img src="assets/img/agendamento/calendario.png" width="30" />
-        </div>
-        <div>
-          <p>Hoje</p>
-        </div>
-        <div>
-          <p>Segunda-Feira</p>
-          <p>Terça-Feira</p>
-          <p>Quarta-Feira</p>
-          <p>Quinta-Feira</p>
-          <p>Sexta-Feira</p>
-          <p>Sábado</p>
-          <p>Domingo</p>
-        </div>
-        <div>
-          <p>09:00 - 21:00</p>
-          <p>09:00 - 21:00</p>
-          <p>09:00 - 21:00</p>
-          <p>09:00 - 21:00</p>
-          <p>09:00 - 21:00</p>
-          <p>08:00 - 19:00</p>
-          <p>Fechado</p>
+        <div class="func-dia" *ngFor="let item of horarios">
+          <div class="func-hoje">
+            <p>&nbsp;</p>
+            <p>&nbsp;</p>
+            <img src="assets/img/agendamento/calendario.png" width="30" />
+            <p>Hoje</p>
+          </div>
+          <div class="func-dia-semana">
+            <p>{{ item.dia }}</p>
+            <p>{{ item.horario }}</p>
+          </div>
         </div>
       </div>
     </div>
@@ -63,7 +51,6 @@
     </div>
     <app-profissionais></app-profissionais>
   </section>
-
 
   <section>
     <div class="servicos-salao">
@@ -87,9 +74,9 @@
         <div class="servico">
           <h4>Avaliação de Cor</h4>
           <p class="descricao">
-            Consultoria para escolher o melhor procedimento de pintura de
-            acordo com a estrutura capilar. É realizado teste de mecha para
-            verificar a resistência dos fios e cor adequada.
+            Consultoria para escolher o melhor procedimento de pintura de acordo
+            com a estrutura capilar. É realizado teste de mecha para verificar a
+            resistência dos fios e cor adequada.
           </p>
           <div class="preco-botao">
             <h5>R$90,00</h5>
@@ -108,7 +95,9 @@
 
         <div class="servico">
           <h4>Mechas Ombré</h4>
-          <p class="descricao">Clareamento do cabelo por mechas, luzes e ombré.</p>
+          <p class="descricao">
+            Clareamento do cabelo por mechas, luzes e ombré.
+          </p>
           <div class="preco-botao">
             <h5>R$650,00</h5>
             <button class="botao">Agendar</button>
@@ -150,7 +139,9 @@
 
         <div class="servico">
           <h4>Penteado</h4>
-          <p class="descricao">Estar com o cabelo limpo e sem produto de finalização.</p>
+          <p class="descricao">
+            Estar com o cabelo limpo e sem produto de finalização.
+          </p>
           <div class="preco-botao">
             <h5>R$350,00</h5>
             <button class="botao">Agendar</button>
@@ -213,7 +204,9 @@
 
         <div class="servico">
           <h4>Podologia</h4>
-          <p class="descricao">Para tratamentos específicos entrar em contato.</p>
+          <p class="descricao">
+            Para tratamentos específicos entrar em contato.
+          </p>
           <div class="preco-botao">
             <div class="preco">
               <p>A partir de &nbsp;</p>
@@ -246,7 +239,9 @@
 
         <div class="servico">
           <h4>Modelagem de sobrancelha</h4>
-          <p class="descricao">Procedimento tradicional, remoção e desenho dos pêlos.</p>
+          <p class="descricao">
+            Procedimento tradicional, remoção e desenho dos pêlos.
+          </p>
           <div class="preco-botao">
             <h5>R$95,00</h5>
             <button class="botao">Agendar</button>

@@ -40,7 +40,27 @@ h5 {
 
 .sobre-salao .funcionamento {
   display: flex;
-  gap: 30px;
+  gap: 5px;
+  flex-direction: column;
+}
+
+.sobre-salao .funcionamento .func-dia {
+  display: flex;
+  width: 400px;
+  justify-content: space-between;
+}
+
+.sobre-salao .funcionamento .func-dia .func-hoje {
+  display: flex;
+  width: 30%;
+  justify-content: space-around;
+}
+
+.sobre-salao .funcionamento .func-dia .func-dia-semana {
+  display: flex;
+  width: 70%;
+  justify-content: space-between;
+  padding-left: 20px;
 }
 
 .equipe-foto .equipe h2{
