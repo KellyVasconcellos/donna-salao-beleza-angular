@@ -18,11 +18,15 @@ export class FuncionarioService {
     return this.http.get<Array<IFuncionario>>(this.apiFuncionario)
   }
 
-  getServicos() {
-    return this.http.get<Array<IServico>>(this.apiServico)
+  getServicosPorFuncionario(id:number) {
+    return this.http.get<Array<IServico>>(`${this.apiServico}?id_funcionario=${id}`)
   }
 
   getListaServico() {
     return this.http.get<Array<IListaServico>>(this.apiListaServico)
   }
+
+  // login(email: string) {
+  //   return this.http.get<IUsuario>(`${this.apiUsuario}?email=${email}`)
+  // }
 }

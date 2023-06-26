@@ -52,7 +52,10 @@
         Confira tudo que o Donna tem para você, clique no profissional desejado:
       </p>
     </div>
-    <app-profissionais [profissionais]="funcionarios"></app-profissionais>
+    <app-profissionais
+    [profissionais]="funcionarios"
+    (idFuncionario)="getIdFuncionario($event)"
+    ></app-profissionais>
   </section>
 
   <section>
@@ -72,6 +75,7 @@
       </div>
 
       <!-- <div *ngFor="let item of servico.servicos">
+      *ngIf="formLogar.get('email')?.errors?.['required'] && submetido"
         <div class="servico">
           <h4>{{ item.titulo }}</h4>
           <p class="descricao">{{ item.descricao }}</p>

@@ -1,6 +1,6 @@
 <div class="especialidades">
   <div class="foto" *ngFor="let funcionario of profissionais">
-    <img src="assets/img/agendamento/{{funcionario.foto}}" width="180" />
+    <a (click)="getId(funcionario.id)"><img src="assets/img/agendamento/{{funcionario.foto}}" width="180" /></a>
     <p class="nome">{{funcionario.nome}}</p>
     <p>{{funcionario.especialidade}}</p>
   </div>

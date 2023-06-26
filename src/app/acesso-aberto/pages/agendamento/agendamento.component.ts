@@ -34,11 +34,16 @@ export class AgendamentoComponent implements OnInit {
         this.listaServico = resposta
       })
 
-      this.funcionarioService.getServicos()
-      .subscribe((resposta: Array<IServico>) => {
-        this.servicos = resposta
-        this.servico = this.servicos[0]
-      })
+      // this.funcionarioService.getServicosPorFuncionario()
+      // .subscribe((resposta: Array<IServico>) => {
+      //   this.servicos = resposta
+      //   this.servico = this.servicos[0]
+      // })
+  }
+
+  getIdFuncionario(id:number):void {
+   //quando clicar na imagem deve capturar o id e enviar pro serviço
+   console.log(id)
   }
 
 
