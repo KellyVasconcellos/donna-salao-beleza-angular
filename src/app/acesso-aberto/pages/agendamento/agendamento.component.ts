@@ -1,15 +1,35 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { IHorario } from '../../interface/horario';
 import { DiaHorarioEnum } from '../../enum/diaHorario';
+import { FuncionarioService } from '../../service/funcionario.service';
+import { IFuncionario } from '../../interface/funcionario';
 
 @Component({
   selector: 'app-agendamento',
   templateUrl: './agendamento.component.html',
   styleUrls: ['./agendamento.component.scss']
 })
+export class AgendamentoComponent implements OnInit {
 
+  funcionarios: Array<IFuncionario> = []
 
-export class AgendamentoComponent {
+  profissionais = []
+
+  constructor(private funcionarioService: FuncionarioService) {}
+
+  ngOnInit(): void {
+    this.funcionarioService.getFuncionarios()
+      .subscribe((resposta: Array<IFuncionario>) => {
+        this.funcionarios = resposta
+        // criar uma lista de funcionarios pegando foto,nome e especialidade
+        //criar uma classe para poder passar para dentro do componente
+        //this.funcionarios.forEach(item => {
+        //   this.profissionais.push(item.)
+        // })
+        // this.profissionais.push(this.)
+      })
+
+  }
 
   horarios: Array<IHorario> = [
     {
@@ -41,7 +61,6 @@ export class AgendamentoComponent {
       horario: "Fechado"
     },
   ];
-
 
   diaAtual(dia:string): boolean {
     const data = new Date()

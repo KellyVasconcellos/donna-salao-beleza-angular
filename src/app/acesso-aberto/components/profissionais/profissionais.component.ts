@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-profissionais',
@@ -6,5 +6,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./profissionais.component.scss']
 })
 export class ProfissionaisComponent {
+
+  @Input() foto: string = ""
+  @Input() nome: string = ""
+  @Input() especialidade: string = ""
 
 }

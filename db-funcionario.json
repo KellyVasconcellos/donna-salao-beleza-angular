@@ -1,0 +1,174 @@
+{
+  "funcionario": [
+    {
+      "id":1,
+      "foto": "clarice.png",
+      "nome": "Clarice Campos",
+      "especialidade": "Cabeleireira Especialista em Visagismo e Coloração",
+      "servicos": [
+        {
+          "titulo": "Avaliação de Imagem",
+          "descricao": "Consultoria para indicar o visual mais apropriado para a imagem que a cliente quer transmitir, o serviço inclui corte, finalização e coloração (caso necessário).",
+          "especifica_preco": "A partir de",
+          "preco": "1200.00"
+        },
+        {
+          "titulo":"Avaliação de Cor",
+          "descricao":"Consultoria para escolher o melhor procedimento de pintura de acordo com a estrutura capilar. É realizado teste de mecha para verificar a resistência dos fios e cor adequada.",
+          "especifica_preco": "",
+          "preco": "90.00"
+        },
+        {
+          "titulo":"Coloração",
+          "descricao":"Tingimento total do cabelo.",
+          "especifica_preco": "",
+          "preco":"500.00"
+        },
+        {
+          "titulo":"Mechas Ombré",
+          "descricao":"Clareamento do cabelo por mechas, luzes e ombré.",
+          "especifica_preco": "",
+          "preco":"650.00"
+        },
+        {
+          "titulo":"Corte",
+          "descricao":"Corte, lavagem e finalização com escova.",
+          "especifica_preco": "",
+          "preco":"200.00"
+        }
+      ]
+    },
+
+    {
+      "id":2,
+      "foto": "teresa.png",
+      "nome": "Teresa Maria",
+      "especialidade": "Cabeleireira Especialista em Terapia Capilar",
+      "servicos": [
+        {
+          "titulo":"Corte",
+          "descricao":"Corte, lavagem e finalização com escova.",
+          "especifica_preco": "",
+          "preco":"200.00"
+        },
+        {
+          "titulo":"Corte a seco",
+          "descricao":"Corte a seco, após o procedimento é realizado lavagem e finalização com o cabelo natural.",
+          "especifica_preco": "",
+          "preco":"200.00"
+        },
+        {
+          "titulo":"Hidratação",
+          "descricao":"Higienização, tratamento e finalização com produtos específicos para cada tipo de cabelo.",
+          "especifica_preco": "",
+          "preco":"400.00"
+        },
+        {
+          "titulo":"Penteado",
+          "descricao":"Estar com o cabelo limpo e sem produto de finalização.",
+          "especifica_preco": "",
+          "preco":"350.00"
+        }
+      ]
+    },
+
+    {
+      "id":3,
+      "foto": "serena.png",
+      "nome": "Serena Souza",
+      "especialidade": "Hair Stylist e Sobrancelha",
+      "servicos": [
+        {
+          "titulo": "Avaliação de Imagem",
+          "descricao": "Consultoria para indicar o visual mais apropriado para a imagem que a cliente quer transmitir, o serviço inclui corte, finalização e coloração (caso necessário).",
+          "especifica_preco": "A partir de",
+          "preco": "1200.00"
+        },
+        {
+          "titulo":"Corte",
+          "descricao":"Corte, lavagem e finalização com escova.",
+          "especifica_preco": "",
+          "preco":"200.00"
+        },
+        {
+          "titulo":"Corte a seco",
+          "descricao":"Corte a seco, após o procedimento é realizado lavagem e finalização com o cabelo natural.",
+          "especifica_preco": "",
+          "preco":"200.00"
+        },
+        {
+          "titulo":"Modelagem de sobrancelha",
+          "descricao":"Procedimento tradicional, remoção e desenho dos pêlos.",
+          "especifica_preco": "",
+          "preco":"95.00"
+        },
+        {
+          "titulo":"Brow lamination",
+          "descricao":"Técnica de alisamento e alinhamento, que deixa os fios com a impressão de estarem mais volumosos.",
+          "especifica_preco": "",
+          "preco":"280.00"
+        }
+      ]
+    },
+
+    {
+      "id":4,
+      "foto": "olivia.png",
+      "nome": "Olivia Maldonato",
+      "especialidade": "Maquiadora",
+      "servicos": [
+        {
+          "titulo": "Maquiagem Social",
+          "descricao": "CMaquiagem manual.",
+          "especifica_preco": "",
+          "preco": "350.00"
+        },
+        {
+          "titulo":"Maquiagem Airbrush",
+          "descricao":"Procedimento visa durabilidade e com efeito mais pesado, ideal para casamentos, formaturas e eventos.",
+          "especifica_preco": "",
+          "preco": "650.00"
+        }
+      ]
+    },
+
+    {
+      "id":5,
+      "foto": "madalena.png",
+      "nome": "Madalena Silva",
+      "especialidade": "Manicure e Podóloga",
+      "servicos": [
+        {
+          "titulo": "Esmaltação tradicional",
+          "descricao": "Mão e pé.",
+          "especifica_preco": "",
+          "preco": "60.00"
+        },
+        {
+          "titulo":"Alongamento de unha de gel",
+          "descricao":"Extensão da unha e coloração.",
+          "especifica_preco": "",
+          "preco": "160.00"
+        },
+        {
+          "titulo":"Manutenção da unha de gel",
+          "descricao":"Inclui coloração.",
+          "especifica_preco": "",
+          "preco":"85.00"
+        },
+        {
+          "titulo":"Blindagem",
+          "descricao":"Película protetora de gel para reforçar as unhas, evitando quebras e lesões, inclui coloração.",
+          "especifica_preco": "",
+          "preco":"120.00"
+        },
+        {
+          "titulo":"Podologia",
+          "descricao":"Para tratamentos específicos entrar em contato.",
+          "especifica_preco": "",
+          "preco":"120.00"
+        }
+      ]
+    }
+  ]
+}
