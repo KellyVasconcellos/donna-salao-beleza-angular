@@ -45,38 +45,45 @@
     </div>
   </section>
 
-  <div *ngFor="let funcionario of funcionarios">
-    <section class="equipe-foto">
-      <div class="equipe">
-        <h2>Serviços oferecidos</h2>
-        <p class="texto-equipe">
-          Confira tudo que o Donna tem para você, clique no profissional
-          desejado:
-        </p>
-      </div>
-      <app-profissionais
-        foto="{{funcionario.foto}}"
-        nome="{{funcionario.nome}}"
-        especialidade="{{funcionario.especialidade}}"
-      ></app-profissionais>
-    </section>
+  <section class="equipe-foto">
+    <div class="equipe">
+      <h2>Serviços oferecidos</h2>
+      <p class="texto-equipe">
+        Confira tudo que o Donna tem para você, clique no profissional desejado:
+      </p>
+    </div>
+    <app-profissionais [profissionais]="funcionarios"></app-profissionais>
+  </section>
 
-    <section>
-      <div class="servicos-salao">
-        <div *ngFor="let servico of funcionario.servicos">
-          <div class="servico">
-            <h4>{{servico.titulo}}</h4>
-            <p class="descricao">{{servico.descricao}}</p>
-            <div class="preco-botao">
-              <div class="preco">
-                <p>{{servico.especifica_preco}}</p>
-                <h5>{{servico.preco}}</h5>
-              </div>
-              <button class="botao">Agendar</button>
+  <section>
+    <div class="servicos-salao">
+      <div *ngFor="let item of listaServico">
+        <div class="servico">
+          <h4>{{ item.titulo }}</h4>
+          <p class="descricao">{{ item.descricao }}</p>
+          <div class="preco-botao">
+            <div class="preco">
+              <p>{{ item.especifica_preco }}</p>
+              <h5>{{ item.preco }}</h5>
             </div>
+            <button class="botao">Agendar</button>
           </div>
         </div>
       </div>
-    </section>
-  </div>
+
+      <!-- <div *ngFor="let item of servico.servicos">
+        <div class="servico">
+          <h4>{{ item.titulo }}</h4>
+          <p class="descricao">{{ item.descricao }}</p>
+          <div class="preco-botao">
+            <div class="preco">
+              <p>{{ item.especifica_preco }}</p>
+              <h5>{{ item.preco }}</h5>
+            </div>
+            <button class="botao">Agendar</button>
+          </div>
+        </div>
+      </div> -->
+    </div>
+  </section>
 </main>

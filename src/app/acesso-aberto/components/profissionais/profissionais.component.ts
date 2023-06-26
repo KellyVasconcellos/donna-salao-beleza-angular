@@ -1,4 +1,5 @@
 import { Component, Input } from '@angular/core';
+import { IFuncionario } from '../../interface/funcionario';
 
 @Component({
   selector: 'app-profissionais',
@@ -7,8 +8,5 @@ import { Component, Input } from '@angular/core';
 })
 export class ProfissionaisComponent {
 
-  @Input() foto: string = ""
-  @Input() nome: string = ""
-  @Input() especialidade: string = ""
-
+  @Input() profissionais: Array<IFuncionario> = []
 }

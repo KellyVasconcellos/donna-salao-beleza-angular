@@ -9,6 +9,8 @@ testar funcionalidade login
 
 deletar área logada dentro do login e criar um novo app de área logada (Serviços pré escolhidos na area publica)
 
+***como subir em 2 portas: json-server --watch db-servicos.json --port 3001
+
 ver serviços e como colocar no db.json
         {
           "titulo":"Dia da Noiva",
@@ -27,3 +29,5 @@ Penteado - pacote mensal inclui 4 penteados no mês (1x por semana)
 Maquiagem manual casual - pacote dá direito a 4 maquiagens que podem ser utilizadas de acordo com a necessidade da cliente.
 Obs: A contratação deve ser feita presencialmente no salão, sujeito a disponibilidade.
         }
+
+

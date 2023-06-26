@@ -3,6 +3,8 @@ import { IHorario } from '../../interface/horario';
 import { DiaHorarioEnum } from '../../enum/diaHorario';
 import { FuncionarioService } from '../../service/funcionario.service';
 import { IFuncionario } from '../../interface/funcionario';
+import { IServico } from '../../interface/servico';
+import { IListaServico } from '../../interface/lista_servico';
 
 @Component({
   selector: 'app-agendamento',
@@ -12,8 +14,12 @@ import { IFuncionario } from '../../interface/funcionario';
 export class AgendamentoComponent implements OnInit {
 
   funcionarios: Array<IFuncionario> = []
+  servicos: Array<IServico> = []
+  servico!: IServico
+  listaServico: Array<IListaServico> = []
 
   profissionais = []
+
 
   constructor(private funcionarioService: FuncionarioService) {}
 
@@ -21,15 +27,23 @@ export class AgendamentoComponent implements OnInit {
     this.funcionarioService.getFuncionarios()
       .subscribe((resposta: Array<IFuncionario>) => {
         this.funcionarios = resposta
-        // criar uma lista de funcionarios pegando foto,nome e especialidade
-        //criar uma classe para poder passar para dentro do componente
-        //this.funcionarios.forEach(item => {
-        //   this.profissionais.push(item.)
-        // })
-        // this.profissionais.push(this.)
       })
 
+      this.funcionarioService.getListaServico()
+      .subscribe((resposta: Array<IListaServico>) => {
+        this.listaServico = resposta
+      })
+
+      this.funcionarioService.getServicos()
+      .subscribe((resposta: Array<IServico>) => {
+        this.servicos = resposta
+        this.servico = this.servicos[0]
+      })
   }
+
+
+
+
 
   horarios: Array<IHorario> = [
     {
