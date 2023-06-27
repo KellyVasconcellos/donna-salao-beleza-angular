@@ -18,7 +18,7 @@ import { ProfissionaisComponent } from './acesso-aberto/components/profissionais
 import { BackgroundPretoComponent } from './acesso-aberto/components/background-preto/background-preto.component';
 import { HttpClientModule } from '@angular/common/http';
 import { ReactiveFormsModule } from '@angular/forms';
-import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { NgbAccordionModule, NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { AppRoutingModule } from './app-routing.module';
 import { HomeFechadaComponent } from './acesso-fechado/pages/home-fechada/home-fechada.component';
 
@@ -40,7 +40,7 @@ import { HomeFechadaComponent } from './acesso-fechado/pages/home-fechada/home-f
     FooterComponent,
     ProfissionaisComponent,
     BackgroundPretoComponent,
-    HomeFechadaComponent
+    HomeFechadaComponent,
   ],
   imports: [
     BrowserModule,
@@ -48,6 +48,7 @@ import { HomeFechadaComponent } from './acesso-fechado/pages/home-fechada/home-f
     NgbModule,
     ReactiveFormsModule,
     HttpClientModule,
+    NgbAccordionModule
   ],
   providers: [],
   bootstrap: [AppComponent],

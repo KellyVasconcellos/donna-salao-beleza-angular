@@ -31,7 +31,10 @@
           fotográfico (que é oferecido a cliente como cortesia ao final do seu atendimento), tem como propósito oferecer uma experiência apaixonate as clientes Donna, principalmente por saber que, por trás de toda beleza, existe uma história para contar, valorizamos cada história.
         </p>
       </div>
-      <app-profissionais></app-profissionais>
+      <app-profissionais
+    [profissionais]="funcionarios"
+    (idFuncionario)="getIdFuncionario($event)"
+    ></app-profissionais>
     </div>
   </section>
 </main>

@@ -8,25 +8,21 @@ import { IListaServico } from '../interface/lista_servico';
   providedIn: 'root'
 })
 export class FuncionarioService {
-  private apiFuncionario = 'http://localhost:3000/funcionario'
-  private apiServico = 'http://localhost:3001/servico'
-  private apiListaServico = 'http://localhost:3002/servicos_lista'
+  private urlFuncionario = 'http://localhost:3000/funcionario'
+  private urlServico = 'http://localhost:3001/servico'
+  private urlListaServico = 'http://localhost:3002/servicos_lista'
 
   constructor(private http: HttpClient) { }
 
   getFuncionarios() {
-    return this.http.get<Array<IFuncionario>>(this.apiFuncionario)
+    return this.http.get<Array<IFuncionario>>(this.urlFuncionario)
   }
 
   getServicosPorFuncionario(id:number) {
-    return this.http.get<Array<IServico>>(`${this.apiServico}?id_funcionario=${id}`)
+    return this.http.get<Array<IServico>>(`${this.urlServico}?id_funcionario=${id}`)
   }
 
   getListaServico() {
-    return this.http.get<Array<IListaServico>>(this.apiListaServico)
+    return this.http.get<Array<IListaServico>>(this.urlListaServico)
   }
-
-  // login(email: string) {
-  //   return this.http.get<IUsuario>(`${this.apiUsuario}?email=${email}`)
-  // }
 }
