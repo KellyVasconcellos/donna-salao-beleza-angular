@@ -20,6 +20,7 @@ export class AgendamentoComponent implements OnInit {
 
   profissionais = []
 
+  panels = ['First', 'Second', 'Third'];
 
   constructor(private funcionarioService: FuncionarioService) {}
 

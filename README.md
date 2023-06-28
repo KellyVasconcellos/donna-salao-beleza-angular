@@ -9,7 +9,10 @@ testar funcionalidade login
 
 deletar área logada dentro do login e criar um novo app de área logada (Serviços pré escolhidos na area publica)
 
-***como subir em 2 portas: json-server --watch db-servicos.json --port 3001
+***como subir em 2 portas: 
+json-server --watch db-funcionario.json
+json-server --watch db-servicos.json --port 3001
+json-server --watch db-lista-servicos.json --port 3002
 
 ver serviços e como colocar no db.json
         {
