@@ -1,4 +1,19 @@
-<div ngbAccordion [closeOthers]="true">
+<div ngbAccordion #accordion="ngbAccordion">
+	<div ngbAccordionItem="first">
+		<h2 ngbAccordionHeader>
+			<button ngbAccordionButton>{{texto}}</button>
+		</h2>
+		<div ngbAccordionCollapse>
+			<div ngbAccordionBody>
+				<ng-template>
+          <ng-content></ng-content>
+				</ng-template>
+			</div>
+		</div>
+	</div>
+
+
+<!-- <div ngbAccordion [closeOthers]="true">
 	<div ngbAccordionItem *ngFor="let panel of panels" [collapsed]="panel !== 'First'">
 		<h2 ngbAccordionHeader>
 			<button ngbAccordionButton>{{ panel }}</button>
@@ -16,4 +31,4 @@
 			</div>
 		</div>
 	</div>
-</div>
+</div> -->

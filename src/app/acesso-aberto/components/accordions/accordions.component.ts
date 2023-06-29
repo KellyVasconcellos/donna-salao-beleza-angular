@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-accordions',
@@ -6,5 +6,6 @@ import { Component } from '@angular/core';
   styleUrls: ['./accordions.component.scss']
 })
 export class AccordionsComponent {
-  panels = ['First', 'Second', 'Third'];
+
+  @Input() texto: string = ''
 }

@@ -25,27 +25,29 @@
       </div>
 
       <h2>Horários de funcionamento</h2>
-      <div class="funcionamento">
-        <div class="func-dia" *ngFor="let item of horarios">
-          <div class="func-hoje">
-            <img
-              *ngIf="diaAtual(item.dia)"
-              src="assets/img/agendamento/calendario.png"
-              width="30"
-            />
-            <p *ngIf="diaAtual(item.dia)">Hoje</p>
-          </div>
-          <!-- para deixar em negrito usar condição do ngClass pesquisar no google, e subir ou descer com as datas é um componente bootstrap-->
-          <div class="func-dia-semana">
-            <p>{{ item.dia }}</p>
-            <p>{{ item.horario }}</p>
+
+      <app-accordions [texto]="'Quinta-Feira     10:00   -   21:00'">
+        <div class="funcionamento">
+          <div class="func-dia" *ngFor="let item of horarios">
+            <div class="func-hoje">
+              <img
+                *ngIf="diaAtual(item.dia)"
+                src="assets/img/agendamento/calendario.png"
+                width="30"
+              />
+              <p *ngIf="diaAtual(item.dia)">Hoje</p>
+            </div>
+            <!-- para deixar em negrito usar condição do ngClass pesquisar no google, e subir ou descer com as datas é um componente bootstrap-->
+            <div class="func-dia-semana">
+              <p>{{ item.dia }}</p>
+              <p>{{ item.horario }}</p>
+            </div>
           </div>
         </div>
-      </div>
+      </app-accordions>
     </div>
   </section>
 
-  <app-accordions></app-accordions>
 
   <section class="equipe-foto">
     <div class="equipe">
