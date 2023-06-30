@@ -44,6 +44,10 @@ h5 {
   flex-direction: column;
 }
 
+.sobre-salao .funcionamento .func-dia-header {
+  padding-right: 30px;
+}
+
 .sobre-salao .funcionamento .func-dia {
   display: flex;
   width: 400px;
@@ -54,6 +58,7 @@ h5 {
   display: flex;
   width: 30%;
   justify-content: space-around;
+  align-items: center;
 }
 
 .sobre-salao .funcionamento .func-dia .func-dia-semana {
@@ -61,6 +66,7 @@ h5 {
   width: 70%;
   justify-content: space-between;
   padding-left: 20px;
+  align-items: center;
 }
 
 .equipe-foto .equipe h2{

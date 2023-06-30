@@ -17,7 +17,7 @@ export class AgendamentoComponent implements OnInit {
   servicos: Array<IServico> = []
   servico!: IServico
   listaServico: Array<IListaServico> = []
-
+  
   profissionais = []
 
   panels = ['First'];
@@ -84,4 +84,6 @@ export class AgendamentoComponent implements OnInit {
       return false
     }
   }
+
+
 }
