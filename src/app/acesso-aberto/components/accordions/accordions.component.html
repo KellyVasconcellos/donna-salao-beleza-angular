@@ -1,7 +1,7 @@
 <div ngbAccordion #accordion="ngbAccordion">
 	<div ngbAccordionItem="first">
     <div ngbAccordionHeader>
-			<button ngbAccordionButton>
+			<button ngbAccordionButton (click)="invisivel()">
         <ng-content select="[header]"></ng-content>
       </button>
 		</div>

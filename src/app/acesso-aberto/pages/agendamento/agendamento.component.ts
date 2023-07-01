@@ -13,11 +13,14 @@ import { IListaServico } from '../../interface/lista_servico';
 })
 export class AgendamentoComponent implements OnInit {
 
+  numero = 1
+
   funcionarios: Array<IFuncionario> = []
   servicos: Array<IServico> = []
   servico!: IServico
   listaServico: Array<IListaServico> = []
-  
+  ihorario!: IHorario
+
   profissionais = []
 
   panels = ['First'];
@@ -34,6 +37,8 @@ export class AgendamentoComponent implements OnInit {
       .subscribe((resposta: Array<IListaServico>) => {
         this.listaServico = resposta
       })
+
+    this.pegaDiaAtual()
   }
 
   getIdFuncionario(id:number):void {
@@ -86,4 +91,18 @@ export class AgendamentoComponent implements OnInit {
   }
 
 
+  pegaDiaAtual(){
+    const data = new Date()
+    const pegaDiaEnum = DiaHorarioEnum[data.getDay()]
+    this.horarios.forEach(item => {
+      if (pegaDiaEnum == item.dia){
+        this.ihorario = item
+      }
+    })
+  }
+
+  enviaNumero(valor: number) {
+    this.numero = valor;
+    console.log(this.numero)
+  }
 }

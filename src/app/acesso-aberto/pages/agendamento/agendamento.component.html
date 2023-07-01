@@ -26,9 +26,9 @@
 
       <h2>Horários de funcionamento</h2>
 
-      <app-accordions>
+      <app-accordions (numberEvent)="enviaNumero($event)">
         <div class="funcionamento" header>
-          <div  class="func-dia func-dia-header">
+          <div [ngClass]="{'invisivel':numero == 0}" class="func-dia func-dia-header">
             <div class="func-hoje">
               <img
                 src="assets/img/agendamento/calendario.png"
@@ -37,8 +37,8 @@
               <p>Hoje</p>
             </div>
             <div class="func-dia-semana">
-              <p>segunda-feira</p>
-              <p>10h-22h</p>
+              <p>{{ihorario.dia}}</p>
+              <p>{{ihorario.horario}}</p>
             </div>
           </div>
         </div>

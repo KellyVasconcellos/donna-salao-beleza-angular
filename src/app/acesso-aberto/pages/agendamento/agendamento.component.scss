@@ -11,6 +11,8 @@ h5 {
   margin: 0px;
 }
 
+
+
 .sobre-salao {
   width: 450px;
   display: flex;
@@ -118,6 +120,12 @@ h5 {
   text-align: center;
   font-weight: bold;
 }
+
+.invisivel {
+  opacity: 0;
+}
+
+
 
 /*Imagens vao ficar em cinza após escolha do profissional: por no ts
 const button = document.querySelector("button");
