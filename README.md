@@ -13,6 +13,9 @@ deletar área logada dentro do login e criar um novo app de área logada (Servi�
 json-server --watch db-funcionario.json
 json-server --watch db-servicos.json --port 3001
 json-server --watch db-lista-servicos.json --port 3002
+json-server --watch db-login.json --port 3003
+
+referencia de guardas de rotas: https://consolelog.com.br/como-proteger-rotas-angular-com-guard/
 
 ver serviços e como colocar no db.json
         {

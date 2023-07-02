@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { LoginService } from '../../service/login.service';
+import { SessaoService } from 'src/app/sessao/sessao.service';
+import { ISessao } from 'src/app/sessao/sessao.interface';
 
 @Component({
   selector: 'app-login',
@@ -17,7 +19,8 @@ export class LoginComponent implements OnInit {
   constructor(
     private fb: FormBuilder,
     private service: LoginService,
-    private router: Router
+    private router: Router,
+    private sessao: SessaoService
   ) { }
 
   ngOnInit(): void {
@@ -36,9 +39,14 @@ export class LoginComponent implements OnInit {
     if (this.formLogar.valid){
       const form = this.formLogar.value
       this.service.login(form.email).subscribe((resposta : any) => {
-        console.log(resposta)
         if (resposta.length) {
           if (resposta[0].senha === form.senha) {
+            const usuarioSessao: ISessao = {
+              id: resposta[0].id,
+              nome: resposta[0].nome,
+              email: resposta[0].email,
+            }
+            this.sessao.salvarSessao(usuarioSessao)
             this.router.navigateByUrl("/home-fechada")
           } else {
             this.mensagemErro = "Usuário ou Senha inválida"

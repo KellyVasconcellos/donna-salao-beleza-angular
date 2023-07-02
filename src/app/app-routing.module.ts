@@ -10,6 +10,8 @@ import { AreaLogadaComponent } from './acesso-login/view/area-logada/area-logada
 import { CadastrarComponent } from './acesso-login/view/cadastrar/cadastrar.component';
 import { LoginComponent } from './acesso-login/view/login/login.component';
 import { HomeFechadaComponent } from './acesso-fechado/pages/home-fechada/home-fechada.component';
+import { SessaoService } from './sessao/sessao.service';
+import { guard } from './sessao/guard.guard';
 
 const routes: Routes = [
   {
@@ -54,7 +56,12 @@ const routes: Routes = [
       },
     ],
   },
-  { path: 'home-fechada', component: HomeFechadaComponent },
+  {
+    path: 'home-fechada',
+    providers: [SessaoService],
+    canMatch: [guard],
+    component: HomeFechadaComponent
+  },
 ];
 
 @NgModule({
