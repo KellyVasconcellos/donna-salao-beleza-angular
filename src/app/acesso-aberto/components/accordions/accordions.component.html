@@ -1,11 +1,11 @@
-<div ngbAccordion #accordion="ngbAccordion">
+<div ngbAccordion #accordion="ngbAccordion" class="caixa-accordion">
 	<div ngbAccordionItem="first">
     <div ngbAccordionHeader>
-			<button ngbAccordionButton (click)="invisivel()">
+			<button ngbAccordionButton (click)="invisivel()" class="botao">
         <ng-content select="[header]"></ng-content>
       </button>
 		</div>
-		<div ngbAccordionCollapse>
+		<div ngbAccordionCollapse class="corpoacc">
 			<div ngbAccordionBody>
 				<ng-template>
           <ng-content select="[body]"></ng-content>

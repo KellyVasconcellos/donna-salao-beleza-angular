@@ -3,6 +3,7 @@ import { Injectable } from '@angular/core';
 import { IFuncionario } from '../interface/funcionario';
 import { IServico } from '../interface/servico';
 import { IListaServico } from '../interface/lista_servico';
+import { Router } from '@angular/router';
 
 @Injectable({
   providedIn: 'root'
@@ -12,7 +13,7 @@ export class FuncionarioService {
   private urlServico = 'http://localhost:3001/servico'
   private urlListaServico = 'http://localhost:3002/servicos_lista'
 
-  constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient, private router: Router) { }
 
   getFuncionarios() {
     return this.http.get<Array<IFuncionario>>(this.urlFuncionario)
@@ -24,5 +25,13 @@ export class FuncionarioService {
 
   getListaServico() {
     return this.http.get<Array<IListaServico>>(this.urlListaServico)
+  }
+
+  navegaUrl(url: string, id: string) {
+    this.router.navigateByUrl(url)
+    let div : any = document.querySelector(id)
+    div.scrollTo({
+      behavior: 'smooth'
+    })
   }
 }
