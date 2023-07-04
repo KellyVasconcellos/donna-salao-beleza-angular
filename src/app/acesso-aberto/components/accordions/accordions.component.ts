@@ -15,12 +15,13 @@ export class AccordionsComponent implements OnInit {
   numero = 1;
 
   invisivel() {
-    let botao: any = document.querySelector('.botao');
+    let botao: any = document.querySelector('.botao')
     if (this.numero > 0) {
       this.numero = this.numero - 1;
       this.numberEvent.emit(this.numero);
       botao.style.boxShadow = '0 0 0 2px white';
       botao.style.borderColor = 'white';
+      botao.style.display = 'none';
     } else {
       this.numero = this.numero + 1;
       this.numberEvent.emit(this.numero);

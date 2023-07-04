@@ -34,11 +34,11 @@
                 src="assets/img/agendamento/calendario.png"
                 width="30"
               />
-              <p>Hoje</p>
+              <p><b>Hoje</b></p>
             </div>
             <div class="func-dia-semana">
-              <p>{{ihorario.dia}}</p>
-              <p>{{ihorario.horario}}</p>
+              <p><b>{{ihorario.dia}}</b></p>
+              <p><b>{{ihorario.horario}}</b></p>
             </div>
           </div>
         </div>
@@ -52,11 +52,11 @@
                 src="assets/img/agendamento/calendario.png"
                 width="30"
               />
-              <p *ngIf="diaAtual(item.dia)">Hoje</p>
+              <p *ngIf="diaAtual(item.dia)"><b>Hoje</b></p>
             </div>
             <div class="func-dia-semana">
-              <p>{{ item.dia }}</p>
-              <p>{{ item.horario }}</p>
+              <p [ngClass]="{'negrito': ihorario.dia==item.dia}">{{ item.dia }}</p>
+              <p [ngClass]="{'negrito': ihorario.dia==item.dia}">{{ item.horario }}</p>
             </div>
           </div>
         </div>
