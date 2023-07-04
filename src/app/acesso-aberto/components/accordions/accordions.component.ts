@@ -19,14 +19,13 @@ export class AccordionsComponent implements OnInit {
     if (this.numero > 0) {
       this.numero = this.numero - 1;
       this.numberEvent.emit(this.numero);
-      botao.style.boxShadow = '0 0 0 2px white';
-      botao.style.borderColor = 'white';
       botao.style.display = 'none';
     } else {
       this.numero = this.numero + 1;
       this.numberEvent.emit(this.numero);
       botao.style.boxShadow = '0 0 0 2px #ecc0c3';
       botao.style.borderColor = '#f9757e';
+      botao.style.display = 'flex';
     }
 
   }
