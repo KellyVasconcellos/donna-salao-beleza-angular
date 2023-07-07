@@ -7,9 +7,17 @@
   margin: 0;
 }
 
-.especialidades img:hover {
-  opacity: 1;
+.especialidades .foto img {
   cursor: pointer;
+  position: static !important;
+}
+
+.opacityOn {
+  opacity: .5;
+}
+
+.opacityOff {
+  opacity: 1;
 }
 
 .especialidades .foto {

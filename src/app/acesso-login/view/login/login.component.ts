@@ -42,9 +42,7 @@ export class LoginComponent implements OnInit {
         if (resposta.length) {
           if (resposta[0].senha === form.senha) {
             const usuarioSessao: ISessao = {
-              id: resposta[0].id,
-              nome: resposta[0].nome,
-              email: resposta[0].email,
+              idCliente: resposta[0].id,
             }
             this.sessao.salvarSessao(usuarioSessao)
             this.router.navigateByUrl("/home-fechada")

@@ -33,7 +33,7 @@
       </div>
       <app-profissionais
     [profissionais]="funcionarios"
-    (idFuncionario)="getIdFuncionario($event)"
+    (idFuncionario)="getIdFuncionario($event)" [routerLink]="['/agendamento']"
     ></app-profissionais>
     </div>
   </section>
