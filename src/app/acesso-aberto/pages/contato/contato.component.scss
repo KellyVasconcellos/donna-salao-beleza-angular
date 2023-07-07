@@ -19,7 +19,7 @@ main {
 }
 
 .titulo1 {
-  color: #b8b8b8;
+  color: #ffffff;
   font-size: 60px;
   padding: 0px 0px 60px 0px;
 }
@@ -45,6 +45,7 @@ main {
     bottom 20px left 20px;
   height: 570px;
   width: 384px;
+  color: #000;
 }
 
 .contato-container  .contato-dados h2 {
@@ -151,31 +152,44 @@ main {
   background-color: #f0f0f0;
 }
 
-.endereco h1 {
-  padding: 100px 0px 60px 0px;
-  font-size: 60px;
+.endereco h3 {
+  padding-top: 35px;
+  padding-bottom: 35px;
 }
 
-.endereco iframe {
+.endereco .content-endereco {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding-top: 150px;
+
+}
+
+.endereco .content-endereco a {
+  cursor: pointer;
+}
+
+.endereco .content-endereco img {
 border-radius: 20px 20px 0px 0px;
 }
 
-.endereco .endereco-texto {
+.endereco .content-endereco .endereco-texto {
   background-color: #ffffff;
   width: 500px;
   border-radius: 0px 0px 20px 20px;
   padding: 0px 35px 35px 35px;
 }
 
-.endereco .endereco-texto .texto {
+.endereco .content-endereco .endereco-texto .texto {
   padding-bottom: 30px;
 }
 
-.endereco .endereco-texto .icone-texto .texto-p {
+.endereco .content-endereco .endereco-texto .icone-texto .texto-p {
   padding-left: 40px;
 }
 
-.endereco .endereco-texto .icone-texto .icone {
+.endereco .content-endereco .endereco-texto .icone-texto .icone {
   display: flex;
   flex-direction: row;
   justify-content:flex-start;

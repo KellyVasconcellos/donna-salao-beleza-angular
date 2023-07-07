@@ -9,14 +9,14 @@ main {
   align-items: center;
   width: 100%;
   height: 100vh;
-  font-family: 'Open Sans', sans-serif;
+  font-family: "Roboto", serif;
   flex-direction: column;
+  line-height: 30px;
 }
 
 .caixa .caixa-login {
   width: 960px;
   display: flex;
-  height: 500px;
 }
 
 .caixa .caixa-login-two {
@@ -25,13 +25,13 @@ main {
 }
 
 .caixa .caixa-login h2 {
-  font-size: 30px;
+  font-size: 32px;
 }
 
 .caixa .caixa-login .area-de-login {
   width: 40%;
-  background: #ecc0c3;
-  border-radius: 15px 0px 0px 15px;
+  background:#ecb6ba;
+  border-radius: 20px 0px 0px 20px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -39,132 +39,116 @@ main {
 }
 
 .caixa .caixa-login .area-de-login-two {
-  border-radius: 0px 15px 15px 0px;
+  border-radius: 0px 20px 20px 0px;
 }
 
 .caixa .caixa-login .area-de-login .primeiro-titulo, .p-titulo1{
   color: #fff;
 }
 
+.caixa .caixa-login .area-de-login .primeiro-titulo {
+  margin-bottom: 25px;
+}
+
 .caixa .caixa-login .area-de-login .p-titulo1{
-  font-size: 14px;
+  font-size: 16px;
   font-weight: 300;
   line-height: 0px;
 }
 
 .caixa .caixa-login .botao-entrar {
-  font-size: 10px;
-  padding: 10px 50px;
+  font-size: 13px;
   cursor: pointer;
   font-weight: bold;
+  margin-top: 20px;
   width: 150px;
-  margin-top: 1rem;
-  background-color: #ecc0c3;
+  height: 35px;
+  background-color: #ecb6ba;
   border: 1px solid #fff;
-  border-radius: 15px;
+  border-radius: 30px;
   text-transform: uppercase;
   color: #fff;
 }
 
 .caixa .caixa-login .botao-entrar:hover {
   background-color: #fff;
-  color: #ecc0c3;
+  color: #ecb6ba;
   cursor: pointer;
 }
 
 .caixa .caixa-login .criar-login {
   width: 60%;
   background: #ffffff;
-  border-radius: 0px 15px 15px 0px;
+  border-radius: 0px 20px 20px 0px;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  padding-bottom: 50px;
+  padding-top: 50px;
 }
 
 .caixa .caixa-login .criar-login-two {
-  border-radius: 15px 0px 0px 15px;
+  border-radius: 20px 0px 0px 20px;
 }
 
 .caixa .caixa-login .criar-login .segundo-titulo {
-  color: #ecc0c3;
+  color: #ecb6ba;
 }
 
 .caixa .caixa-login .criar-login .p-titulo2 {
   color: #7f8c8d;
-  font-size: 14px;
+  font-size: 16px;
   font-weight: 300;
   line-height: 30px;
-}
-
-.caixa .caixa-login .criar-login .icones-gerais {
-  display: flex;
-  gap: 10px;
-}
-
-.caixa .caixa-login .criar-login .icones-gerais .icones-redes {
-  border: 1px solid #bdc3c7;
-  border-radius: 50%;
-  width: 35px;
-  height: 35px;
-  line-height: 35px;
-  text-align: center;
-  color: #95a5a6;
-}
-
-.caixa .caixa-login .criar-login .icones-gerais .icones-redes:hover {
-  background: #ecc0c3;
-  color: #fff;
-  cursor: pointer;
 }
 
 .caixa .caixa-login .criar-login .form {
   display: flex;
   flex-direction: column;
+  gap: 10px;
   width: 55%;
 }
 
-
 .caixa .caixa-login .criar-login .form .form-login {
-  background-color: #ecf0f1;
+  background-color: #f7f7f7;
   display: flex;
   align-items: center;
   margin: 8px;
-  padding-left: 4px;
+  padding-left: 15px;
   height: 45px;
   color: #7f8c8d;
-  border: solid 1px #ecf0f1;
-
+  border: solid 1px #f7f7f7;
+  border-radius: 20px;
 }
 
-
 .caixa .caixa-login .criar-login .form input {
-  background-color: #ecf0f1;
+  background-color: #f7f7f7;
   margin: 8px;
   width: 100%;
   border: none;
   height: 45px;
+  border-radius: 20px;
 }
 
 .caixa .caixa-login .criar-login .form span {
-  font-size: 14px;
-  font-family: 'Open Sans' sans-serif;
+  font-size: 16px;
+  font-family: "Roboto", serif;
   color: red;
   padding-left: 12px;
 }
 
 .caixa .caixa-login .criar-login .form .botao-form {
-  font-size: 10px;
-  padding: 10px 50px;
+  font-size: 13px;
   cursor: pointer;
   font-weight: bold;
   width: 150px;
+  height: 35px;
   align-self: center;
   border: none;
-  margin-top: 1rem;
-  background-color: #ecc0c3;
-  border: 1px solid #ecc0c3;
-  border-radius: 15px;
+  background-color: #ecb6ba;
+  border: 1px solid #ecb6ba;
+  border-radius: 30px;
   text-transform: uppercase;
   color: #fff;
 }
@@ -172,15 +156,15 @@ main {
 .caixa .caixa-login .criar-login .form .botao-form:hover {
   cursor: pointer;
   background-color: #fff;
-  border: 1px solid #ecc0c3;
-  color: #ecc0c3;
+  border: 1px solid #ecb6ba;
+  color: #ecb6ba;
 }
 
 .caixa .caixa-login-two .form h4 {
   color: #34495e;
-  font-size: 14px;
+  font-size: 16px;
   text-align: center;
   text-decoration: underline;
   font-style: italic;
-  margin: 0px;
+  margin-bottom: 20px;
 }

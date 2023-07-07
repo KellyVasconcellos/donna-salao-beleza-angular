@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
+import { ModalMapaComponent } from '../../components/modal-mapa/modal-mapa.component';
 
 
 @Component({
@@ -8,5 +10,14 @@ import { Component } from '@angular/core';
 })
 export class ContatoComponent {
 
+
+  constructor(
+    private modalService: NgbModal
+  ) {
+}
+
+  openModal() {
+    this.modalService.open(ModalMapaComponent, { fullscreen: true });
+  }
 
 }

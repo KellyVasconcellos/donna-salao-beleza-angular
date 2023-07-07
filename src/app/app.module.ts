@@ -22,7 +22,6 @@ import { NgbAccordionModule, NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { AppRoutingModule } from './app-routing.module';
 import { HomeFechadaComponent } from './acesso-fechado/pages/home-fechada/home-fechada.component';
 import { AccordionsComponent } from './acesso-aberto/components/accordions/accordions.component';
-import { ModalMapaComponent } from './acesso-aberto/components/modal-mapa/modal-mapa.component';
 
 @NgModule({
   declarations: [
@@ -44,7 +43,6 @@ import { ModalMapaComponent } from './acesso-aberto/components/modal-mapa/modal-
     BackgroundPretoComponent,
     HomeFechadaComponent,
     AccordionsComponent,
-    ModalMapaComponent
   ],
   imports: [
     BrowserModule,
