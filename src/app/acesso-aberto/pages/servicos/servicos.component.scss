@@ -5,12 +5,15 @@ section {
   color: #212529;
   font-family: "Roboto", serif;
   line-height: 30px;
-  width: 62%;
   text-align: justify;
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  justify-content: space-between;
 }
 
 section h2 {
-  padding: 45px 0px 15px 0px;
+  padding: 0px 0px 15px 0px;
 }
 
 section p {
@@ -19,4 +22,30 @@ section p {
 
 section li::marker {
 color: #ecc0c3;
+}
+
+img {
+  width: 350px;
+}
+
+.caixa-servicos {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content:space-between;
+}
+
+.caixa-servicos .caixa-texto{
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  max-width: 900px;
+  padding-bottom: 150px;
+}
+
+.caixa-servicos .div-imagem{
+  display: flex;
+  justify-content:flex-end;
+  align-items:center;
+  padding-bottom: 150px;
 }
