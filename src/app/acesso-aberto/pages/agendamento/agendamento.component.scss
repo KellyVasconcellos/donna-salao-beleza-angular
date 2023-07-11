@@ -1,7 +1,7 @@
 @import "../../../../styles.scss";
 
 section {
-  @include padding-grid(100px, 200px, 100px, 200px);
+  @include padding-grid(100px, 200px, 0px, 200px);
   color: #212529;
   font-family: "Roboto", serif;
   line-height: 30px;
@@ -82,11 +82,14 @@ h5 {
 }
 
 .servicos-salao {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
   width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
   justify-content: space-between;
+  align-items: flex-start;
+  margin: 0;
+  padding-bottom: 100px;
 }
 
 .servicos-salao .servico {

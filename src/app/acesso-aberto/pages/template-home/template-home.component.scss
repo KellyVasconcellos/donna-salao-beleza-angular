@@ -28,6 +28,11 @@ header {
   @include padding-grid(0, 100px, 0, 100px);
 }
 
+.container-menu .menu .menu-principal a:hover {
+  color: #fff;
+  font-weight: bold;
+}
+
 .container-menu .menu .menu-principal nav ul li {
   display: inline-block;
   align-items: baseline;
@@ -46,6 +51,13 @@ header {
   height: 35px;
   width: 120px;
   text-align: center;
+}
+
+.container-menu .menu .botao-login:hover {
+  border: solid 2px #eba4a9;
+  color: #000000;
+  cursor: pointer;
+  font-weight: bold;
 }
 
 .container-menu .menu-texto {

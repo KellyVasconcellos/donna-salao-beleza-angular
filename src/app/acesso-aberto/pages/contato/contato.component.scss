@@ -122,7 +122,6 @@ main {
 .contato-container .contato-formulario .form input[type="email"]:focus,
 .contato-container .contato-formulario .form textarea:focus {
   outline: none;
-  border-color:#f9757e;
   background: #ffffff;
   box-shadow: 0 0 0 2px #ecc0c3;
 }
@@ -141,9 +140,9 @@ main {
 }
 
 .contato-container .contato-formulario button:hover {
-  background-color: #ffffff;
-  transition: 0.5s;
-  opacity:0.7;
+  color: #000000;
+  cursor: pointer;
+  font-weight: bold;
 }
 
 .endereco {

@@ -33,6 +33,13 @@ h2 {
   font-weight: bold;
 }
 
+.caixa .caixa-principal .botao:hover {
+  background-color: #181818 ;
+  border: solid 2px #eba4a9;
+  color: #eba4a9;
+  cursor: pointer;
+}
+
 .caixa .caixa-img {
   display: flex;
   justify-content: center;
