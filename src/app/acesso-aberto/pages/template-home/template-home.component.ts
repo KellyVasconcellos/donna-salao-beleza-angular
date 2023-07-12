@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { FuncionarioService } from '../../service/funcionario.service';
+
 
 @Component({
   selector: 'app-template-home',
@@ -9,10 +9,6 @@ import { FuncionarioService } from '../../service/funcionario.service';
 export class TemplateHomeComponent {
 
   constructor(
-    private service: FuncionarioService
   ) {}
 
-  navegaUrl(url: string, id: string) {
-    this.service.navegaUrl(url, id)
-  }
 }

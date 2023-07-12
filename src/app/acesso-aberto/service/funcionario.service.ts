@@ -27,11 +27,4 @@ export class FuncionarioService {
     return this.http.get<Array<IListaServico>>(this.urlListaServico)
   }
 
-  navegaUrl(url: string, id: string) {
-    this.router.navigateByUrl(url)
-    let div : any = document.querySelector(id)
-    div.scrollTo({
-      behavior: 'smooth'
-    })
-  }
 }

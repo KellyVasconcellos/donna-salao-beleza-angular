@@ -1,7 +1,7 @@
 <section class="caixa">
   <div class="caixa-principal">
     <ng-content></ng-content>
-    <button class="botao"><a [routerLink]="['/agendamento']">{{textoBotao}}</a></button>
+    <button class="botao"><a [routerLink]="['/agendamento']" fragment="agendamentoId">{{textoBotao}}</a></button>
   </div>
   <div class="caixa-img">
     <img src="{{ primeiraImagem }}" width="300" height="170" />

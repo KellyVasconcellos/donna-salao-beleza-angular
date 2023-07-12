@@ -21,22 +21,22 @@
 
     <ul>
       <li><h3>Serviços</h3></li>
-      <li><a href="servicos">Procedimentos Capilares</a></li>
-      <li><a href="servicos">Dia da Noiva</a></li>
-      <li><a href="servicos">Manicure e Pedicure</a></li>
-      <li><a href="servicos">Maquiagem</a></li>
-      <li><a href="servicos">Sobrancelha</a></li>
-      <li><a href="servicos">Programa de Fidelidade</a></li>
+      <li><a [routerLink]="['servicos']" fragment="capilarId">Procedimentos Capilares</a></li>
+      <li><a [routerLink]="['servicos']" fragment="noivaId">Dia da Noiva</a></li>
+      <li><a [routerLink]="['servicos']" fragment="peMaoId">Manicure e Pedicure</a></li>
+      <li><a [routerLink]="['servicos']" fragment="maquiagemId">Maquiagem</a></li>
+      <li><a [routerLink]="['servicos']" fragment="sobrancelhaId">Sobrancelha</a></li>
+      <li><a [routerLink]="['servicos']" fragment="fidelidadeId">Programa de Fidelidade</a></li>
     </ul>
 
     <ul>
       <li><h3>Menu</h3></li>
-      <li><a routerLink="home">Home</a></li>
-      <li><a routerLink="sobre">Sobre Nós</a></li>
-      <li><a routerLink="servicos">Serviços</a></li>
-      <li><a routerLink="agendamento">Agendamento</a></li>
-      <li><a routerLink="contato">Contato</a></li>
-      <li><a routerLink="login">Login</a></li>
+      <li><a routerLink="home" fragment="homeId">Home</a></li>
+      <li><a routerLink="sobre"  fragment="sobreId">Sobre Nós</a></li>
+      <li><a routerLink="servicos" fragment="servicosId">Serviços</a></li>
+      <li><a routerLink="agendamento" fragment="agendamentoId">Agendamento</a></li>
+      <li><a routerLink="contato" fragment="contato">Contato</a></li>
+      <li><a routerLink="login" fragment="loginId">Login</a></li>
     </ul>
   </div>
   <p class="p-footer">Donna © 2023 - Desenvolvido por Kelly Vasconcellos</p>

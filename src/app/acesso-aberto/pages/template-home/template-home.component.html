@@ -16,19 +16,19 @@
       <div class="menu-principal">
         <nav>
           <ul>
-            <li><a routerLink="home">Home</a></li>
-            <li><a routerLink="sobre">Sobre Nós</a></li>
-            <li><a routerLink="servicos">Serviços</a></li>
-            <li><a routerLink="agendamento">Agendamento</a></li>
-            <li><a routerLink="contato">Contato</a></li>
+            <li><a [routerLink]="['home']" fragment="homeId">Home</a></li>
+            <li><a [routerLink]="['sobre']" fragment="sobreId">Sobre Nós</a></li>
+            <li><a [routerLink]="['servicos']" fragment="servicosId">Serviços</a></li>
+            <li><a [routerLink]="['agendamento']" fragment="agendamentoId">Agendamento</a></li>
+            <li><a [routerLink]="['contato']" fragment="contato">Contato</a></li>
           </ul>
         </nav>
       </div>
-      <button (click)="navegaUrl('login', 'loginId')" class="botao-login">
+      <button [routerLink]="['login']" fragment="loginId" class="botao-login">
         <p><a>Login</a></p>
       </button>
     </div>
-    <div class="menu-texto">
+    <div class="menu-texto" id="homeId">
       <h1>
         O seu cabelo em <span>boas mãos</span><br />
         e a sua autoestima <br />restaurada
