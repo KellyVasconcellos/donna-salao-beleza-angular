@@ -26,6 +26,7 @@ header {
   position: fixed;
   background-color: #ecc0c3;
   @include padding-grid(0, 100px, 0, 100px);
+  z-index:1;
 }
 
 .container-menu .menu .menu-principal a:hover {
