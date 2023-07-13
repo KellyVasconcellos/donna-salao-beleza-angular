@@ -28,21 +28,24 @@
 
       <app-accordions (numberEvent)="enviaNumero($event)">
         <div class="funcionamento" header>
-          <div [ngClass]="{'invisivel':numero == 0}" class="func-dia func-dia-header">
+          <div
+            [ngClass]="{ invisivel: numero == 0 }"
+            class="func-dia func-dia-header"
+          >
             <div class="func-hoje">
-              <img
-                src="assets/img/agendamento/calendario.png"
-                width="30"
-              />
+              <img src="assets/img/agendamento/calendario.png" width="30" />
               <p><b>Hoje</b></p>
             </div>
             <div class="func-dia-semana">
-              <p><b>{{ihorario.dia}}</b></p>
-              <p><b>{{ihorario.horario}}</b></p>
+              <p>
+                <b>{{ ihorario.dia }}</b>
+              </p>
+              <p>
+                <b>{{ ihorario.horario }}</b>
+              </p>
             </div>
           </div>
         </div>
-
 
         <div class="funcionamento" body>
           <div class="func-dia" *ngFor="let item of horarios">
@@ -55,15 +58,18 @@
               <p *ngIf="diaAtual(item.dia)"><b>Hoje</b></p>
             </div>
             <div class="func-dia-semana">
-              <p [ngClass]="{'negrito': ihorario.dia==item.dia}">{{ item.dia }}</p>
-              <p [ngClass]="{'negrito': ihorario.dia==item.dia}">{{ item.horario }}</p>
+              <p [ngClass]="{ negrito: ihorario.dia == item.dia }">
+                {{ item.dia }}
+              </p>
+              <p [ngClass]="{ negrito: ihorario.dia == item.dia }">
+                {{ item.horario }}
+              </p>
             </div>
           </div>
         </div>
       </app-accordions>
     </div>
   </section>
-
 
   <section class="equipe-foto">
     <div class="equipe">
@@ -79,35 +85,30 @@
   </section>
 
   <section>
-    <div class="servicos-salao">
-      <div *ngIf="servicos.length == 0 ">
-        <div *ngFor="let item of listaServico">
-          <div class="servico">
-            <h4>{{ item.titulo }}</h4>
-            <p class="descricao">{{ item.descricao }}</p>
-            <div class="preco-botao">
-              <div class="preco">
-                <p>{{ item.especifica_preco }}</p>
-                <h5>{{ item.preco }}</h5>
-              </div>
-            </div>
+    <div class="servicos-salao" *ngIf="servicos.length == 0">
+      <div *ngFor="let item of listaServico" class="servico">
+        <h4>{{ item.titulo }}</h4>
+        <p class="descricao">{{ item.descricao }}</p>
+        <div class="preco-botao">
+          <div class="preco">
+            <p>{{ item.especifica_preco }}</p>
+            <h5>{{ item.preco | currency : 'BRL' }}</h5>
           </div>
         </div>
       </div>
-
-      <div *ngIf="servicos.length > 0 ">
-        <div  *ngFor="let item of servico.servicos">
-          <div class="servico">
-            <h4>{{ item.titulo }}</h4>
-            <p class="descricao">{{ item.descricao }}</p>
-            <div class="preco-botao">
-              <div class="preco">
-                <p>{{ item.especifica_preco }}</p>
-                <h5>{{ item.preco }}</h5>
-              </div>
-              <button class="botao" [routerLink]="['/login']" fragment="loginId">Agendar</button>
-            </div>
+    </div>
+    <div class="servicos-salao" *ngIf="servicos.length > 0">
+      <div *ngFor="let item of servico.servicos" class="servico">
+        <h4>{{ item.titulo }}</h4>
+        <p class="descricao">{{ item.descricao }}</p>
+        <div class="preco-botao">
+          <div class="preco">
+            <p>{{ item.especifica_preco }}</p>
+            <h5>{{ item.preco | currency : 'BRL' }}</h5>
           </div>
+          <button class="botao" [routerLink]="['/login']" fragment="loginId">
+            Agendar
+          </button>
         </div>
       </div>
     </div>
