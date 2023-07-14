@@ -30,7 +30,7 @@ main {
 
 .caixa .caixa-login .area-de-login {
   width: 40%;
-  background:#ecb6ba;
+  background: #ecb6ba;
   border-radius: 20px 0px 0px 20px;
   display: flex;
   justify-content: center;
@@ -42,7 +42,8 @@ main {
   border-radius: 0px 20px 20px 0px;
 }
 
-.caixa .caixa-login .area-de-login .primeiro-titulo, .p-titulo1{
+.caixa .caixa-login .area-de-login .primeiro-titulo,
+.p-titulo1 {
   color: #fff;
 }
 
@@ -50,7 +51,7 @@ main {
   margin-bottom: 25px;
 }
 
-.caixa .caixa-login .area-de-login .p-titulo1{
+.caixa .caixa-login .area-de-login .p-titulo1 {
   font-size: 16px;
   font-weight: 300;
   line-height: 0px;
@@ -173,4 +174,88 @@ main {
   text-decoration: underline;
   font-style: italic;
   margin-bottom: 20px;
+}
+
+@media (max-width: 425px) {
+  .caixa {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    padding: 50px 0px 50px 0px;
+  }
+
+  .caixa .caixa-login {
+    width: 425px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .caixa .caixa-login-two {
+    display: flex;
+    flex-direction: row-reverse;
+    flex-wrap: wrap;
+  }
+
+  .caixa .caixa-login .area-de-login {
+    width: 315px;
+    height: 260px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    border-radius: 20px 20px 0px 0px;
+    padding: 30px;
+    text-align: center;
+  }
+
+  .caixa .caixa-login .area-de-login-two {
+    width: 315px;
+    height: 260px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    border-radius: 20px 20px 0px 0px;
+    padding:30px;
+    text-align: center;
+  }
+
+  .caixa .caixa-login .criar-login {
+    width: 315px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    border-radius: 0px 0px 20px 20px;
+    padding: 50px 15px 50px 15px;
+  }
+
+  .caixa .caixa-login .criar-login-two {
+    width: 315px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    border-radius: 0px 0px 20px 20px;
+    padding: 50px 15px 50px 15px;
+  }
+
+  .caixa .caixa-login .area-de-login .primeiro-titulo {
+    margin-bottom: 10px;
+  }
+
+  .caixa .caixa-login .area-de-login .p-titulo1 {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .caixa .caixa-login .area-de-login .p-titulo1 {
+    line-height: 20px;
+  }
+
+  .caixa .caixa-login .criar-login .form {
+    width: 100%;
+  }
+
+
 }

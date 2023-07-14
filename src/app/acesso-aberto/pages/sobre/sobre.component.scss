@@ -18,3 +18,26 @@ h2 {
 .equipe p {
   padding-bottom: 30px;
 }
+
+
+@media (max-width: 1024px) {
+
+  section {
+    @include padding-grid(80px, 55px, 80px, 55px);
+  }
+}
+
+@media (max-width: 425px) {
+  section {
+    @include padding-grid(80px, 55px, 80px, 55px);
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+  }
+  h2 {
+    display: flex;
+    justify-content: center;
+  }
+
+}

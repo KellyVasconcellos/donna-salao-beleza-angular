@@ -7,11 +7,12 @@
   </label>
   <div id="sidebarMenu">
         <div class="main-content-wrapper">
-            <a href="#home">Home</a>
-            <a href="#sobre">Sobre Nós</a>
-            <a href="#servicos">Serviços</a>
-            <a href="#agendamento">Agendamento</a>
-            <a href="#contato">Contato</a>
+          <a [routerLink]="['home']" fragment="homeId">Home</a>
+          <a [routerLink]="['sobre']" fragment="sobreId">Sobre Nós</a>
+          <a [routerLink]="['servicos']" fragment="servicosId">Serviços</a>
+          <a [routerLink]="['agendamento']" fragment="agendamentoId">Agendamento</a>
+          <a [routerLink]="['contato']" fragment="contatoId">Contato</a>
+          <a [routerLink]="['login']" fragment="loginId">Login</a>
         </div>
     </div>
 </div>

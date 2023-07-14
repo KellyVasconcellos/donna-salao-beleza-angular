@@ -11,7 +11,7 @@ h5 {
   margin: 0px;
 }
 
-.negrito{
+.negrito {
   font-weight: bold;
 }
 
@@ -73,11 +73,11 @@ h5 {
   align-items: center;
 }
 
-.equipe-foto .equipe h2{
+.equipe-foto .equipe h2 {
   padding: 0px 0px 30px 0px;
 }
 
-.equipe-foto .equipe p{
+.equipe-foto .equipe p {
   padding: 0px 0px 30px 0px;
 }
 
@@ -114,7 +114,7 @@ h5 {
   align-items: center;
 }
 
-.servicos-salao .servico .preco-botao .preco p{
+.servicos-salao .servico .preco-botao .preco p {
   padding-right: 5px;
 }
 
@@ -131,15 +131,57 @@ h5 {
   border: solid 2px #eba4a9;
 }
 
-
 .invisivel {
   opacity: 0;
 }
 
+@media (max-width: 1024px) {
+  section {
+    @include padding-grid(80px, 55px, 80px, 55px);
+  }
+}
 
+@media (max-width: 425px) {
+  section {
+    @include padding-grid(80px, 55px, 80px, 55px);
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+  }
+  h2 {
+    display: flex;
+    justify-content: center;
+  }
 
-/*Imagens vao ficar em cinza após escolha do profissional: por no ts
-const button = document.querySelector("button");
-button.addEventListener("click", (event) => {
-  button.textContent = `Click count: ${event.detail}`;
-});*/
+  .equipe-foto {
+    padding-top: 0px !important;
+    padding-bottom: 0px !important;
+  }
+
+  .sobre-salao {
+    width: 100%;
+    padding-top: 0px;
+  }
+
+  .sobre-salao .funcionamento .func-dia-header {
+    padding: 0;
+  }
+
+  .sobre-salao .funcionamento .func-dia {
+    width: 100%;
+  }
+
+  .servicos-salao {
+    padding-bottom: 0px;
+  }
+
+  .servicos-salao .servico {
+    height: 100%;
+    width: 100%;
+    border: #e0e4e8 1px solid;
+    border-radius: 20px;
+    padding: 30px 30px 30px 30px;
+    margin-top: 45px;
+  }
+}
