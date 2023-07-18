@@ -4,6 +4,7 @@ export interface IServico{
 }
 
 export interface IServicos{
+  id: number
   titulo: string
   descricao: string
   especifica_preco: string

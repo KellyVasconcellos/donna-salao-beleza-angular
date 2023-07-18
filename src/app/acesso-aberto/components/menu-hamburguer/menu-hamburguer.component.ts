@@ -5,6 +5,9 @@ import { Component } from '@angular/core';
   templateUrl: './menu-hamburguer.component.html',
   styleUrls: ['./menu-hamburguer.component.scss']
 })
+
 export class MenuHamburguerComponent {
   name = 'Angular';
+
+
 }

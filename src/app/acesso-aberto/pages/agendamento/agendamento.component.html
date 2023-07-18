@@ -106,7 +106,7 @@
             <p>{{ item.especifica_preco }}</p>
             <h5>{{ item.preco | currency : 'BRL' }}</h5>
           </div>
-          <button class="botao" [routerLink]="['/login']" fragment="loginId">
+          <button (click)="getIdServico(item.id)" class="botao" fragment="loginId">
             Agendar
           </button>
         </div>

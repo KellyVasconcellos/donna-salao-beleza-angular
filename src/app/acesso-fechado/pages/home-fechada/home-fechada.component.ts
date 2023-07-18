@@ -1,10 +1,38 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { Observable } from 'rxjs';
+import { SessaoEnum } from 'src/app/sessao/sessao.enum';
+import { ISessao } from 'src/app/sessao/sessao.interface';
+import { SessaoService } from 'src/app/sessao/sessao.service';
 
 @Component({
   selector: 'app-home-fechada',
   templateUrl: './home-fechada.component.html',
-  styleUrls: ['./home-fechada.component.scss']
+  styleUrls: ['./home-fechada.component.scss'],
 })
-export class HomeFechadaComponent {
+export class HomeFechadaComponent implements OnInit {
 
+  sessao!: ISessao
+
+  constructor(private sessaoService: SessaoService) {}
+
+  ngOnInit(): void {
+    const dadosSessao: ISessao = {
+      idFuncionario: this.sessaoService.buscaSessao(SessaoEnum.CHAVE_FUNCIONARIO),
+      idServico: this.sessaoService.buscaSessao(SessaoEnum.CHAVE_SERVICO),
+      idCliente: this.sessaoService.buscaSessao(SessaoEnum.CHAVE_CLIENTE),
+    };
+    this.sessao = dadosSessao;
+    console.log(this.sessao);
+  }
+
+  /**
+   * criar service acesso-fechada/service
+   * 1 - criar uma chamada na service para buscar o funcionario pelo dadosSessao.idFuncionario
+   * 2 - criar uma chamada na service para buscar o serviço pelo dadosSessao.idServico
+   * 3 - criar uma chamada na service para buscar o cliente pelo dadosSessao.idCliente
+   * 4 - exibir o resultado de cada serviço na tela aqui home-fechada
+   *
+   * exemplo de chamada na service http://localhost:3002/servicos_lista/3
+   * http://localhost:3002/servicos_lista/{id}
+   */
 }

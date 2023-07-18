@@ -1,5 +1,5 @@
 export interface ISessao {
-  idCliente?: number
-  idFuncionario?: number
-  idServico?: number
+  idFuncionario: string
+  idServico: string
+  idCliente?: string
 }

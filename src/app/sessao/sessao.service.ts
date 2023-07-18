@@ -1,28 +1,15 @@
 import { Injectable } from '@angular/core';
-import { ISessao } from './sessao.interface';
+import { SessaoEnum } from './sessao.enum';
 
 @Injectable({
   providedIn: 'root'
 })
 export class SessaoService {
 
-  CHAVE_SESSAO = "usuario_sessao";
-
-  /**
-   * Ao fazer login devemos guardar o id do usuario na sessao do navegador.
-   * criar um formulario reativo (ver no git da bruxa) para pegar os valores: id imagem e id serviço.
-   * Enviar id imagem e id serviço via serviço subject (criar dentro do seviço de sessao o subject para enviar ids e capturar ids).
-   * ver referencia para subject: https://consolelog.com.br/como-proteger-rotas-angular-com-guard/
-   */
-
   constructor() { }
 
-  salvarSessao(sessao: ISessao){
-    sessionStorage.setItem(this.CHAVE_SESSAO, JSON.stringify(sessao))
-  }
-
-  buscaSessao():boolean {
-    let sessao = sessionStorage.getItem(this.CHAVE_SESSAO);
+  validaSessaoCliente():boolean {
+    let sessao = sessionStorage.getItem(SessaoEnum.CHAVE_CLIENTE);
 
     if (sessao == null || sessao == undefined) {
       return false
@@ -30,9 +17,25 @@ export class SessaoService {
     return true
   }
 
+  salvarSessao(chave: string, valor: string){
+    sessionStorage.setItem(chave, valor)
+  }
+
+  buscaSessao(chave: string): string {
+    return sessionStorage.getItem(chave) || ''
+  }
+
   limparSessao(){
     sessionStorage.clear()
   }
+
+  /*
+  private sessionSubject = new BehaviorSubject<ISessao | null>(null)
+  salvarSessaoSubject(iSessao: ISessao){
+    this.sessionSubject.next(iSessao);
+  }
+
+  buscaSessaoSubject() {
+    return this.sessionSubject.asObservable();
+  }*/
 }
-
-

@@ -11,7 +11,7 @@ import { CadastrarComponent } from './acesso-login/view/cadastrar/cadastrar.comp
 import { LoginComponent } from './acesso-login/view/login/login.component';
 import { HomeFechadaComponent } from './acesso-fechado/pages/home-fechada/home-fechada.component';
 import { SessaoService } from './sessao/sessao.service';
-import { guard } from './sessao/guard.guard';
+import { guard } from './sessao/sessao.guard';
 
 const routes: Routes = [
   {
