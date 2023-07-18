@@ -85,32 +85,18 @@
   </section>
 
   <section>
-    <div class="servicos-salao" *ngIf="servicos.length == 0">
-      <div *ngFor="let item of listaServico" class="servico">
-        <h4>{{ item.titulo }}</h4>
-        <p class="descricao">{{ item.descricao }}</p>
-        <div class="preco-botao">
-          <div class="preco">
-            <p>{{ item.especifica_preco }}</p>
-            <h5>{{ item.preco | currency : 'BRL' }}</h5>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="servicos-salao" *ngIf="servicos.length > 0">
-      <div *ngFor="let item of servico.servicos" class="servico">
-        <h4>{{ item.titulo }}</h4>
-        <p class="descricao">{{ item.descricao }}</p>
-        <div class="preco-botao">
-          <div class="preco">
-            <p>{{ item.especifica_preco }}</p>
-            <h5>{{ item.preco | currency : 'BRL' }}</h5>
-          </div>
-          <button (click)="getIdServico(item.id)" class="botao" fragment="loginId">
-            Agendar
-          </button>
-        </div>
-      </div>
-    </div>
+    <app-lista-servico
+      *ngIf="servicos.length == 0"
+      [servicos]="listaServico"
+      [showBotao]="false"
+    >
+    </app-lista-servico>
+
+    <app-lista-servico
+      *ngIf="servicos.length > 0"
+      [servicos]="servico.servicos"
+      (idServico)="getIdServico($event)"
+    >
+    </app-lista-servico>
   </section>
 </main>

@@ -1,24 +1,52 @@
+<header>
+  <section class="container-menu">
+    <div class="menu">
+      <div class="nome-marca">
+        <a href="./">
+          <img
+            src="assets/img/home/marca.png"
+            width="160"
+            height="30"
+            alt="Donna"
+          />
+        </a>
+      </div>
+      <button [routerLink]="['/home']" fragment="homeId" class="botao-login">
+        <p><a>Sair</a></p>
+      </button>
+    </div>
+  </section>
+</header>
 
-<div *ngIf="sessao">
-  <p>ID CLIENTE: {{sessao.idCliente}}</p>
-  <p>ID PROFISSIONAL: {{sessao.idFuncionario}}</p>
-  <p>ID SERVIÇO: {{sessao.idServico}}</p>
-</div>
+<main>
+  <div class="container-calendario">
+    <!-- <div *ngIf="sessao">
+      <p>ID CLIENTE: {{ sessao.idCliente }}</p>
+      <p>ID PROFISSIONAL: {{ sessao.idFuncionario }}</p>
+      <p>ID SERVIÇO: {{ sessao.idServico }}</p>
+    </div> -->
 
-<div *ngIf="funcionario">
-  <p>{{funcionario.foto}}</p>
-  <p>{{funcionario.nome}}</p>
-  <p>{{funcionario.especialidade}}</p>
-</div>
-<div *ngIf="servico">
-  <p>{{servico.titulo}}</p>
-  <p>{{servico.descricao}}</p>
-  <p>{{servico.especifica_preco}}</p>
-  <p>{{servico.preco}}</p>
-</div>
-<div *ngIf="usuario">
-  <p>{{usuario.nome}}</p>
-  <p>{{usuario.email}}</p>
-  <p>{{usuario.senha}}</p>
-  <p></p>
-</div>
+    <div *ngIf="usuario" class="usuario-perfil">
+      <p class="chamada">Olá,&nbsp;{{ usuario.nome }}</p>
+      <button>Editar Perfil</button>
+      <a href=""
+        ><img src="assets/img/home-fechada/editar.png" width="40px"
+      /></a>
+      <!-- <p>{{ usuario.email }}</p>
+      <p>{{ usuario.senha }}</p> -->
+    </div>
+    <div class="agenda-calendario">
+      <app-profissionais
+        *ngIf="funcionario.length"
+        [profissionais]="funcionario"
+      ></app-profissionais>
+
+      <app-lista-servico
+        *ngIf="servico.length"
+        [servicos]="servico"
+        [showBotao]="false"
+      ></app-lista-servico>
+    </div>
+  </div>
+</main>
+<app-footer></app-footer>

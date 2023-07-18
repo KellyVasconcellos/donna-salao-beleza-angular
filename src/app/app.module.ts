@@ -22,6 +22,7 @@ import { NgbAccordionModule, NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { AppRoutingModule } from './app-routing.module';
 import { HomeFechadaComponent } from './acesso-fechado/pages/home-fechada/home-fechada.component';
 import { AccordionsComponent } from './acesso-aberto/components/accordions/accordions.component';
+import { ListaServicoComponent } from './acesso-aberto/components/lista-servico/lista-servico.component';
 
 @NgModule({
   declarations: [
@@ -43,6 +44,7 @@ import { AccordionsComponent } from './acesso-aberto/components/accordions/accor
     BackgroundPretoComponent,
     HomeFechadaComponent,
     AccordionsComponent,
+    ListaServicoComponent,
   ],
   imports: [
     BrowserModule,

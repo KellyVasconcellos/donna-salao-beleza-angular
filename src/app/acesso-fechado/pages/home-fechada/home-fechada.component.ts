@@ -3,7 +3,7 @@ import { Observable } from 'rxjs';
 import { SessaoEnum } from 'src/app/sessao/sessao.enum';
 import { ISessao } from 'src/app/sessao/sessao.interface';
 import { SessaoService } from 'src/app/sessao/sessao.service';
-import { AcessoFechado } from './service/acesso-fechado.service';
+import { AcessoFechado } from '../../service/acesso-fechado.service';
 import { IListaServico } from 'src/app/acesso-aberto/interface/lista_servico';
 import { IUsuario } from 'src/app/acesso-login/interface/usuario';
 import { IFuncionario } from 'src/app/acesso-aberto/interface/funcionario';
@@ -17,9 +17,9 @@ export class HomeFechadaComponent implements OnInit {
 
   sessao!: ISessao
 
-  funcionario!: IFuncionario
+  funcionario: Array<IFuncionario> = []
 
-  servico!: IListaServico
+  servico: Array<IListaServico> = []
 
   usuario!: IUsuario
 
@@ -35,12 +35,12 @@ export class HomeFechadaComponent implements OnInit {
     console.log(this.sessao);
 
     this.acessoFechado.getFuncionario(dadosSessao.idFuncionario!).subscribe((response:IFuncionario) => {
-      this.funcionario = response
+      this.funcionario.push(response)
       console.log('aqui vai imprimir o funcionário escolhido', this.funcionario)
     });
 
     this.acessoFechado.getServico(dadosSessao.idServico).subscribe((response: IListaServico) => {
-      this.servico = response
+      this.servico.push(response)
       console.log('aqui vai imprimir o serviço selecionado', this.servico)
     });
 
@@ -48,12 +48,6 @@ export class HomeFechadaComponent implements OnInit {
       this.usuario = response
       console.log('aqui vai imprimir o nome do usuario', this.usuario)
     });
-
-
-
-
-
-
   }
 
   /**
