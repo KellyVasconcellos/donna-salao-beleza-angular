@@ -3,6 +3,10 @@ import { Observable } from 'rxjs';
 import { SessaoEnum } from 'src/app/sessao/sessao.enum';
 import { ISessao } from 'src/app/sessao/sessao.interface';
 import { SessaoService } from 'src/app/sessao/sessao.service';
+import { AcessoFechado } from './service/acesso-fechado.service';
+import { IListaServico } from 'src/app/acesso-aberto/interface/lista_servico';
+import { IUsuario } from 'src/app/acesso-login/interface/usuario';
+import { IFuncionario } from 'src/app/acesso-aberto/interface/funcionario';
 
 @Component({
   selector: 'app-home-fechada',
@@ -13,7 +17,13 @@ export class HomeFechadaComponent implements OnInit {
 
   sessao!: ISessao
 
-  constructor(private sessaoService: SessaoService) {}
+  funcionario!: IFuncionario
+
+  servico!: IListaServico
+
+  usuario!: IUsuario
+
+  constructor(private sessaoService: SessaoService, private acessoFechado: AcessoFechado) {}
 
   ngOnInit(): void {
     const dadosSessao: ISessao = {
@@ -23,6 +33,27 @@ export class HomeFechadaComponent implements OnInit {
     };
     this.sessao = dadosSessao;
     console.log(this.sessao);
+
+    this.acessoFechado.getFuncionario(dadosSessao.idFuncionario!).subscribe((response:IFuncionario) => {
+      this.funcionario = response
+      console.log('aqui vai imprimir o funcionário escolhido', this.funcionario)
+    });
+
+    this.acessoFechado.getServico(dadosSessao.idServico).subscribe((response: IListaServico) => {
+      this.servico = response
+      console.log('aqui vai imprimir o serviço selecionado', this.servico)
+    });
+
+    this.acessoFechado.getCliente(dadosSessao.idCliente!).subscribe((response:IUsuario) => {
+      this.usuario = response
+      console.log('aqui vai imprimir o nome do usuario', this.usuario)
+    });
+
+
+
+
+
+
   }
 
   /**
