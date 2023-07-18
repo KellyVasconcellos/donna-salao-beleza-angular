@@ -1,7 +1,24 @@
-<p>home-fechada works!</p>
 
 <div *ngIf="sessao">
   <p>ID CLIENTE: {{sessao.idCliente}}</p>
   <p>ID PROFISSIONAL: {{sessao.idFuncionario}}</p>
   <p>ID SERVIÇO: {{sessao.idServico}}</p>
+</div>
+
+<div *ngIf="funcionario">
+  <p>{{funcionario.foto}}</p>
+  <p>{{funcionario.nome}}</p>
+  <p>{{funcionario.especialidade}}</p>
+</div>
+<div *ngIf="servico">
+  <p>{{servico.titulo}}</p>
+  <p>{{servico.descricao}}</p>
+  <p>{{servico.especifica_preco}}</p>
+  <p>{{servico.preco}}</p>
+</div>
+<div *ngIf="usuario">
+  <p>{{usuario.nome}}</p>
+  <p>{{usuario.email}}</p>
+  <p>{{usuario.senha}}</p>
+  <p></p>
 </div>
