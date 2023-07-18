@@ -20,32 +20,34 @@
 
 <main>
   <div class="container-calendario">
-    <!-- <div *ngIf="sessao">
-      <p>ID CLIENTE: {{ sessao.idCliente }}</p>
-      <p>ID PROFISSIONAL: {{ sessao.idFuncionario }}</p>
-      <p>ID SERVIÇO: {{ sessao.idServico }}</p>
-    </div> -->
-
     <div *ngIf="usuario" class="usuario-perfil">
       <p class="chamada">Olá,&nbsp;{{ usuario.nome }}</p>
-      <button>Editar Perfil</button>
-      <a href=""
-        ><img src="assets/img/home-fechada/editar.png" width="40px"
-      /></a>
-      <!-- <p>{{ usuario.email }}</p>
-      <p>{{ usuario.senha }}</p> -->
+      <div class="botao-editar">
+        <button>Editar Perfil</button>
+        <a href=""><img src="assets/img/home-fechada/editar.png" width="40px"
+        /></a>
+      </div>
     </div>
+
     <div class="agenda-calendario">
-      <app-profissionais
+      <div class="caixa-agendamento">
+        <app-profissionais
         *ngIf="funcionario.length"
-        [profissionais]="funcionario"
+        [profissionais]="funcionario" class="imagem"
       ></app-profissionais>
 
       <app-lista-servico
         *ngIf="servico.length"
         [servicos]="servico"
-        [showBotao]="false"
+        [showBotao]="false" class="servicos-agendamento"
       ></app-lista-servico>
+      </div>
+
+      <div class="calendario">
+        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+      </div>
+
+
     </div>
   </div>
 </main>

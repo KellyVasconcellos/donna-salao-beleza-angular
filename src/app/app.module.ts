@@ -23,6 +23,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { HomeFechadaComponent } from './acesso-fechado/pages/home-fechada/home-fechada.component';
 import { AccordionsComponent } from './acesso-aberto/components/accordions/accordions.component';
 import { ListaServicoComponent } from './acesso-aberto/components/lista-servico/lista-servico.component';
+import { CalendariocoComponent } from './acesso-fechado/components/calendarioco/calendarioco.component';
 
 @NgModule({
   declarations: [
@@ -45,6 +46,7 @@ import { ListaServicoComponent } from './acesso-aberto/components/lista-servico/
     HomeFechadaComponent,
     AccordionsComponent,
     ListaServicoComponent,
+    CalendariocoComponent,
   ],
   imports: [
     BrowserModule,
