@@ -2,11 +2,11 @@ import { Component } from '@angular/core';
 import { NgbDateStruct, NgbCalendar } from '@ng-bootstrap/ng-bootstrap';
 
 @Component({
-  selector: 'app-calendarioco',
-  templateUrl: './calendarioco.component.html',
-  styleUrls: ['./calendarioco.component.scss']
+  selector: 'app-calendario',
+  templateUrl: './calendario.component.html',
+  styleUrls: ['./calendario.component.scss']
 })
-export class CalendariocoComponent {
+export class CalendarioComponent {
 	model!: NgbDateStruct;
 	date!: { year: number; month: number };
 
