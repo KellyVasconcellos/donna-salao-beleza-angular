@@ -22,10 +22,15 @@
   <div class="container-calendario">
     <div *ngIf="usuario" class="usuario-perfil">
       <p class="chamada">Olá,&nbsp;{{ usuario.nome }}</p>
+
+
       <div class="botao-editar">
-        <button>Editar Perfil</button>
-        <a href=""><img src="assets/img/home-fechada/editar.png" width="40px"
-        /></a>
+        <p>Editar Perfil</p>
+        <a (click)="open()">
+          <img src="assets/img/home-fechada/editar.png" width="40px"
+          />
+
+        </a>
       </div>
     </div>
 

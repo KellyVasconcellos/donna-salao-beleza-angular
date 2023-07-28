@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { Observable } from 'rxjs';
 import { SessaoEnum } from 'src/app/sessao/sessao.enum';
 import { ISessao } from 'src/app/sessao/sessao.interface';
 import { SessaoService } from 'src/app/sessao/sessao.service';
@@ -7,13 +6,18 @@ import { AcessoFechado } from '../../service/acesso-fechado.service';
 import { IListaServico } from 'src/app/acesso-aberto/interface/lista_servico';
 import { IUsuario } from 'src/app/acesso-login/interface/usuario';
 import { IFuncionario } from 'src/app/acesso-aberto/interface/funcionario';
+import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
+import { ModalPerfilComponent } from '../../components/modal-perfil/modal-perfil.component';
 
 @Component({
   selector: 'app-home-fechada',
   templateUrl: './home-fechada.component.html',
   styleUrls: ['./home-fechada.component.scss'],
 })
+
 export class HomeFechadaComponent implements OnInit {
+
+  closeResult: string | undefined;
 
   sessao!: ISessao
 
@@ -23,7 +27,16 @@ export class HomeFechadaComponent implements OnInit {
 
   usuario!: IUsuario
 
-  constructor(private sessaoService: SessaoService, private acessoFechado: AcessoFechado) {}
+  constructor(private sessaoService: SessaoService, private acessoFechado: AcessoFechado,
+  private modalService: NgbModal) {}
+
+  open() {
+		const modalRef = this.modalService.open(ModalPerfilComponent, { centered: true });
+		modalRef.closed.subscribe(() => {
+      console.log('Quando clica no OK do modal, a aplicação cai aqui!')
+      console.log('Aqui deve ser o código de envio de formulário')
+    })
+	}
 
   ngOnInit(): void {
     const dadosSessao: ISessao = {

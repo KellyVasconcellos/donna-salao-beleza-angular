@@ -24,7 +24,8 @@ import { HomeFechadaComponent } from './acesso-fechado/pages/home-fechada/home-f
 import { AccordionsComponent } from './acesso-aberto/components/accordions/accordions.component';
 import { ListaServicoComponent } from './acesso-aberto/components/lista-servico/lista-servico.component';
 import { JsonPipe } from '@angular/common';
-import { CalendarioComponent } from './acesso-fechado/components/calendarioco/calendario.component';
+import { CalendarioComponent } from './acesso-fechado/components/calendario/calendario.component';
+import { ModalPerfilComponent } from './acesso-fechado/components/modal-perfil/modal-perfil.component';
 
 @NgModule({
   declarations: [
