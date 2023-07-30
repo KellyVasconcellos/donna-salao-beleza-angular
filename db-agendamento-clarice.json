@@ -1,0 +1,12 @@
+{
+  "agendamento": {
+    "id_funcionario":1,
+    "nome": "Clarice Campos",
+    "horarios": [
+      {
+        "dia": "21/09/2023",
+        "horario": "13:00"
+      }
+    ]
+  }
+}

@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { LOCALE_ID, NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './acesso-aberto/pages/home/home.component';
@@ -25,7 +25,10 @@ import { AccordionsComponent } from './acesso-aberto/components/accordions/accor
 import { ListaServicoComponent } from './acesso-aberto/components/lista-servico/lista-servico.component';
 import { JsonPipe } from '@angular/common';
 import { CalendarioComponent } from './acesso-fechado/components/calendario/calendario.component';
-import { ModalPerfilComponent } from './acesso-fechado/components/modal-perfil/modal-perfil.component';
+import { registerLocaleData } from '@angular/common';
+import localePt from '@angular/common/locales/pt';
+
+registerLocaleData(localePt);
 
 @NgModule({
   declarations: [
@@ -61,7 +64,7 @@ import { ModalPerfilComponent } from './acesso-fechado/components/modal-perfil/m
     FormsModule,
     JsonPipe
   ],
-  providers: [],
+  providers: [{ provide: LOCALE_ID, useValue: 'pt'}],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

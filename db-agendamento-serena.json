@@ -1,0 +1,12 @@
+{
+  "agendamento": {
+    "id_funcionario":3,
+    "nome": "Serena Souza",
+    "horarios": [
+      {
+        "dia": "15/12/2023",
+        "horario": "18:00"
+      }
+    ]
+  }
+}
