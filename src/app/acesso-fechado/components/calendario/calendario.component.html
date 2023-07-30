@@ -4,7 +4,7 @@
 [displayMonths]="displayMonths"
 [markDisabled]="markDisabled"
 [outsideDays]="outsideDays"
+(dateSelect)="getdateSelect($event)"
 (navigate)="date = $event.next"></ngb-datepicker>
 
 <hr>
-<input *ngFor="let item of horarios" class="btn btn-primary" type="button" value="{{item}}">

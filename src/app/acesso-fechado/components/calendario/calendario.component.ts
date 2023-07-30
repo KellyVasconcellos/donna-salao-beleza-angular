@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 import { NgbDateStruct, NgbCalendar, NgbDate } from '@ng-bootstrap/ng-bootstrap';
 import { horarios } from './horarios';
 
@@ -9,6 +9,8 @@ import { horarios } from './horarios';
 })
 export class CalendarioComponent implements OnInit {
 
+  @Output() calendario = new EventEmitter<NgbDate>();
+
 	model!: NgbDateStruct;
 	date!: { year: number; month: number };
 
@@ -16,7 +18,7 @@ export class CalendarioComponent implements OnInit {
   outsideDays = 'collapsed';
   displayMonths = 3;
   markDisabled: any = null;
-  horarios = horarios
+
 
 	constructor(private calendar: NgbCalendar) {
     this.markDisabled = (date: NgbDate) => {
@@ -27,11 +29,9 @@ export class CalendarioComponent implements OnInit {
 
   }
 
-  ngOnInit(): void {
+  ngOnInit(): void {}
 
+  getdateSelect(date: NgbDate){
+    this.calendario.emit(date)
   }
-
-	selectToday() {
-		this.model = this.calendar.getToday();
-	}
 }

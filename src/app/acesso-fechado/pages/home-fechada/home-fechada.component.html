@@ -23,13 +23,10 @@
     <div *ngIf="usuario" class="usuario-perfil">
       <p class="chamada">Olá,&nbsp;{{ usuario.nome }}</p>
 
-
       <div class="botao-editar">
         <p>Editar Perfil</p>
         <a (click)="open()">
-          <img src="assets/img/home-fechada/editar.png" width="40px"
-          />
-
+          <img src="assets/img/home-fechada/editar.png" width="40px" />
         </a>
       </div>
     </div>
@@ -37,22 +34,32 @@
     <div class="agenda-calendario">
       <div class="caixa-agendamento">
         <app-profissionais
-        *ngIf="funcionario.length"
-        [profissionais]="funcionario" class="imagem"
-      ></app-profissionais>
+          *ngIf="funcionario.length"
+          [profissionais]="funcionario"
+          class="imagem"
+        ></app-profissionais>
 
-      <app-lista-servico
-        *ngIf="servico.length"
-        [servicos]="servico"
-        [showBotao]="false" class="servicos-agendamento"
-      ></app-lista-servico>
+        <app-lista-servico
+          *ngIf="servico.length"
+          [servicos]="servico"
+          [showBotao]="false"
+          class="servicos-agendamento"
+        ></app-lista-servico>
       </div>
 
       <div class="calendario">
-        <app-calendario></app-calendario>
+        <app-calendario (calendario)="pegaDataSelecionada($event)"></app-calendario>
+        <div *ngIf="apareceBotoes">
+          <input
+          *ngFor="let item of horarios"
+          (click)="gethorario(item)"
+          class="btn btn-primary"
+          type="button"
+          value="{{ item }}"
+        />
+        </div>
+        <button type="button" class="btn btn-success" (click)="agendar()">Agendar</button>
       </div>
-
-
     </div>
   </div>
 </main>

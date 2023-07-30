@@ -1,0 +1,53 @@
+{
+  "agendamento": [
+    {
+      "id": 1,
+      "id_funcionario": 1,
+      "nome_funcionario": "Clarice Campos",
+      "id_servico": 1,
+      "id_cliente": 575871836052,
+      "nome_cliente": "Alice",
+      "horario": {
+        "dia": "21/9/2023",
+        "horario": "13:00"
+      }
+    },
+    {
+      "id": 363350735322,
+      "id_funcionario": 1,
+      "nome_funcionario": "Clarice Campos",
+      "id_cliente": 575871836052,
+      "nome_cliente": "Alice",
+      "id_servico": 1,
+      "horario": {
+        "dia": "10/8/2023",
+        "horario": "11:00"
+      }
+    },
+    {
+      "id": 604141420041,
+      "id_funcionario": 3,
+      "nome_funcionario": "Serena Souza",
+      "id_cliente": 931407201708,
+      "nome_cliente": "Gabriela",
+      "id_servico": 10,
+      "horario": {
+        "dia": "31/7/2023",
+        "horario": "21:00"
+      }
+    },
+    {
+      "id": 817321367564,
+      "id_funcionario": 3,
+      "nome_funcionario": "Serena Souza",
+      "id_cliente": 931407201708,
+      "nome_cliente": "Gabriela",
+      "id_servico": 10,
+      "nome_servico": "Brow lamination",
+      "horario": {
+        "dia": "14/9/2023",
+        "horario": "08:00"
+      }
+    }
+  ]
+}

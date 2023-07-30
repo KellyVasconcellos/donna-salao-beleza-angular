@@ -6,8 +6,11 @@ import { AcessoFechado } from '../../service/acesso-fechado.service';
 import { IListaServico } from 'src/app/acesso-aberto/interface/lista_servico';
 import { IUsuario } from 'src/app/acesso-login/interface/usuario';
 import { IFuncionario } from 'src/app/acesso-aberto/interface/funcionario';
-import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
+import { NgbDate, NgbModal } from '@ng-bootstrap/ng-bootstrap';
 import { ModalPerfilComponent } from '../../components/modal-perfil/modal-perfil.component';
+import { horarios } from '../../components/calendario/horarios';
+import { IAgendamento } from '../../interface/agendamento';
+import { IHorario } from '../../interface/horario';
 
 @Component({
   selector: 'app-home-fechada',
@@ -23,9 +26,25 @@ export class HomeFechadaComponent implements OnInit {
 
   funcionario: Array<IFuncionario> = []
 
+  getFuncionario!: IFuncionario
+
   servico: Array<IListaServico> = []
 
+  getServico!: IListaServico
+
   usuario!: IUsuario
+
+  horarios = horarios
+
+  apareceBotoes = false
+
+  pegaHorario: string = ""
+
+  agendamento!: IAgendamento
+
+  pegaCalendario!: NgbDate
+
+
 
   constructor(private sessaoService: SessaoService, private acessoFechado: AcessoFechado,
   private modalService: NgbModal) {}
@@ -48,11 +67,13 @@ export class HomeFechadaComponent implements OnInit {
     console.log(this.sessao);
 
     this.acessoFechado.getFuncionario(dadosSessao.idFuncionario!).subscribe((response:IFuncionario) => {
+      this.getFuncionario = response
       this.funcionario.push(response)
       console.log('aqui vai imprimir o funcionário escolhido', this.funcionario)
     });
 
     this.acessoFechado.getServico(dadosSessao.idServico).subscribe((response: IListaServico) => {
+      this.getServico = response
       this.servico.push(response)
       console.log('aqui vai imprimir o serviço selecionado', this.servico)
     });
@@ -63,14 +84,43 @@ export class HomeFechadaComponent implements OnInit {
     });
   }
 
-  /**
-   * criar service acesso-fechada/service
-   * 1 - criar uma chamada na service para buscar o funcionario pelo dadosSessao.idFuncionario
-   * 2 - criar uma chamada na service para buscar o serviço pelo dadosSessao.idServico
-   * 3 - criar uma chamada na service para buscar o cliente pelo dadosSessao.idCliente
-   * 4 - exibir o resultado de cada serviço na tela aqui home-fechada
-   *
-   * exemplo de chamada na service http://localhost:3002/servicos_lista/3
-   * http://localhost:3002/servicos_lista/{id}
-   */
+
+
+  gethorario(horario: string){
+    this.pegaHorario = horario
+  }
+
+  pegaDataSelecionada(calendario: NgbDate){
+    this.pegaCalendario = calendario
+    this.apareceBotoes = true
+  }
+
+  agendar(){
+    const pegaData = `${this.pegaCalendario.day}/${this.pegaCalendario.month}/${this.pegaCalendario.year}`
+    const horario: IHorario = {
+      dia: pegaData.trim(),
+      horario: this.pegaHorario
+    }
+
+    const idAgendamento = Math.floor(Date.now() * Math.random())
+
+    const agendamento: IAgendamento = {
+      id : idAgendamento,
+      id_funcionario : this.getFuncionario.id,
+      nome_funcionario: this.getFuncionario.nome,
+      id_cliente: this.usuario.id,
+      nome_cliente: this.usuario.nome,
+      id_servico: this.getServico.id,
+      nome_servico:this.getServico.titulo,
+      horario: horario
+    }
+
+    this.agendamento = agendamento
+
+    this.acessoFechado.salvarAgendamento(this.agendamento).subscribe(() => {
+      console.log("agendamento feito")
+    })
+  }
+
+
 }

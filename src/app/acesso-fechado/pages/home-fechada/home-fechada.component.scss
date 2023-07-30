@@ -92,9 +92,13 @@ main {
 
 .container-calendario .agenda-calendario .calendario {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   width: 750px;
   align-items: flex-start;
+}
+
+.container-calendario .agenda-calendario .calendario input{
+  margin: 5px;
 }
 
 
