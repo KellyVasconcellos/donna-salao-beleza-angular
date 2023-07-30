@@ -48,6 +48,19 @@
         "dia": "14/9/2023",
         "horario": "08:00"
       }
+    },
+    {
+      "id": 1133475343645,
+      "id_funcionario": 3,
+      "nome_funcionario": "Serena Souza",
+      "id_cliente": 931407201708,
+      "nome_cliente": "Gabriela",
+      "id_servico": 10,
+      "nome_servico": "Brow lamination",
+      "horario": {
+        "dia": "17/8/2023",
+        "horario": "10:00"
+      }
     }
   ]
 }

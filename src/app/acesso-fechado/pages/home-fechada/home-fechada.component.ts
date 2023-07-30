@@ -96,6 +96,40 @@ export class HomeFechadaComponent implements OnInit {
   }
 
   agendar(){
+
+    // const modalRef = this.modalService.open(ModalPerfilComponent(trocar), { centered: true });
+		// modalRef.closed.subscribe(() => {
+      // const pegaData = `${this.pegaCalendario.day}/${this.pegaCalendario.month}/${this.pegaCalendario.year}`
+      // const horario: IHorario = {
+      //   dia: pegaData.trim(),
+      //   horario: this.pegaHorario
+      // }
+
+      // const idAgendamento = Math.floor(Date.now() * Math.random())
+
+      // const agendamento: IAgendamento = {
+      //   id : idAgendamento,
+      //   id_funcionario : this.getFuncionario.id,
+      //   nome_funcionario: this.getFuncionario.nome,
+      //   id_cliente: this.usuario.id,
+      //   nome_cliente: this.usuario.nome,
+      //   id_servico: this.getServico.id,
+      //   nome_servico:this.getServico.titulo,
+      //   horario: horario
+      // }
+
+      // this.agendamento = agendamento
+
+      // this.acessoFechado.salvarAgendamento(this.agendamento).subscribe(() => {
+      //   console.log("agendamento feito")
+      // })
+
+    //   console.log('Quando clica no OK do modal, a aplicação cai aqui!')
+    //   console.log('Aqui deve ser o código de envio de formulário')
+    // })
+    //modificar de acordo com meu modal de confirmação de agendamento
+    //criar componente modal
+
     const pegaData = `${this.pegaCalendario.day}/${this.pegaCalendario.month}/${this.pegaCalendario.year}`
     const horario: IHorario = {
       dia: pegaData.trim(),
@@ -122,5 +156,15 @@ export class HomeFechadaComponent implements OnInit {
     })
   }
 
+  /**
+   * quando clicar na hora colocar opacity nos demais botoes igual as fotos das funcionarias,
+   * quando clicar em agendar abrir modal para confirmação: nesse modal emitir método igual ao Open nessa página com outro nome caso ele clique no botao "confirmar".
+   * deletar código acima depois de criar modal.
+   * apos confirmação aparecer outro componente que mostra os serviços agendados - fazer get http://localhost:3004/agendamento.
+   * Criar um botão ou link para novos agendamentos, que deverão redirecionar para tela agendamento do acesso aberto
+   * Quando clicar no botão agendar na tela agendamento do acesso aberto, deve verificar primeiro se o id do cliente está na sessão (logado), se tiver, deve direcionar direto para a area fechada /home-fechada, se não, deve direcionar para login
+   *
+   *
+   */
 
 }
