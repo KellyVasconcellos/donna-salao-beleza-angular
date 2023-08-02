@@ -27,44 +27,47 @@ import { JsonPipe } from '@angular/common';
 import { CalendarioComponent } from './acesso-fechado/components/calendario/calendario.component';
 import { registerLocaleData } from '@angular/common';
 import localePt from '@angular/common/locales/pt';
+import { ModalPerfilComponent } from "./acesso-fechado/components/modal-perfil/modal-perfil.component";
+
 
 registerLocaleData(localePt);
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    HomeComponent,
-    SobreComponent,
-    ServicosComponent,
-    ContatoComponent,
-    AgendamentoComponent,
-    TemplateHomeComponent,
-    FormaCartaoComponent,
-    MenuHamburguerComponent,
-    LoginComponent,
-    CadastrarComponent,
-    AreaLogadaComponent,
-    ModalEditarComponent,
-    FooterComponent,
-    ProfissionaisComponent,
-    BackgroundPretoComponent,
-    HomeFechadaComponent,
-    AccordionsComponent,
-    ListaServicoComponent,
-    CalendarioComponent,
-  ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    NgbModule,
-    ReactiveFormsModule,
-    HttpClientModule,
-    NgbAccordionModule,
-    NgbDatepickerModule,
-    FormsModule,
-    JsonPipe
-  ],
-  providers: [{ provide: LOCALE_ID, useValue: 'pt'}],
-  bootstrap: [AppComponent],
+    declarations: [
+        AppComponent,
+        HomeComponent,
+        SobreComponent,
+        ServicosComponent,
+        ContatoComponent,
+        AgendamentoComponent,
+        TemplateHomeComponent,
+        FormaCartaoComponent,
+        MenuHamburguerComponent,
+        LoginComponent,
+        CadastrarComponent,
+        AreaLogadaComponent,
+        ModalEditarComponent,
+        FooterComponent,
+        ProfissionaisComponent,
+        BackgroundPretoComponent,
+        HomeFechadaComponent,
+        AccordionsComponent,
+        ListaServicoComponent,
+        CalendarioComponent,
+    ],
+    providers: [{ provide: LOCALE_ID, useValue: 'pt' }],
+    bootstrap: [AppComponent],
+    imports: [
+        BrowserModule,
+        AppRoutingModule,
+        NgbModule,
+        ReactiveFormsModule,
+        HttpClientModule,
+        NgbAccordionModule,
+        NgbDatepickerModule,
+        FormsModule,
+        JsonPipe,
+        ModalPerfilComponent
+    ]
 })
 export class AppModule {}

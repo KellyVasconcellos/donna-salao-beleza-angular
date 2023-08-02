@@ -11,6 +11,7 @@ import { ModalPerfilComponent } from '../../components/modal-perfil/modal-perfil
 import { horarios } from '../../components/calendario/horarios';
 import { IAgendamento } from '../../interface/agendamento';
 import { IHorario } from '../../interface/horario';
+import { ModalConfirmaAgendamentoComponent } from '../../components/modal-confirma-agendamento/modal-confirma-agendamento.component';
 
 @Component({
   selector: 'app-home-fechada',
@@ -44,7 +45,9 @@ export class HomeFechadaComponent implements OnInit {
 
   pegaCalendario!: NgbDate
 
+  alert = false
 
+  mensagem  = ""
 
   constructor(private sessaoService: SessaoService, private acessoFechado: AcessoFechado,
   private modalService: NgbModal) {}
@@ -84,8 +87,6 @@ export class HomeFechadaComponent implements OnInit {
     });
   }
 
-
-
   gethorario(horario: string){
     this.pegaHorario = horario
   }
@@ -97,38 +98,7 @@ export class HomeFechadaComponent implements OnInit {
 
   agendar(){
 
-    // const modalRef = this.modalService.open(ModalPerfilComponent(trocar), { centered: true });
-		// modalRef.closed.subscribe(() => {
-      // const pegaData = `${this.pegaCalendario.day}/${this.pegaCalendario.month}/${this.pegaCalendario.year}`
-      // const horario: IHorario = {
-      //   dia: pegaData.trim(),
-      //   horario: this.pegaHorario
-      // }
-
-      // const idAgendamento = Math.floor(Date.now() * Math.random())
-
-      // const agendamento: IAgendamento = {
-      //   id : idAgendamento,
-      //   id_funcionario : this.getFuncionario.id,
-      //   nome_funcionario: this.getFuncionario.nome,
-      //   id_cliente: this.usuario.id,
-      //   nome_cliente: this.usuario.nome,
-      //   id_servico: this.getServico.id,
-      //   nome_servico:this.getServico.titulo,
-      //   horario: horario
-      // }
-
-      // this.agendamento = agendamento
-
-      // this.acessoFechado.salvarAgendamento(this.agendamento).subscribe(() => {
-      //   console.log("agendamento feito")
-      // })
-
-    //   console.log('Quando clica no OK do modal, a aplicação cai aqui!')
-    //   console.log('Aqui deve ser o código de envio de formulário')
-    // })
-    //modificar de acordo com meu modal de confirmação de agendamento
-    //criar componente modal
+    const modalRef = this.modalService.open(ModalConfirmaAgendamentoComponent, { centered: true });
 
     const pegaData = `${this.pegaCalendario.day}/${this.pegaCalendario.month}/${this.pegaCalendario.year}`
     const horario: IHorario = {
@@ -151,10 +121,25 @@ export class HomeFechadaComponent implements OnInit {
 
     this.agendamento = agendamento
 
-    this.acessoFechado.salvarAgendamento(this.agendamento).subscribe(() => {
-      console.log("agendamento feito")
+    modalRef.componentInstance.agendamento = this.agendamento
+
+    modalRef.closed.subscribe(() => {
+      this.acessoFechado.salvarAgendamento(this.agendamento).subscribe(() => {
+        console.log("agendamento feito")
+        this.alert = true
+        this.mensagem = "Usuário alterado com sucesso!"
+        setTimeout(() => {
+          this.alert = false
+        }, 3000);
+      })
     })
-  }
+
+    //   console.log('Quando clica no OK do modal, a aplicação cai aqui!')
+    //   console.log('Aqui deve ser o código de envio de formulário')
+    // })
+    //modificar de acordo com meu modal de confirmação de agendamento
+    //criar componente modal
+
 
   /**
    * quando clicar na hora colocar opacity nos demais botoes igual as fotos das funcionarias,
@@ -166,5 +151,5 @@ export class HomeFechadaComponent implements OnInit {
    *
    *
    */
-
+  }
 }

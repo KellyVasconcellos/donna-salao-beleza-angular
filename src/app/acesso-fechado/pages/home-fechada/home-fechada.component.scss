@@ -136,3 +136,16 @@ main {
   }
 
 }
+
+
+.alert {
+  width: 60%;
+  text-align: center;
+  width: 60%;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
+
+.alert_opacity {
+  opacity: 1;
+}

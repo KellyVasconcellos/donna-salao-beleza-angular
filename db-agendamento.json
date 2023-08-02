@@ -61,6 +61,178 @@
         "dia": "17/8/2023",
         "horario": "10:00"
       }
+    },
+    {
+      "id": 1215775851078,
+      "id_cliente": 459578448235,
+      "nome_cliente": "Claudia",
+      "horario": {
+        "dia": "24/8/2023",
+        "horario": "08:00"
+      }
+    },
+    {
+      "id": 1476315363926,
+      "id_cliente": 459578448235,
+      "nome_cliente": "Claudia",
+      "horario": {
+        "dia": "18/8/2023",
+        "horario": ""
+      }
+    },
+    {
+      "id": 1506255427076,
+      "id_cliente": 459578448235,
+      "nome_cliente": "Claudia",
+      "horario": {
+        "dia": "18/8/2023",
+        "horario": "09:00"
+      }
+    },
+    {
+      "id": 335362700839,
+      "id_cliente": 459578448235,
+      "nome_cliente": "Claudia",
+      "horario": {
+        "dia": "18/8/2023",
+        "horario": "10:00"
+      }
+    },
+    {
+      "id": 134459972201,
+      "id_cliente": 459578448235,
+      "nome_cliente": "Claudia",
+      "horario": {
+        "dia": "18/8/2023",
+        "horario": "10:00"
+      }
+    },
+    {
+      "id": 1645626866769,
+      "id_cliente": 459578448235,
+      "nome_cliente": "Claudia",
+      "horario": {
+        "dia": "18/8/2023",
+        "horario": "10:00"
+      }
+    },
+    {
+      "id": 607726790546,
+      "id_cliente": 459578448235,
+      "nome_cliente": "Claudia",
+      "horario": {
+        "dia": "18/8/2023",
+        "horario": "10:00"
+      }
+    },
+    {
+      "id": 1312737527781,
+      "id_cliente": 459578448235,
+      "nome_cliente": "Claudia",
+      "horario": {
+        "dia": "18/8/2023",
+        "horario": "10:00"
+      }
+    },
+    {
+      "id": 634890343919,
+      "id_cliente": 459578448235,
+      "nome_cliente": "Claudia",
+      "horario": {
+        "dia": "18/8/2023",
+        "horario": "10:00"
+      }
+    },
+    {
+      "id": 245460825798,
+      "id_funcionario": 4,
+      "nome_funcionario": "Olivia Maldonato",
+      "id_cliente": 1327565904676,
+      "nome_cliente": "Fernanda",
+      "id_servico": 11,
+      "nome_servico": "Maquiagem Social",
+      "horario": {
+        "dia": "9/8/2023",
+        "horario": "09:00"
+      }
+    },
+    {
+      "id": 1100629736731,
+      "id_funcionario": 4,
+      "nome_funcionario": "Olivia Maldonato",
+      "id_cliente": 1327565904676,
+      "nome_cliente": "Fernanda",
+      "id_servico": 11,
+      "nome_servico": "Maquiagem Social",
+      "horario": {
+        "dia": "11/8/2023",
+        "horario": "09:00"
+      }
+    },
+    {
+      "id": 500508097392,
+      "id_funcionario": 4,
+      "nome_funcionario": "Olivia Maldonato",
+      "id_cliente": 1327565904676,
+      "nome_cliente": "Fernanda",
+      "id_servico": 11,
+      "nome_servico": "Maquiagem Social",
+      "horario": {
+        "dia": "11/8/2023",
+        "horario": "09:00"
+      }
+    },
+    {
+      "id": 834086002472,
+      "id_funcionario": 4,
+      "nome_funcionario": "Olivia Maldonato",
+      "id_cliente": 1327565904676,
+      "nome_cliente": "Fernanda",
+      "id_servico": 11,
+      "nome_servico": "Maquiagem Social",
+      "horario": {
+        "dia": "11/8/2023",
+        "horario": "09:00"
+      }
+    },
+    {
+      "id": 1687210309992,
+      "id_funcionario": 2,
+      "nome_funcionario": "Teresa Maria",
+      "id_cliente": 370393892916,
+      "nome_cliente": "Clara",
+      "id_servico": 6,
+      "nome_servico": "Corte a seco",
+      "horario": {
+        "dia": "17/8/2023",
+        "horario": "09:00"
+      }
+    },
+    {
+      "id": 613166147170,
+      "id_funcionario": 2,
+      "nome_funcionario": "Teresa Maria",
+      "id_cliente": 370393892916,
+      "nome_cliente": "Clara",
+      "id_servico": 6,
+      "nome_servico": "Corte a seco",
+      "horario": {
+        "dia": "15/9/2023",
+        "horario": "10:00"
+      }
+    },
+    {
+      "id": 427253125020,
+      "id_funcionario": 2,
+      "nome_funcionario": "Teresa Maria",
+      "id_cliente": 370393892916,
+      "nome_cliente": "Clara",
+      "id_servico": 6,
+      "nome_servico": "Corte a seco",
+      "horario": {
+        "dia": "15/9/2023",
+        "horario": "11:00"
+      }
     }
   ]
 }
