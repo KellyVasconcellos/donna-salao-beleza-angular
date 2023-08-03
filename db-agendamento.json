@@ -233,6 +233,266 @@
         "dia": "15/9/2023",
         "horario": "11:00"
       }
+    },
+    {
+      "id": 297477743591,
+      "id_funcionario": 2,
+      "nome_funcionario": "Teresa Maria",
+      "id_cliente": 370393892916,
+      "nome_cliente": "Clara",
+      "id_servico": 6,
+      "nome_servico": "Corte a seco",
+      "horario": {
+        "dia": "15/9/2023",
+        "horario": "11:00"
+      }
+    },
+    {
+      "id": 587203442039,
+      "id_funcionario": 2,
+      "nome_funcionario": "Teresa Maria",
+      "id_cliente": 370393892916,
+      "nome_cliente": "Clara",
+      "id_servico": 6,
+      "nome_servico": "Corte a seco",
+      "horario": {
+        "dia": "13/9/2023",
+        "horario": "11:00"
+      }
+    },
+    {
+      "id": 1613238042157,
+      "id_funcionario": 2,
+      "nome_funcionario": "Teresa Maria",
+      "id_cliente": 370393892916,
+      "nome_cliente": "Clara",
+      "id_servico": 6,
+      "nome_servico": "Corte a seco",
+      "horario": {
+        "dia": "20/9/2023",
+        "horario": "09:00"
+      }
+    },
+    {
+      "id": 441090837966,
+      "id_funcionario": 2,
+      "nome_funcionario": "Teresa Maria",
+      "id_cliente": 370393892916,
+      "nome_cliente": "Clara",
+      "id_servico": 6,
+      "nome_servico": "Corte a seco",
+      "horario": {
+        "dia": "17/8/2023",
+        "horario": "09:00"
+      }
+    },
+    {
+      "id": 274466989314,
+      "id_funcionario": 2,
+      "nome_funcionario": "Teresa Maria",
+      "id_cliente": 370393892916,
+      "nome_cliente": "Clara",
+      "id_servico": 6,
+      "nome_servico": "Corte a seco",
+      "horario": {
+        "dia": "18/8/2023",
+        "horario": "09:00"
+      }
+    },
+    {
+      "id": 1110289239845,
+      "id_funcionario": 2,
+      "nome_funcionario": "Teresa Maria",
+      "id_cliente": 370393892916,
+      "nome_cliente": "Clara",
+      "id_servico": 6,
+      "nome_servico": "Corte a seco",
+      "horario": {
+        "dia": "14/9/2023",
+        "horario": "09:00"
+      }
+    },
+    {
+      "id": 574656848338,
+      "id_funcionario": 2,
+      "nome_funcionario": "Teresa Maria",
+      "id_cliente": 370393892916,
+      "nome_cliente": "Clara",
+      "id_servico": 6,
+      "nome_servico": "Corte a seco",
+      "horario": {
+        "dia": "12/10/2023",
+        "horario": "14:00"
+      }
+    },
+    {
+      "id": 1323881383035,
+      "id_funcionario": 2,
+      "nome_funcionario": "Teresa Maria",
+      "id_cliente": 370393892916,
+      "nome_cliente": "Clara",
+      "id_servico": 6,
+      "nome_servico": "Corte a seco",
+      "horario": {
+        "dia": "17/10/2023",
+        "horario": "14:00"
+      }
+    },
+    {
+      "id": 856837141880,
+      "id_funcionario": 2,
+      "nome_funcionario": "Teresa Maria",
+      "id_cliente": 370393892916,
+      "nome_cliente": "Clara",
+      "id_servico": 6,
+      "nome_servico": "Corte a seco",
+      "horario": {
+        "dia": "17/10/2023",
+        "horario": "13:00"
+      }
+    },
+    {
+      "id": 593649307722,
+      "id_funcionario": 2,
+      "nome_funcionario": "Teresa Maria",
+      "id_cliente": 370393892916,
+      "nome_cliente": "Clara",
+      "id_servico": 6,
+      "nome_servico": "Corte a seco",
+      "horario": {
+        "dia": "17/10/2023",
+        "horario": "11:00"
+      }
+    },
+    {
+      "id": 460439547808,
+      "id_funcionario": 2,
+      "nome_funcionario": "Teresa Maria",
+      "id_cliente": 370393892916,
+      "nome_cliente": "Clara",
+      "id_servico": 6,
+      "nome_servico": "Corte a seco",
+      "horario": {
+        "dia": "13/9/2023",
+        "horario": "11:00"
+      }
+    },
+    {
+      "id": 16902613556,
+      "id_funcionario": 2,
+      "nome_funcionario": "Teresa Maria",
+      "id_cliente": 370393892916,
+      "nome_cliente": "Clara",
+      "id_servico": 6,
+      "nome_servico": "Corte a seco",
+      "horario": {
+        "dia": "6/9/2023",
+        "horario": ""
+      }
+    },
+    {
+      "id": 803675793030,
+      "id_funcionario": 2,
+      "nome_funcionario": "Teresa Maria",
+      "id_cliente": 370393892916,
+      "nome_cliente": "Clara",
+      "id_servico": 6,
+      "nome_servico": "Corte a seco",
+      "horario": {
+        "dia": "10/8/2023",
+        "horario": "09:00"
+      }
+    },
+    {
+      "id": 1253774773409,
+      "id_funcionario": 2,
+      "nome_funcionario": "Teresa Maria",
+      "id_cliente": 370393892916,
+      "nome_cliente": "Clara",
+      "id_servico": 6,
+      "nome_servico": "Corte a seco",
+      "horario": {
+        "dia": "18/8/2023",
+        "horario": "09:00"
+      }
+    },
+    {
+      "id": 24099927072,
+      "id_funcionario": 2,
+      "nome_funcionario": "Teresa Maria",
+      "id_cliente": 370393892916,
+      "nome_cliente": "Clara",
+      "id_servico": 6,
+      "nome_servico": "Corte a seco",
+      "horario": {
+        "dia": "16/8/2023",
+        "horario": "09:00"
+      }
+    },
+    {
+      "id": 521516688711,
+      "id_funcionario": 2,
+      "nome_funcionario": "Teresa Maria",
+      "id_cliente": 370393892916,
+      "nome_cliente": "Clara",
+      "id_servico": 6,
+      "nome_servico": "Corte a seco",
+      "horario": {
+        "dia": "10/8/2023",
+        "horario": ""
+      }
+    },
+    {
+      "id": 1548334488145,
+      "id_funcionario": 2,
+      "nome_funcionario": "Teresa Maria",
+      "id_cliente": 370393892916,
+      "nome_cliente": "Clara",
+      "id_servico": 6,
+      "nome_servico": "Corte a seco",
+      "horario": {
+        "dia": "10/8/2023",
+        "horario": ""
+      }
+    },
+    {
+      "id": 637244883562,
+      "id_funcionario": 2,
+      "nome_funcionario": "Teresa Maria",
+      "id_cliente": 370393892916,
+      "nome_cliente": "Clara",
+      "id_servico": 6,
+      "nome_servico": "Corte a seco",
+      "horario": {
+        "dia": "8/9/2023",
+        "horario": ""
+      }
+    },
+    {
+      "id": 1510637405736,
+      "id_funcionario": 2,
+      "nome_funcionario": "Teresa Maria",
+      "id_cliente": 370393892916,
+      "nome_cliente": "Clara",
+      "id_servico": 6,
+      "nome_servico": "Corte a seco",
+      "horario": {
+        "dia": "10/8/2023",
+        "horario": ""
+      }
+    },
+    {
+      "id": 426565674541,
+      "id_funcionario": 2,
+      "nome_funcionario": "Teresa Maria",
+      "id_cliente": 370393892916,
+      "nome_cliente": "Clara",
+      "id_servico": 6,
+      "nome_servico": "Corte a seco",
+      "horario": {
+        "dia": "17/8/2023",
+        "horario": ""
+      }
     }
   ]
 }

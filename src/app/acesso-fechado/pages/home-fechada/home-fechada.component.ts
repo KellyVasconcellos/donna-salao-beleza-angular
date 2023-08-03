@@ -18,121 +18,152 @@ import { ModalConfirmaAgendamentoComponent } from '../../components/modal-confir
   templateUrl: './home-fechada.component.html',
   styleUrls: ['./home-fechada.component.scss'],
 })
-
 export class HomeFechadaComponent implements OnInit {
-
   closeResult: string | undefined;
 
-  sessao!: ISessao
+  sessao!: ISessao;
 
-  funcionario: Array<IFuncionario> = []
+  funcionario: Array<IFuncionario> = [];
 
-  getFuncionario!: IFuncionario
+  getFuncionario!: IFuncionario;
 
-  servico: Array<IListaServico> = []
+  servico: Array<IListaServico> = [];
 
-  getServico!: IListaServico
+  getServico!: IListaServico;
 
-  usuario!: IUsuario
+  usuario!: IUsuario;
 
-  horarios = horarios
+  horarios = horarios;
 
-  apareceBotoes = false
+  apareceBotoes = false;
 
-  pegaHorario: string = ""
+  pegaHorario: string = '';
 
-  agendamento!: IAgendamento
+  agendamento!: IAgendamento;
 
-  pegaCalendario!: NgbDate
+  pegaCalendario!: NgbDate;
 
-  alert = false
+  alert = false;
 
-  mensagem  = ""
+  mensagem = '';
 
-  constructor(private sessaoService: SessaoService, private acessoFechado: AcessoFechado,
-  private modalService: NgbModal) {}
+  constructor(
+    private sessaoService: SessaoService,
+    private acessoFechado: AcessoFechado,
+    private modalService: NgbModal
+  ) {}
 
   open() {
-		const modalRef = this.modalService.open(ModalPerfilComponent, { centered: true });
-		modalRef.closed.subscribe(() => {
-      console.log('Quando clica no OK do modal, a aplicação cai aqui!')
-      console.log('Aqui deve ser o código de envio de formulário')
-    })
-	}
+    const modalRef = this.modalService.open(ModalPerfilComponent, {
+      centered: true,
+    });
+    modalRef.closed.subscribe(() => {
+      console.log('Quando clica no OK do modal, a aplicação cai aqui!');
+      console.log('Aqui deve ser o código de envio de formulário');
+    });
+  }
 
   ngOnInit(): void {
     const dadosSessao: ISessao = {
-      idFuncionario: this.sessaoService.buscaSessao(SessaoEnum.CHAVE_FUNCIONARIO),
+      idFuncionario: this.sessaoService.buscaSessao(
+        SessaoEnum.CHAVE_FUNCIONARIO
+      ),
       idServico: this.sessaoService.buscaSessao(SessaoEnum.CHAVE_SERVICO),
       idCliente: this.sessaoService.buscaSessao(SessaoEnum.CHAVE_CLIENTE),
     };
     this.sessao = dadosSessao;
     console.log(this.sessao);
 
-    this.acessoFechado.getFuncionario(dadosSessao.idFuncionario!).subscribe((response:IFuncionario) => {
-      this.getFuncionario = response
-      this.funcionario.push(response)
-      console.log('aqui vai imprimir o funcionário escolhido', this.funcionario)
-    });
+    this.acessoFechado
+      .getFuncionario(dadosSessao.idFuncionario!)
+      .subscribe((response: IFuncionario) => {
+        this.getFuncionario = response;
+        this.funcionario.push(response);
+        console.log(
+          'aqui vai imprimir o funcionário escolhido',
+          this.funcionario
+        );
+      });
 
-    this.acessoFechado.getServico(dadosSessao.idServico).subscribe((response: IListaServico) => {
-      this.getServico = response
-      this.servico.push(response)
-      console.log('aqui vai imprimir o serviço selecionado', this.servico)
-    });
+    this.acessoFechado
+      .getServico(dadosSessao.idServico)
+      .subscribe((response: IListaServico) => {
+        this.getServico = response;
+        this.servico.push(response);
+        console.log('aqui vai imprimir o serviço selecionado', this.servico);
+      });
 
-    this.acessoFechado.getCliente(dadosSessao.idCliente!).subscribe((response:IUsuario) => {
-      this.usuario = response
-      console.log('aqui vai imprimir o nome do usuario', this.usuario)
-    });
+    this.acessoFechado
+      .getCliente(dadosSessao.idCliente!)
+      .subscribe((response: IUsuario) => {
+        this.usuario = response;
+        console.log('aqui vai imprimir o nome do usuario', this.usuario);
+      });
   }
 
-  gethorario(horario: string){
-    this.pegaHorario = horario
+  gethorario(horario: string) {
+    this.pegaHorario = horario;
   }
 
-  pegaDataSelecionada(calendario: NgbDate){
-    this.pegaCalendario = calendario
-    this.apareceBotoes = true
+  pegaDataSelecionada(calendario: NgbDate) {
+    this.pegaCalendario = calendario;
+    this.apareceBotoes = true;
   }
 
-  agendar(){
+  agendar() {
+    const modalRef = this.modalService.open(ModalConfirmaAgendamentoComponent, {
+      centered: true,
+    });
 
-    const modalRef = this.modalService.open(ModalConfirmaAgendamentoComponent, { centered: true });
-
-    const pegaData = `${this.pegaCalendario.day}/${this.pegaCalendario.month}/${this.pegaCalendario.year}`
+    const pegaData = `${this.pegaCalendario.day}/${this.pegaCalendario.month}/${this.pegaCalendario.year}`;
     const horario: IHorario = {
       dia: pegaData.trim(),
-      horario: this.pegaHorario
-    }
+      horario: this.pegaHorario,
+    };
 
-    const idAgendamento = Math.floor(Date.now() * Math.random())
+    const idAgendamento = Math.floor(Date.now() * Math.random());
 
     const agendamento: IAgendamento = {
-      id : idAgendamento,
-      id_funcionario : this.getFuncionario.id,
+      id: idAgendamento,
+      id_funcionario: this.getFuncionario.id,
       nome_funcionario: this.getFuncionario.nome,
       id_cliente: this.usuario.id,
       nome_cliente: this.usuario.nome,
       id_servico: this.getServico.id,
-      nome_servico:this.getServico.titulo,
-      horario: horario
-    }
+      nome_servico: this.getServico.titulo,
+      horario: horario,
+    };
 
-    this.agendamento = agendamento
+    this.agendamento = agendamento;
 
-    modalRef.componentInstance.agendamento = this.agendamento
+    modalRef.componentInstance.agendamento = this.agendamento;
 
     modalRef.closed.subscribe(() => {
-      this.acessoFechado.salvarAgendamento(this.agendamento).subscribe(() => {
-        console.log("agendamento feito")
-        this.alert = true
-        this.mensagem = "Usuário alterado com sucesso!"
+      console.log(this.agendamento)
+      if (
+        this.agendamento.id_funcionario != null &&
+        this.agendamento.nome_funcionario.length > 0  &&
+        this.agendamento.id_servico != null &&
+        this.agendamento.nome_servico.length > 0 &&
+        this.agendamento.horario.dia.length > 0 &&
+        this.agendamento.horario.horario.length > 0
+      ) {
+
+        this.acessoFechado.salvarAgendamento(this.agendamento).subscribe(() => {
+          this.alert = true;
+          this.mensagem = 'Agendamento realizado com sucesso!';
+          setTimeout(() => {
+            this.alert = false;
+          }, 3000);
+        });
+      } else {
+        this.alert = true;
+        this.mensagem = 'Não foi possível finalizar o agendamento';
         setTimeout(() => {
-          this.alert = false
+          this.alert = false;
         }, 3000);
-      })
-    })
+      }
+    });
 
     //   console.log('Quando clica no OK do modal, a aplicação cai aqui!')
     //   console.log('Aqui deve ser o código de envio de formulário')
@@ -140,16 +171,15 @@ export class HomeFechadaComponent implements OnInit {
     //modificar de acordo com meu modal de confirmação de agendamento
     //criar componente modal
 
-
-  /**
-   * quando clicar na hora colocar opacity nos demais botoes igual as fotos das funcionarias,
-   * quando clicar em agendar abrir modal para confirmação: nesse modal emitir método igual ao Open nessa página com outro nome caso ele clique no botao "confirmar".
-   * deletar código acima depois de criar modal.
-   * apos confirmação aparecer outro componente que mostra os serviços agendados - fazer get http://localhost:3004/agendamento.
-   * Criar um botão ou link para novos agendamentos, que deverão redirecionar para tela agendamento do acesso aberto
-   * Quando clicar no botão agendar na tela agendamento do acesso aberto, deve verificar primeiro se o id do cliente está na sessão (logado), se tiver, deve direcionar direto para a area fechada /home-fechada, se não, deve direcionar para login
-   *
-   *
-   */
+    /**
+     * quando clicar na hora colocar opacity nos demais botoes igual as fotos das funcionarias,
+     * quando clicar em agendar abrir modal para confirmação: nesse modal emitir método igual ao Open nessa página com outro nome caso ele clique no botao "confirmar".
+     * deletar código acima depois de criar modal.
+     * apos confirmação aparecer outro componente que mostra os serviços agendados - fazer get http://localhost:3004/agendamento.
+     * Criar um botão ou link para novos agendamentos, que deverão redirecionar para tela agendamento do acesso aberto
+     * Quando clicar no botão agendar na tela agendamento do acesso aberto, deve verificar primeiro se o id do cliente está na sessão (logado), se tiver, deve direcionar direto para a area fechada /home-fechada, se não, deve direcionar para login
+     *
+     *
+     */
   }
 }

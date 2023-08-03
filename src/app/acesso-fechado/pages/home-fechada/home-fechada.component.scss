@@ -83,6 +83,19 @@ main {
   flex-wrap: wrap;
 }
 
+.container-calendario .agenda-calendario .alert {
+  width: 100%;
+  text-align: center;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+  margin-top: 25px;
+}
+
+.container-calendario .agenda-calendario .alert_opacity {
+  opacity: 1;
+}
+
+
 .container-calendario .agenda-calendario .caixa-agendamento {
   display: flex;
   flex-direction: column;
@@ -138,14 +151,3 @@ main {
 }
 
 
-.alert {
-  width: 60%;
-  text-align: center;
-  width: 60%;
-  opacity: 0;
-  transition: opacity 1s ease-in-out;
-}
-
-.alert_opacity {
-  opacity: 1;
-}
