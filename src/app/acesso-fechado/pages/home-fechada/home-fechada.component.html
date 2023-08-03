@@ -69,11 +69,14 @@
     </div>
   </div>
 
-  <section *ngFor="let item of listaAgendamento">
-    <p>Profissional:	&nbsp;{{ item.nome_funcionario}}</p>
-    <p>Serviço:	&nbsp;{{ item.nome_servico}}</p>
-    <p>Dia:	&nbsp;{{ item.horario.dia}}</p>
-    <p>Horario:	&nbsp;{{ item.horario.horario}}</p>
-  </section>
+  <div class="lista-geral">
+    <div class="lista" *ngFor="let item of listaAgendamento">
+      <p>Profissional:	&nbsp;{{ item.nome_funcionario}}</p>
+      <p>Serviço:	&nbsp;{{ item.nome_servico}}</p>
+      <p>Dia:	&nbsp;{{ item.horario.dia}}</p>
+      <p>Horario:	&nbsp;{{ item.horario.horario}}</p>
+    </div>
+  </div>
+
 </main>
 <app-footer></app-footer>

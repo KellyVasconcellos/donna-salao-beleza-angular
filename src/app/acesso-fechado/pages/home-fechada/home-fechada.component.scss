@@ -46,6 +46,15 @@ main {
   line-height: 30px;
 }
 
+main .lista-geral {
+  background-color: #f0f0f0;
+  @include padding-grid(0, 200px, 100px, 200px);
+}
+
+main .lista-geral .lista {
+  padding-top: 10px
+}
+
 .container-calendario .usuario-perfil {
   @include padding-grid(100px, 200px, 20px, 200px);
   width: 100%;
@@ -72,6 +81,11 @@ main {
   align-items: center;
   justify-content: end;
   gap: 20px;
+
+}
+
+.container-calendario .usuario-perfil .botao-editar a{
+  cursor: pointer;
 }
 
 
@@ -85,6 +99,7 @@ main {
 
 .container-calendario .agenda-calendario .alert {
   width: 100%;
+  position: absolute;
   text-align: center;
   opacity: 0;
   transition: opacity 1s ease-in-out;
@@ -115,6 +130,14 @@ main {
   margin: 5px;
 }
 
+.container-calendario .agenda-calendario .calendario .btn{
+  background-color: #ecc0c3;
+  border: #ecc0c3;
+}
+
+.container-calendario .agenda-calendario .caixa-agendamento .servicos-agendamento .servicos-agendamento {
+  padding: 10px;
+}
 
 @media (max-width: 1152px) {
   .container-menu .menu {

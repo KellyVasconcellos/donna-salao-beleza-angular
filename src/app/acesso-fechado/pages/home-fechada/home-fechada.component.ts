@@ -163,6 +163,7 @@ export class HomeFechadaComponent implements OnInit {
       ) {
 
         this.acessoFechado.salvarAgendamento(this.agendamento).subscribe(() => {
+          this.listaAgendamento.push(this.agendamento)
           this.alert = true;
           this.mensagem = 'Agendamento realizado com sucesso!';
           setTimeout(() => {

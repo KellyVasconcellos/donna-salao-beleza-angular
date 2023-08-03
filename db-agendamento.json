@@ -90,6 +90,19 @@
         "dia": "7/10/2023",
         "horario": "08:00"
       }
+    },
+    {
+      "id": 1398754436398,
+      "id_funcionario": 5,
+      "nome_funcionario": "Madalena Silva",
+      "id_cliente": 546128998765,
+      "nome_cliente": "Vandisleya",
+      "id_servico": 14,
+      "nome_servico": "Alongamento de unha de gel",
+      "horario": {
+        "dia": "4/8/2023",
+        "horario": "08:00"
+      }
     }
   ]
 }
