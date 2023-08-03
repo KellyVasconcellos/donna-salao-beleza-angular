@@ -45,7 +45,13 @@ export class HomeFechadaComponent implements OnInit {
 
   alert = false;
 
+  alertDanger = false;
+
   mensagem = '';
+
+  mensagemDanger = '';
+
+  listaAgendamento: Array<IAgendamento> = []
 
   constructor(
     private sessaoService: SessaoService,
@@ -99,6 +105,13 @@ export class HomeFechadaComponent implements OnInit {
         this.usuario = response;
         console.log('aqui vai imprimir o nome do usuario', this.usuario);
       });
+
+    const idCliente = parseInt(dadosSessao.idCliente!)
+    this.acessoFechado.getListarAgendamentos(idCliente)
+    .subscribe((response: Array<IAgendamento>) => {
+      //this.listaAgendamento = []
+      this.listaAgendamento = response
+    });
   }
 
   gethorario(horario: string) {
@@ -157,10 +170,10 @@ export class HomeFechadaComponent implements OnInit {
           }, 3000);
         });
       } else {
-        this.alert = true;
-        this.mensagem = 'Não foi possível finalizar o agendamento';
+        this.alertDanger = true;
+        this.mensagemDanger = 'Não foi possível finalizar o agendamento, favor selecionar todos os itens (dia e horário)';
         setTimeout(() => {
-          this.alert = false;
+          this.alertDanger = false;
         }, 3000);
       }
     });

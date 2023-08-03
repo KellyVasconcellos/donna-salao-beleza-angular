@@ -63,12 +63,17 @@
       <div [ngClass]="{'alert_opacity':alert}" class="alert alert-success" role="alert">
         {{mensagem}}
       </div>
-      <div [ngClass]="{'alert_opacity':alert}" class="alert alert-danger" role="alert">
-        {{mensagem}}
+      <div [ngClass]="{'alert_opacity':alertDanger}" class="alert alert-danger" role="alert">
+        {{mensagemDanger}}
       </div>
-
-
     </div>
   </div>
+
+  <section *ngFor="let item of listaAgendamento">
+    <p>Profissional:	&nbsp;{{ item.nome_funcionario}}</p>
+    <p>Serviço:	&nbsp;{{ item.nome_servico}}</p>
+    <p>Dia:	&nbsp;{{ item.horario.dia}}</p>
+    <p>Horario:	&nbsp;{{ item.horario.horario}}</p>
+  </section>
 </main>
 <app-footer></app-footer>

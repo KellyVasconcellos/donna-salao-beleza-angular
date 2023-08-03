@@ -1,497 +1,94 @@
 {
   "agendamento": [
     {
-      "id": 1,
-      "id_funcionario": 1,
-      "nome_funcionario": "Clarice Campos",
-      "id_servico": 1,
-      "id_cliente": 575871836052,
-      "nome_cliente": "Alice",
+      "id": 296019492054,
+      "id_funcionario": 3,
+      "nome_funcionario": "Serena Souza",
+      "id_cliente": 370393892916,
+      "nome_cliente": "Clara",
+      "id_servico": 9,
+      "nome_servico": "Modelagem de sobrancelha",
       "horario": {
-        "dia": "21/9/2023",
-        "horario": "13:00"
+        "dia": "9/8/2023",
+        "horario": "10:00"
       }
     },
     {
-      "id": 363350735322,
-      "id_funcionario": 1,
-      "nome_funcionario": "Clarice Campos",
-      "id_cliente": 575871836052,
-      "nome_cliente": "Alice",
-      "id_servico": 1,
+      "id": 1248070543775,
+      "id_funcionario": 3,
+      "nome_funcionario": "Serena Souza",
+      "id_cliente": 370393892916,
+      "nome_cliente": "Clara",
+      "id_servico": 9,
+      "nome_servico": "Modelagem de sobrancelha",
       "horario": {
-        "dia": "10/8/2023",
+        "dia": "17/8/2023",
+        "horario": "10:00"
+      }
+    },
+    {
+      "id": 908800352999,
+      "id_funcionario": 3,
+      "nome_funcionario": "Serena Souza",
+      "id_cliente": 370393892916,
+      "nome_cliente": "Clara",
+      "id_servico": 9,
+      "nome_servico": "Modelagem de sobrancelha",
+      "horario": {
+        "dia": "13/9/2023",
         "horario": "11:00"
       }
     },
     {
-      "id": 604141420041,
+      "id": 476784978176,
       "id_funcionario": 3,
       "nome_funcionario": "Serena Souza",
-      "id_cliente": 931407201708,
-      "nome_cliente": "Gabriela",
-      "id_servico": 10,
+      "id_cliente": 370393892916,
+      "nome_cliente": "Clara",
+      "id_servico": 9,
+      "nome_servico": "Modelagem de sobrancelha",
       "horario": {
-        "dia": "31/7/2023",
+        "dia": "11/8/2023",
+        "horario": "10:00"
+      }
+    },
+    {
+      "id": 274236924329,
+      "id_funcionario": 5,
+      "nome_funcionario": "Madalena Silva",
+      "id_cliente": 546128998765,
+      "nome_cliente": "Vandisleya",
+      "id_servico": 14,
+      "nome_servico": "Alongamento de unha de gel",
+      "horario": {
+        "dia": "22/9/2023",
         "horario": "21:00"
       }
     },
     {
-      "id": 817321367564,
-      "id_funcionario": 3,
-      "nome_funcionario": "Serena Souza",
-      "id_cliente": 931407201708,
-      "nome_cliente": "Gabriela",
-      "id_servico": 10,
-      "nome_servico": "Brow lamination",
+      "id": 577286566570,
+      "id_funcionario": 5,
+      "nome_funcionario": "Madalena Silva",
+      "id_cliente": 546128998765,
+      "nome_cliente": "Vandisleya",
+      "id_servico": 14,
+      "nome_servico": "Alongamento de unha de gel",
       "horario": {
-        "dia": "14/9/2023",
+        "dia": "6/10/2023",
+        "horario": "19:00"
+      }
+    },
+    {
+      "id": 942605417696,
+      "id_funcionario": 5,
+      "nome_funcionario": "Madalena Silva",
+      "id_cliente": 546128998765,
+      "nome_cliente": "Vandisleya",
+      "id_servico": 14,
+      "nome_servico": "Alongamento de unha de gel",
+      "horario": {
+        "dia": "7/10/2023",
         "horario": "08:00"
-      }
-    },
-    {
-      "id": 1133475343645,
-      "id_funcionario": 3,
-      "nome_funcionario": "Serena Souza",
-      "id_cliente": 931407201708,
-      "nome_cliente": "Gabriela",
-      "id_servico": 10,
-      "nome_servico": "Brow lamination",
-      "horario": {
-        "dia": "17/8/2023",
-        "horario": "10:00"
-      }
-    },
-    {
-      "id": 1215775851078,
-      "id_cliente": 459578448235,
-      "nome_cliente": "Claudia",
-      "horario": {
-        "dia": "24/8/2023",
-        "horario": "08:00"
-      }
-    },
-    {
-      "id": 1476315363926,
-      "id_cliente": 459578448235,
-      "nome_cliente": "Claudia",
-      "horario": {
-        "dia": "18/8/2023",
-        "horario": ""
-      }
-    },
-    {
-      "id": 1506255427076,
-      "id_cliente": 459578448235,
-      "nome_cliente": "Claudia",
-      "horario": {
-        "dia": "18/8/2023",
-        "horario": "09:00"
-      }
-    },
-    {
-      "id": 335362700839,
-      "id_cliente": 459578448235,
-      "nome_cliente": "Claudia",
-      "horario": {
-        "dia": "18/8/2023",
-        "horario": "10:00"
-      }
-    },
-    {
-      "id": 134459972201,
-      "id_cliente": 459578448235,
-      "nome_cliente": "Claudia",
-      "horario": {
-        "dia": "18/8/2023",
-        "horario": "10:00"
-      }
-    },
-    {
-      "id": 1645626866769,
-      "id_cliente": 459578448235,
-      "nome_cliente": "Claudia",
-      "horario": {
-        "dia": "18/8/2023",
-        "horario": "10:00"
-      }
-    },
-    {
-      "id": 607726790546,
-      "id_cliente": 459578448235,
-      "nome_cliente": "Claudia",
-      "horario": {
-        "dia": "18/8/2023",
-        "horario": "10:00"
-      }
-    },
-    {
-      "id": 1312737527781,
-      "id_cliente": 459578448235,
-      "nome_cliente": "Claudia",
-      "horario": {
-        "dia": "18/8/2023",
-        "horario": "10:00"
-      }
-    },
-    {
-      "id": 634890343919,
-      "id_cliente": 459578448235,
-      "nome_cliente": "Claudia",
-      "horario": {
-        "dia": "18/8/2023",
-        "horario": "10:00"
-      }
-    },
-    {
-      "id": 245460825798,
-      "id_funcionario": 4,
-      "nome_funcionario": "Olivia Maldonato",
-      "id_cliente": 1327565904676,
-      "nome_cliente": "Fernanda",
-      "id_servico": 11,
-      "nome_servico": "Maquiagem Social",
-      "horario": {
-        "dia": "9/8/2023",
-        "horario": "09:00"
-      }
-    },
-    {
-      "id": 1100629736731,
-      "id_funcionario": 4,
-      "nome_funcionario": "Olivia Maldonato",
-      "id_cliente": 1327565904676,
-      "nome_cliente": "Fernanda",
-      "id_servico": 11,
-      "nome_servico": "Maquiagem Social",
-      "horario": {
-        "dia": "11/8/2023",
-        "horario": "09:00"
-      }
-    },
-    {
-      "id": 500508097392,
-      "id_funcionario": 4,
-      "nome_funcionario": "Olivia Maldonato",
-      "id_cliente": 1327565904676,
-      "nome_cliente": "Fernanda",
-      "id_servico": 11,
-      "nome_servico": "Maquiagem Social",
-      "horario": {
-        "dia": "11/8/2023",
-        "horario": "09:00"
-      }
-    },
-    {
-      "id": 834086002472,
-      "id_funcionario": 4,
-      "nome_funcionario": "Olivia Maldonato",
-      "id_cliente": 1327565904676,
-      "nome_cliente": "Fernanda",
-      "id_servico": 11,
-      "nome_servico": "Maquiagem Social",
-      "horario": {
-        "dia": "11/8/2023",
-        "horario": "09:00"
-      }
-    },
-    {
-      "id": 1687210309992,
-      "id_funcionario": 2,
-      "nome_funcionario": "Teresa Maria",
-      "id_cliente": 370393892916,
-      "nome_cliente": "Clara",
-      "id_servico": 6,
-      "nome_servico": "Corte a seco",
-      "horario": {
-        "dia": "17/8/2023",
-        "horario": "09:00"
-      }
-    },
-    {
-      "id": 613166147170,
-      "id_funcionario": 2,
-      "nome_funcionario": "Teresa Maria",
-      "id_cliente": 370393892916,
-      "nome_cliente": "Clara",
-      "id_servico": 6,
-      "nome_servico": "Corte a seco",
-      "horario": {
-        "dia": "15/9/2023",
-        "horario": "10:00"
-      }
-    },
-    {
-      "id": 427253125020,
-      "id_funcionario": 2,
-      "nome_funcionario": "Teresa Maria",
-      "id_cliente": 370393892916,
-      "nome_cliente": "Clara",
-      "id_servico": 6,
-      "nome_servico": "Corte a seco",
-      "horario": {
-        "dia": "15/9/2023",
-        "horario": "11:00"
-      }
-    },
-    {
-      "id": 297477743591,
-      "id_funcionario": 2,
-      "nome_funcionario": "Teresa Maria",
-      "id_cliente": 370393892916,
-      "nome_cliente": "Clara",
-      "id_servico": 6,
-      "nome_servico": "Corte a seco",
-      "horario": {
-        "dia": "15/9/2023",
-        "horario": "11:00"
-      }
-    },
-    {
-      "id": 587203442039,
-      "id_funcionario": 2,
-      "nome_funcionario": "Teresa Maria",
-      "id_cliente": 370393892916,
-      "nome_cliente": "Clara",
-      "id_servico": 6,
-      "nome_servico": "Corte a seco",
-      "horario": {
-        "dia": "13/9/2023",
-        "horario": "11:00"
-      }
-    },
-    {
-      "id": 1613238042157,
-      "id_funcionario": 2,
-      "nome_funcionario": "Teresa Maria",
-      "id_cliente": 370393892916,
-      "nome_cliente": "Clara",
-      "id_servico": 6,
-      "nome_servico": "Corte a seco",
-      "horario": {
-        "dia": "20/9/2023",
-        "horario": "09:00"
-      }
-    },
-    {
-      "id": 441090837966,
-      "id_funcionario": 2,
-      "nome_funcionario": "Teresa Maria",
-      "id_cliente": 370393892916,
-      "nome_cliente": "Clara",
-      "id_servico": 6,
-      "nome_servico": "Corte a seco",
-      "horario": {
-        "dia": "17/8/2023",
-        "horario": "09:00"
-      }
-    },
-    {
-      "id": 274466989314,
-      "id_funcionario": 2,
-      "nome_funcionario": "Teresa Maria",
-      "id_cliente": 370393892916,
-      "nome_cliente": "Clara",
-      "id_servico": 6,
-      "nome_servico": "Corte a seco",
-      "horario": {
-        "dia": "18/8/2023",
-        "horario": "09:00"
-      }
-    },
-    {
-      "id": 1110289239845,
-      "id_funcionario": 2,
-      "nome_funcionario": "Teresa Maria",
-      "id_cliente": 370393892916,
-      "nome_cliente": "Clara",
-      "id_servico": 6,
-      "nome_servico": "Corte a seco",
-      "horario": {
-        "dia": "14/9/2023",
-        "horario": "09:00"
-      }
-    },
-    {
-      "id": 574656848338,
-      "id_funcionario": 2,
-      "nome_funcionario": "Teresa Maria",
-      "id_cliente": 370393892916,
-      "nome_cliente": "Clara",
-      "id_servico": 6,
-      "nome_servico": "Corte a seco",
-      "horario": {
-        "dia": "12/10/2023",
-        "horario": "14:00"
-      }
-    },
-    {
-      "id": 1323881383035,
-      "id_funcionario": 2,
-      "nome_funcionario": "Teresa Maria",
-      "id_cliente": 370393892916,
-      "nome_cliente": "Clara",
-      "id_servico": 6,
-      "nome_servico": "Corte a seco",
-      "horario": {
-        "dia": "17/10/2023",
-        "horario": "14:00"
-      }
-    },
-    {
-      "id": 856837141880,
-      "id_funcionario": 2,
-      "nome_funcionario": "Teresa Maria",
-      "id_cliente": 370393892916,
-      "nome_cliente": "Clara",
-      "id_servico": 6,
-      "nome_servico": "Corte a seco",
-      "horario": {
-        "dia": "17/10/2023",
-        "horario": "13:00"
-      }
-    },
-    {
-      "id": 593649307722,
-      "id_funcionario": 2,
-      "nome_funcionario": "Teresa Maria",
-      "id_cliente": 370393892916,
-      "nome_cliente": "Clara",
-      "id_servico": 6,
-      "nome_servico": "Corte a seco",
-      "horario": {
-        "dia": "17/10/2023",
-        "horario": "11:00"
-      }
-    },
-    {
-      "id": 460439547808,
-      "id_funcionario": 2,
-      "nome_funcionario": "Teresa Maria",
-      "id_cliente": 370393892916,
-      "nome_cliente": "Clara",
-      "id_servico": 6,
-      "nome_servico": "Corte a seco",
-      "horario": {
-        "dia": "13/9/2023",
-        "horario": "11:00"
-      }
-    },
-    {
-      "id": 16902613556,
-      "id_funcionario": 2,
-      "nome_funcionario": "Teresa Maria",
-      "id_cliente": 370393892916,
-      "nome_cliente": "Clara",
-      "id_servico": 6,
-      "nome_servico": "Corte a seco",
-      "horario": {
-        "dia": "6/9/2023",
-        "horario": ""
-      }
-    },
-    {
-      "id": 803675793030,
-      "id_funcionario": 2,
-      "nome_funcionario": "Teresa Maria",
-      "id_cliente": 370393892916,
-      "nome_cliente": "Clara",
-      "id_servico": 6,
-      "nome_servico": "Corte a seco",
-      "horario": {
-        "dia": "10/8/2023",
-        "horario": "09:00"
-      }
-    },
-    {
-      "id": 1253774773409,
-      "id_funcionario": 2,
-      "nome_funcionario": "Teresa Maria",
-      "id_cliente": 370393892916,
-      "nome_cliente": "Clara",
-      "id_servico": 6,
-      "nome_servico": "Corte a seco",
-      "horario": {
-        "dia": "18/8/2023",
-        "horario": "09:00"
-      }
-    },
-    {
-      "id": 24099927072,
-      "id_funcionario": 2,
-      "nome_funcionario": "Teresa Maria",
-      "id_cliente": 370393892916,
-      "nome_cliente": "Clara",
-      "id_servico": 6,
-      "nome_servico": "Corte a seco",
-      "horario": {
-        "dia": "16/8/2023",
-        "horario": "09:00"
-      }
-    },
-    {
-      "id": 521516688711,
-      "id_funcionario": 2,
-      "nome_funcionario": "Teresa Maria",
-      "id_cliente": 370393892916,
-      "nome_cliente": "Clara",
-      "id_servico": 6,
-      "nome_servico": "Corte a seco",
-      "horario": {
-        "dia": "10/8/2023",
-        "horario": ""
-      }
-    },
-    {
-      "id": 1548334488145,
-      "id_funcionario": 2,
-      "nome_funcionario": "Teresa Maria",
-      "id_cliente": 370393892916,
-      "nome_cliente": "Clara",
-      "id_servico": 6,
-      "nome_servico": "Corte a seco",
-      "horario": {
-        "dia": "10/8/2023",
-        "horario": ""
-      }
-    },
-    {
-      "id": 637244883562,
-      "id_funcionario": 2,
-      "nome_funcionario": "Teresa Maria",
-      "id_cliente": 370393892916,
-      "nome_cliente": "Clara",
-      "id_servico": 6,
-      "nome_servico": "Corte a seco",
-      "horario": {
-        "dia": "8/9/2023",
-        "horario": ""
-      }
-    },
-    {
-      "id": 1510637405736,
-      "id_funcionario": 2,
-      "nome_funcionario": "Teresa Maria",
-      "id_cliente": 370393892916,
-      "nome_cliente": "Clara",
-      "id_servico": 6,
-      "nome_servico": "Corte a seco",
-      "horario": {
-        "dia": "10/8/2023",
-        "horario": ""
-      }
-    },
-    {
-      "id": 426565674541,
-      "id_funcionario": 2,
-      "nome_funcionario": "Teresa Maria",
-      "id_cliente": 370393892916,
-      "nome_cliente": "Clara",
-      "id_servico": 6,
-      "nome_servico": "Corte a seco",
-      "horario": {
-        "dia": "17/8/2023",
-        "horario": ""
       }
     }
   ]

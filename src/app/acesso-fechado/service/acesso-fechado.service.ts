@@ -34,4 +34,8 @@ export class AcessoFechado {
     return this.http.post<IAgendamento>(this.apiAgendamento, agendamento)
   }
 
+  getListarAgendamentos(id_cliente:number) {
+    return this.http.get<Array<IAgendamento>>(`${this.apiAgendamento}?id_cliente=${id_cliente}`)
+  }
+
 }
