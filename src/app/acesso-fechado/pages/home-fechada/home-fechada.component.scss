@@ -133,6 +133,15 @@ main .lista-geral .lista {
 .container-calendario .agenda-calendario .calendario .btn{
   background-color: #ecc0c3;
   border: #ecc0c3;
+  &:hover{
+    background-color: #e19297;
+    border: #e19297;
+  }
+}
+
+.container-calendario .agenda-calendario .calendario .btn:focus{
+  background-color: #e19297;
+  border: #e19297;
 }
 
 .container-calendario .agenda-calendario .caixa-agendamento .servicos-agendamento .servicos-agendamento {

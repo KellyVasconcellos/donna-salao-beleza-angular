@@ -103,6 +103,45 @@
         "dia": "4/8/2023",
         "horario": "08:00"
       }
+    },
+    {
+      "id": 1381728072050,
+      "id_funcionario": 3,
+      "nome_funcionario": "Serena Souza",
+      "id_cliente": 931407201708,
+      "nome_cliente": "Gabriela",
+      "id_servico": 1,
+      "nome_servico": "Avaliação de Imagem",
+      "horario": {
+        "dia": "10/8/2023",
+        "horario": "09:00"
+      }
+    },
+    {
+      "id": 1572996286385,
+      "id_funcionario": 3,
+      "nome_funcionario": "Serena Souza",
+      "id_cliente": 1623003939619,
+      "nome_cliente": "josefa",
+      "id_servico": 1,
+      "nome_servico": "Avaliação de Imagem",
+      "horario": {
+        "dia": "8/9/2023",
+        "horario": "13:00"
+      }
+    },
+    {
+      "id": 772237970830,
+      "id_funcionario": 3,
+      "nome_funcionario": "Serena Souza",
+      "id_cliente": 1623003939619,
+      "nome_cliente": "josefa",
+      "id_servico": 1,
+      "nome_servico": "Avaliação de Imagem",
+      "horario": {
+        "dia": "12/9/2023",
+        "horario": "08:00"
+      }
     }
   ]
 }

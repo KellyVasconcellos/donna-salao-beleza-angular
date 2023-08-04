@@ -35,3 +35,15 @@ button {
 @mixin padding-grid($top, $right, $bottom, $left) {
   padding: $top $right $bottom $left;
 }
+
+ngb-datepicker .ngb-dp-weekday{
+  color:red;
+}
+
+ngb-datepicker [ngbDatepickerDayView]{
+  border-radius:50px !important;
+}
+
+.ngb-dp-day .bg-primary {
+    background: #e19297 !important;
+}
