@@ -58,7 +58,7 @@
           value="{{ item }}"
         />
         </div>
-        <button type="button" class="btn btn-success" (click)="agendar()">Agendar</button>
+        <button *ngIf=" pegaHorario != '' " type="button" class="btn btn-success" (click)="agendar()">Agendar</button>
       </div>
       <div [ngClass]="{'alert_opacity':alert}" class="alert alert-success" role="alert">
         {{mensagem}}

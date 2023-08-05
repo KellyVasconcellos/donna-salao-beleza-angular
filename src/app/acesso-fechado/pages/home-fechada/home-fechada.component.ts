@@ -51,7 +51,7 @@ export class HomeFechadaComponent implements OnInit {
 
   mensagemDanger = '';
 
-  listaAgendamento: Array<IAgendamento> = []
+  listaAgendamento: Array<IAgendamento> = [];
 
   constructor(
     private sessaoService: SessaoService,
@@ -107,15 +107,10 @@ export class HomeFechadaComponent implements OnInit {
       });
 
     const idCliente = parseInt(dadosSessao.idCliente!)
-    this.acessoFechado.getListarAgendamentos(idCliente)
-    .subscribe((response: Array<IAgendamento>) => {
-      //this.listaAgendamento = []
-      this.listaAgendamento = response
-    });
+    this.listarAgendamento(idCliente)
   }
 
   gethorario(horario: string) {
-
     this.pegaHorario = horario;
   }
 
@@ -153,32 +148,63 @@ export class HomeFechadaComponent implements OnInit {
     modalRef.componentInstance.agendamento = this.agendamento;
 
     modalRef.closed.subscribe(() => {
-      console.log(this.agendamento)
+      console.log(this.agendamento);
       if (
         this.agendamento.id_funcionario != null &&
-        this.agendamento.nome_funcionario.length > 0  &&
+        this.agendamento.nome_funcionario.length > 0 &&
         this.agendamento.id_servico != null &&
         this.agendamento.nome_servico.length > 0 &&
         this.agendamento.horario.dia.length > 0 &&
         this.agendamento.horario.horario.length > 0
       ) {
+        const verificaServico = this.listaAgendamento.filter((item) => {
+          return item.nome_servico == this.agendamento.nome_servico;
+        })
+        console.log(verificaServico);
+        if (verificaServico.length) {
+          this.agendamento.id = verificaServico[0].id;
+          this.acessoFechado.editarAgendamento(this.agendamento).subscribe(() => {
+              this.listarAgendamento(this.agendamento.id_cliente)
+              this.alert = true;
+              this.mensagem = 'Agendamento alterado com sucesso!';
+              setTimeout(() => {
+                this.alert = false;
+              }, 3000);
+          });
+        } else {
+          this.acessoFechado
+            .salvarAgendamento(this.agendamento)
+            .subscribe(() => {
+              this.listaAgendamento.push(this.agendamento);
+              this.alert = true;
+              this.mensagem = 'Agendamento realizado com sucesso!';
+              setTimeout(() => {
+                this.alert = false;
+              }, 3000);
+            });
+        }
 
-        this.acessoFechado.salvarAgendamento(this.agendamento).subscribe(() => {
-          this.listaAgendamento.push(this.agendamento)
-          this.alert = true;
-          this.mensagem = 'Agendamento realizado com sucesso!';
-          setTimeout(() => {
-            this.alert = false;
-          }, 3000);
-        });
       } else {
         this.alertDanger = true;
-        this.mensagemDanger = 'Não foi possível finalizar o agendamento, favor selecionar todos os itens (dia e horário)';
+        this.mensagemDanger =
+          'Não foi possível finalizar o agendamento, favor selecionar todos os itens (dia e horário)';
         setTimeout(() => {
           this.alertDanger = false;
         }, 3000);
       }
     });
+  }
+
+
+  listarAgendamento(idCliente: number){
+    this.acessoFechado
+    .getListarAgendamentos(idCliente)
+    .subscribe((response: Array<IAgendamento>) => {
+      //this.listaAgendamento = []
+      this.listaAgendamento = response;
+    });
+  }
+}
 
     //   console.log('Quando clica no OK do modal, a aplicação cai aqui!')
     //   console.log('Aqui deve ser o código de envio de formulário')
@@ -196,5 +222,3 @@ export class HomeFechadaComponent implements OnInit {
      *
      *
      */
-  }
-}

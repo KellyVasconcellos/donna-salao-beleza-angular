@@ -38,4 +38,8 @@ export class AcessoFechado {
     return this.http.get<Array<IAgendamento>>(`${this.apiAgendamento}?id_cliente=${id_cliente}`)
   }
 
+  editarAgendamento(agendamento: IAgendamento) {
+    return this.http.put<IAgendamento>(`${this.apiAgendamento}/${agendamento.id}`, agendamento)
+  }
+
 }
