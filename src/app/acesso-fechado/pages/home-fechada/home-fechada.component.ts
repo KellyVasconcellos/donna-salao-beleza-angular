@@ -115,6 +115,7 @@ export class HomeFechadaComponent implements OnInit {
   }
 
   gethorario(horario: string) {
+
     this.pegaHorario = horario;
   }
 

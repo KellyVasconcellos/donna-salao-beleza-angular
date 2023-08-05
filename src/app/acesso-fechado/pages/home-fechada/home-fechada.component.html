@@ -52,7 +52,7 @@
         <div *ngIf="apareceBotoes">
           <input
           *ngFor="let item of horarios"
-          (click)="gethorario(item)"
+          (click)="gethorario(item)" [ngClass]="{ rosa_escuro: pegaHorario == item}"
           class="btn btn-primary"
           type="button"
           value="{{ item }}"
