@@ -33,6 +33,8 @@ export class HomeFechadaComponent implements OnInit {
 
   usuario!: IUsuario;
 
+
+
   horarios = horarios;
 
   apareceBotoes = false;
@@ -52,6 +54,8 @@ export class HomeFechadaComponent implements OnInit {
   mensagemDanger = '';
 
   listaAgendamento: Array<IAgendamento> = [];
+
+  listaTodosAgendamentos: Array<IAgendamento> = [];
 
   constructor(
     private sessaoService: SessaoService,
@@ -108,6 +112,20 @@ export class HomeFechadaComponent implements OnInit {
 
     const idCliente = parseInt(dadosSessao.idCliente!)
     this.listarAgendamento(idCliente)
+
+    //this.acessoFechado
+       //.listaTodosOsAgendamentos()
+       //.subscribe((response: Array<IAgendamento>) => {
+         //this.listaTodosAgendamentos = response;
+
+         //const listaAgendamentoPorFuncionario = this.listaTodosAgendamentos.filter(item => {
+           //return dadosSessao.idFuncionario == item.id_funcionario.toString()
+         //})
+
+         //listaAgendamentoPorFuncionario.forEach(item => {
+           //const pegaHorario = item.horario
+         //})
+       //});
   }
 
   gethorario(horario: string) {
@@ -195,7 +213,6 @@ export class HomeFechadaComponent implements OnInit {
     });
   }
 
-
   listarAgendamento(idCliente: number){
     this.acessoFechado
     .getListarAgendamentos(idCliente)
@@ -204,6 +221,7 @@ export class HomeFechadaComponent implements OnInit {
       this.listaAgendamento = response;
     });
   }
+
 }
 
     //   console.log('Quando clica no OK do modal, a aplicação cai aqui!')
