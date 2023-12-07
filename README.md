@@ -49,6 +49,5 @@ O projeto foi desenvolvido utilizando as seguintes tecnologias:
 
 ---
 
-
 Desenvolvido 💜 por Kelly Vasconcellos
 
